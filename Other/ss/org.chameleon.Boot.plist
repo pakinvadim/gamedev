@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Credits</key>
+	<string>Created with Champlist</string>
+	<key>EthernetBuiltIn</key>
+	<string>Yes</string>
+	<key>GenerateCStates</key>
+	<string>Yes</string>
+	<key>GeneratePStates</key>
+	<string>Yes</string>
+	<key>GraphicsEnabler</key>
+	<string>Yes</string>
+	<key>Kernel</key>
+	<string>mach_kernel</string>
+	<key>Legacy Logo</key>
+	<string>Yes</string>
+	<key>ShowInfo</key>
+	<string>No</string>
+	<key>Timeout</key>
+	<string>3</string>
+	<key>UseKernelCache</key>
+	<string>Yes</string>
+	<key>Wake</key>
+	<string>No</string>
+</dict>
+</plist>

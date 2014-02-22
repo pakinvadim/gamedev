@@ -13,7 +13,6 @@
 		094490CE18329B7D0069CE5A /* doorRight_00.png in Resources */ = {isa = PBXBuildFile; fileRef = 094490C818329B7D0069CE5A /* doorRight_00.png */; };
 		094490CF18329B7D0069CE5A /* doorTop_00.png in Resources */ = {isa = PBXBuildFile; fileRef = 094490C918329B7D0069CE5A /* doorTop_00.png */; };
 		094490D018329B7D0069CE5A /* room1.png in Resources */ = {isa = PBXBuildFile; fileRef = 094490CA18329B7D0069CE5A /* room1.png */; };
-		094AAB57182C29E7000FA8BE /* Door.m in Sources */ = {isa = PBXBuildFile; fileRef = 094AAB56182C29E7000FA8BE /* Door.m */; };
 		09E39A52182995DF006D94C1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E39A51182995DF006D94C1 /* QuartzCore.framework */; };
 		09E39A54182995DF006D94C1 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E39A53182995DF006D94C1 /* OpenGLES.framework */; };
 		09E39A56182995DF006D94C1 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E39A55182995DF006D94C1 /* OpenAL.framework */; };
@@ -147,12 +146,13 @@
 		09E39BF5182995E3006D94C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E39BF4182995E3006D94C1 /* main.m */; };
 		09E39BF8182995E3006D94C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E39BF7182995E3006D94C1 /* AppDelegate.m */; };
 		09E39BFE182995E3006D94C1 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E39BFD182995E3006D94C1 /* IntroLayer.m */; };
-		09E39C06182997D2006D94C1 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E39C05182997D2006D94C1 /* Room.m */; };
 		09E39C0F182997ED006D94C1 /* ActionSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E39C08182997ED006D94C1 /* ActionSprite.m */; };
-		09E39C10182997ED006D94C1 /* Cat.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E39C0A182997ED006D94C1 /* Cat.m */; };
-		09E39C11182997ED006D94C1 /* GameLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E39C0C182997ED006D94C1 /* GameLevel.m */; };
-		09E39C12182997ED006D94C1 /* GameLevel1Layer.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E39C0E182997ED006D94C1 /* GameLevel1Layer.m */; };
 		09E39C18182998D2006D94C1 /* RootLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E39C17182998D2006D94C1 /* RootLayer.m */; };
+		48C6BD4218B9513500DD3042 /* GameLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C6BD3F18B9513500DD3042 /* GameLevel.m */; };
+		48C6BD4318B9513500DD3042 /* GameLevel1Layer.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C6BD4118B9513500DD3042 /* GameLevel1Layer.m */; };
+		48C6BD4618B9516200DD3042 /* Cat.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C6BD4518B9516200DD3042 /* Cat.m */; };
+		48C6BD4B18B9517600DD3042 /* Door.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C6BD4818B9517600DD3042 /* Door.m */; };
+		48C6BD4C18B9517600DD3042 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C6BD4A18B9517600DD3042 /* Room.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -162,8 +162,6 @@
 		094490C818329B7D0069CE5A /* doorRight_00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = doorRight_00.png; path = Resources/images/doorRight_00.png; sourceTree = "<group>"; };
 		094490C918329B7D0069CE5A /* doorTop_00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = doorTop_00.png; path = Resources/images/doorTop_00.png; sourceTree = "<group>"; };
 		094490CA18329B7D0069CE5A /* room1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = room1.png; path = Resources/images/room1.png; sourceTree = "<group>"; };
-		094AAB55182C29E7000FA8BE /* Door.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Door.h; sourceTree = "<group>"; };
-		094AAB56182C29E7000FA8BE /* Door.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Door.m; sourceTree = "<group>"; };
 		09E39A4E182995DF006D94C1 /* BadCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BadCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E39A51182995DF006D94C1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		09E39A53182995DF006D94C1 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -443,18 +441,20 @@
 		09E39BF7182995E3006D94C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		09E39BFC182995E3006D94C1 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		09E39BFD182995E3006D94C1 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
-		09E39C04182997D2006D94C1 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Room.h; path = ../../TestAnimate/TestAnimate/Room.h; sourceTree = "<group>"; };
-		09E39C05182997D2006D94C1 /* Room.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Room.m; path = ../../TestAnimate/TestAnimate/Room.m; sourceTree = "<group>"; };
 		09E39C07182997ED006D94C1 /* ActionSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActionSprite.h; path = ../../TestAnimate/TestAnimate/ActionSprite.h; sourceTree = "<group>"; };
 		09E39C08182997ED006D94C1 /* ActionSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActionSprite.m; path = ../../TestAnimate/TestAnimate/ActionSprite.m; sourceTree = "<group>"; };
-		09E39C09182997ED006D94C1 /* Cat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Cat.h; path = ../../TestAnimate/TestAnimate/Cat.h; sourceTree = "<group>"; };
-		09E39C0A182997ED006D94C1 /* Cat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Cat.m; path = ../../TestAnimate/TestAnimate/Cat.m; sourceTree = "<group>"; };
-		09E39C0B182997ED006D94C1 /* GameLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameLevel.h; path = ../../TestAnimate/TestAnimate/GameLevel.h; sourceTree = "<group>"; };
-		09E39C0C182997ED006D94C1 /* GameLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameLevel.m; path = ../../TestAnimate/TestAnimate/GameLevel.m; sourceTree = "<group>"; };
-		09E39C0D182997ED006D94C1 /* GameLevel1Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameLevel1Layer.h; path = ../../TestAnimate/TestAnimate/GameLevel1Layer.h; sourceTree = "<group>"; };
-		09E39C0E182997ED006D94C1 /* GameLevel1Layer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameLevel1Layer.m; path = ../../TestAnimate/TestAnimate/GameLevel1Layer.m; sourceTree = "<group>"; };
 		09E39C16182998D2006D94C1 /* RootLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootLayer.h; sourceTree = "<group>"; };
 		09E39C17182998D2006D94C1 /* RootLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootLayer.m; sourceTree = "<group>"; };
+		48C6BD3E18B9513500DD3042 /* GameLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameLevel.h; path = Levels/GameLevel.h; sourceTree = "<group>"; };
+		48C6BD3F18B9513500DD3042 /* GameLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameLevel.m; path = Levels/GameLevel.m; sourceTree = "<group>"; };
+		48C6BD4018B9513500DD3042 /* GameLevel1Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameLevel1Layer.h; path = Levels/GameLevel1Layer.h; sourceTree = "<group>"; };
+		48C6BD4118B9513500DD3042 /* GameLevel1Layer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameLevel1Layer.m; path = Levels/GameLevel1Layer.m; sourceTree = "<group>"; };
+		48C6BD4418B9516200DD3042 /* Cat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Cat.h; path = Bots/Cat.h; sourceTree = "<group>"; };
+		48C6BD4518B9516200DD3042 /* Cat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Cat.m; path = Bots/Cat.m; sourceTree = "<group>"; };
+		48C6BD4718B9517600DD3042 /* Door.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Door.h; path = House/Door.h; sourceTree = "<group>"; };
+		48C6BD4818B9517600DD3042 /* Door.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Door.m; path = House/Door.m; sourceTree = "<group>"; };
+		48C6BD4918B9517600DD3042 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Room.h; path = House/Room.h; sourceTree = "<group>"; };
+		48C6BD4A18B9517600DD3042 /* Room.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Room.m; path = House/Room.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -481,10 +481,10 @@
 		094AAB58182C29F7000FA8BE /* House */ = {
 			isa = PBXGroup;
 			children = (
-				09E39C04182997D2006D94C1 /* Room.h */,
-				09E39C05182997D2006D94C1 /* Room.m */,
-				094AAB55182C29E7000FA8BE /* Door.h */,
-				094AAB56182C29E7000FA8BE /* Door.m */,
+				48C6BD4718B9517600DD3042 /* Door.h */,
+				48C6BD4818B9517600DD3042 /* Door.m */,
+				48C6BD4918B9517600DD3042 /* Room.h */,
+				48C6BD4A18B9517600DD3042 /* Room.m */,
 			);
 			name = House;
 			sourceTree = "<group>";
@@ -924,10 +924,10 @@
 		09E39C13182997F3006D94C1 /* Bots */ = {
 			isa = PBXGroup;
 			children = (
+				48C6BD4418B9516200DD3042 /* Cat.h */,
+				48C6BD4518B9516200DD3042 /* Cat.m */,
 				09E39C07182997ED006D94C1 /* ActionSprite.h */,
 				09E39C08182997ED006D94C1 /* ActionSprite.m */,
-				09E39C09182997ED006D94C1 /* Cat.h */,
-				09E39C0A182997ED006D94C1 /* Cat.m */,
 			);
 			name = Bots;
 			sourceTree = "<group>";
@@ -935,10 +935,10 @@
 		09E39C14182997FC006D94C1 /* Levels */ = {
 			isa = PBXGroup;
 			children = (
-				09E39C0B182997ED006D94C1 /* GameLevel.h */,
-				09E39C0C182997ED006D94C1 /* GameLevel.m */,
-				09E39C0D182997ED006D94C1 /* GameLevel1Layer.h */,
-				09E39C0E182997ED006D94C1 /* GameLevel1Layer.m */,
+				48C6BD3E18B9513500DD3042 /* GameLevel.h */,
+				48C6BD3F18B9513500DD3042 /* GameLevel.m */,
+				48C6BD4018B9513500DD3042 /* GameLevel1Layer.h */,
+				48C6BD4118B9513500DD3042 /* GameLevel1Layer.m */,
 			);
 			name = Levels;
 			sourceTree = "<group>";
@@ -1054,13 +1054,11 @@
 				09E39B48182995E1006D94C1 /* CCTMXLayer.m in Sources */,
 				09E39BE0182995E2006D94C1 /* mat4.c in Sources */,
 				09E39ABC182995E0006D94C1 /* ccDeprecated.m in Sources */,
-				094AAB57182C29E7000FA8BE /* Door.m in Sources */,
 				09E39B77182995E2006D94C1 /* CCDirectorMac.m in Sources */,
 				09E39AD1182995E0006D94C1 /* ccGLStateCache.m in Sources */,
 				09E39BA3182995E2006D94C1 /* TransformUtils.m in Sources */,
 				09E39AF0182995E1006D94C1 /* CCNode+Debug.m in Sources */,
 				09E39ACB182995E0006D94C1 /* ccFPSImages.m in Sources */,
-				09E39C12182997ED006D94C1 /* GameLevel1Layer.m in Sources */,
 				09E39B51182995E1006D94C1 /* CCTMXXMLParser.m in Sources */,
 				09E39BE8182995E2006D94C1 /* ray2.c in Sources */,
 				09E39B83182995E2006D94C1 /* base64.c in Sources */,
@@ -1071,12 +1069,14 @@
 				09E39BB4182995E2006D94C1 /* CDXMacOSXSupport.m in Sources */,
 				09E39BA8182995E2006D94C1 /* ZipUtils.m in Sources */,
 				09E39A9A182995E0006D94C1 /* CCActionManager.m in Sources */,
+				48C6BD4618B9516200DD3042 /* Cat.m in Sources */,
+				48C6BD4B18B9517600DD3042 /* Door.m in Sources */,
 				09E39B02182995E1006D94C1 /* CCParticleSystemQuad.m in Sources */,
-				09E39C11182997ED006D94C1 /* GameLevel.m in Sources */,
 				09E39AC5182995E0006D94C1 /* CCDrawNode.m in Sources */,
 				09E39B57182995E1006D94C1 /* CCTransitionPageTurn.m in Sources */,
 				09E39A88182995E0006D94C1 /* CCActionCatmullRom.m in Sources */,
 				09E39AFF182995E1006D94C1 /* CCParticleSystem.m in Sources */,
+				48C6BD4C18B9517600DD3042 /* Room.m in Sources */,
 				09E39B54182995E1006D94C1 /* CCTransition.m in Sources */,
 				09E39AFC182995E1006D94C1 /* CCParticleExamples.m in Sources */,
 				09E39AF9182995E1006D94C1 /* CCParticleBatchNode.m in Sources */,
@@ -1098,7 +1098,6 @@
 				09E39BF8182995E3006D94C1 /* AppDelegate.m in Sources */,
 				09E39B68182995E2006D94C1 /* CCES2Renderer.m in Sources */,
 				09E39ADA182995E1006D94C1 /* CCLabelAtlas.m in Sources */,
-				09E39C10182997ED006D94C1 /* Cat.m in Sources */,
 				09E39AF6182995E1006D94C1 /* CCParallaxNode.m in Sources */,
 				09E39BFE182995E3006D94C1 /* IntroLayer.m in Sources */,
 				09E39A8E182995E0006D94C1 /* CCActionGrid.m in Sources */,
@@ -1106,6 +1105,7 @@
 				09E39BE6182995E2006D94C1 /* quaternion.c in Sources */,
 				09E39B33182995E1006D94C1 /* CCSpriteFrame.m in Sources */,
 				09E39AA0182995E0006D94C1 /* CCActionProgressTimer.m in Sources */,
+				48C6BD4218B9513500DD3042 /* GameLevel.m in Sources */,
 				09E39A82182995E0006D94C1 /* CCAction.m in Sources */,
 				09E39BBA182995E2006D94C1 /* CocosDenshion.m in Sources */,
 				09E39B3F182995E1006D94C1 /* CCTextureCache.m in Sources */,
@@ -1154,6 +1154,7 @@
 				09E39B30182995E1006D94C1 /* CCSpriteBatchNode.m in Sources */,
 				09E39AB9182995E0006D94C1 /* CCConfiguration.m in Sources */,
 				09E39B15182995E1006D94C1 /* CCScheduler.m in Sources */,
+				48C6BD4318B9513500DD3042 /* GameLevel1Layer.m in Sources */,
 				09E39B65182995E2006D94C1 /* CCDirectorIOS.m in Sources */,
 				09E39AE7182995E1006D94C1 /* CCMenu.m in Sources */,
 				09E39BF0182995E2006D94C1 /* vec4.c in Sources */,
@@ -1163,7 +1164,6 @@
 				09E39ACE182995E0006D94C1 /* CCGLProgram.m in Sources */,
 				09E39BBE182995E2006D94C1 /* SimpleAudioEngine.m in Sources */,
 				09E39B70182995E2006D94C1 /* CCTouchDispatcher.m in Sources */,
-				09E39C06182997D2006D94C1 /* Room.m in Sources */,
 				09E39AF3182995E1006D94C1 /* CCNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

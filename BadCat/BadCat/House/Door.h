@@ -22,6 +22,8 @@ typedef enum DoorType
 }
 
 @property int direct;
+@property DoorType Type;
+@property (nonatomic)CGPoint EnterPosition;
 
 //- (void) addDirect:(int) dir;
 - (id)initWithType:(DoorType)type andDirect:(int)dir;

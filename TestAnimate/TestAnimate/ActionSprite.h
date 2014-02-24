@@ -10,7 +10,6 @@
 #import <GameKit/GameKit.h>
 #import "cocos2d.h"
 #import "Room.h"
-//
 
 typedef enum ActionSpriteState
 {
@@ -30,6 +29,7 @@ typedef enum ActionSpriteState
 
 
 @property(nonatomic)int startRoomNum;
+@property(nonatomic)float Duration;
 
 @property(nonatomic,strong) CCAction *idleAction;
 @property(nonatomic,strong) CCAction *walkLeftAction;

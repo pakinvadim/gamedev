@@ -17,8 +17,10 @@
 
 @property NSMutableArray *doors;
 @property int numberRoom;
+@property (nonatomic)float FloorPosition;
 
 -(id) initWithFile:(NSString *)filename andPosition:(CGPoint) positionR andNumber:(int) number;
 -(void) AddDoorWithType:(DoorType) type  andDirect:(int)dir andPositionX:(float)positionX;
+-(Door*) GetDoorWithDirect:(int) direct;
 
 @end

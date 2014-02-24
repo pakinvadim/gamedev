@@ -12,7 +12,9 @@
 #import "ActionSprite.h"
 #import "cocos2d.h"
 
-@interface Cat : ActionSprite
+@interface Cat : ActionSprite{
+
+}
 
 //-(void) GoTo:(CGPoint*)point;
 -(void) FinishAnimateWalk;

@@ -13,6 +13,7 @@
 
 -(id) init{
 	if( self=[super init]){
+        self.Duration = 2.5f;
 	}
 	return self;
 }
@@ -25,7 +26,7 @@
     {
         if (room.numberRoom == startRoomNum)
         {
-            self.position = ccp(room.position.x + [room boundingBox].size.width/2, room.position.y+60);
+            self.position = ccp(room.position.x + [room boundingBox].size.width/2, room.FloorPosition);
         }
     }
 }
@@ -54,7 +55,7 @@
 {
     GameLevel *level = (GameLevel*)[self parent];
     Room *endRoom = [self GetRoomInPoint:point];
-    Room *actualRoom = [self GetRoomInPoint:ccp(level.position.x +  self.position.x,level.position.y+ self.position.y)];
+    Room *actualRoom = [self GetActualRoom];
     if(endRoom.numberRoom != 0) //проверяем нажатие за пределы комнат
     {
         if (actualRoom.numberRoom != endRoom.numberRoom) // проверяем не нажали ли туже комнату
@@ -62,13 +63,16 @@
             NSLog([NSString stringWithFormat:@"actual room number %d",actualRoom.numberRoom]);
             NSLog([NSString stringWithFormat:@"walk room number %d",endRoom.numberRoom]);
             
-            int routeArray[10] = [self GetWalkRouteTo:endRoom fromRoom:actualRoom inLevel:level andRoomsChechedArr:[NSMutableArray array]];
             
-            for(int num in routeArray)
-            {
-                NSLog([NSString stringWithFormat:@"Next room number %d",[num integerValue]]);
-                [self GoToRoomWithNumber:num from:actualRoom];
+            NSMutableArray *route = [self GetWalkRouteTo:endRoom fromRoom:actualRoom inLevel:level andRoomsChechedArr:[NSMutableArray array]];
+            
+            NSString* s = @"";
+            for(NSNumber* nnn in route.reverseObjectEnumerator){
+                s = [NSString stringWithFormat:@"%@->%d",s,[nnn integerValue]];
             }
+            NSLog([NSString stringWithFormat:@"route: %@",s]);
+                   
+            [self RunRoute:self routeData:route];
             
             
             /*if (self.actionState == ActionStateIdle)
@@ -91,16 +95,32 @@
     }
 }
 
--(void)GoToRoomWithNumber:(int)goToRoomNum from:(Room*) actualRoom{
-    for (Door *door in actualRoom.doors){
-        if(door.direct == goToRoomNum){
-            CCMoveTo *move = [CCMoveTo actionWithDuration:1 position:door.position];
-            [self runAction:[CCSequence actions:move,nil,nil]];
-            //while(self.position.x != door.position.x){
-                //self.position.x = 5;
-            //}
-        }
+-(void)RunRoute:(id)sender routeData:(NSMutableArray*)route{
+    
+    //NSMutableArray *route = (NSMutableArray*)routeData;
+    
+    if(route == nil || route.count == 0){
+        return;
     }
+    
+    NSNumber *roomNum = [route lastObject];
+    
+    NSLog([NSString stringWithFormat:@"Next room number %d",[roomNum integerValue]]);
+    
+    Room *room = [self GetActualRoom];
+    Door *door = [room GetDoorWithDirect:[roomNum integerValue]];
+    
+    CCMoveTo *move = [CCMoveTo actionWithDuration:self.Duration position: door.EnterPosition];
+    CCMoveTo *move2 = [CCMoveTo actionWithDuration:self.Duration position: ccp(door.EnterPosition.x - 110, door.EnterPosition.y)];
+    [route removeLastObject];
+    CCCallFuncO *callbackAction = [CCCallFuncO actionWithTarget: self selector: @selector(RunRoute:routeData:) object:route];
+    
+    [self runAction:[CCSequence actions: move, move2,callbackAction, nil]];
+}
+
+-(Room*) GetActualRoom{
+    GameLevel *level = (GameLevel*)[self parent];
+    return [self GetRoomInPoint:ccp(level.position.x +  self.position.x,level.position.y+ self.position.y)];
 }
 
 -(Room*) GetRoomInPoint:(CGPoint) point //Получить номер комнаты по координатам
@@ -115,7 +135,7 @@
                                      [room boundingBox].size.height);
         if(CGRectContainsPoint(rectRoom, point))
         {
-            NSLog([NSString stringWithFormat:@"Room %f %f %f %f",
+            /*NSLog([NSString stringWithFormat:@"Room %f %f %f %f",
                    room.position.x + actualLevel.position.x,
                    room.position.y + actualLevel.position.y,
                    [room boundingBox].size.width,
@@ -123,17 +143,18 @@
             
             NSLog([NSString stringWithFormat:@"point %f %f",
                    point.x,
-                   point.y]);
+                   point.y]);*/
             return room;
         }
     }
     return nil;
 }
 
--(int*) GetWalkRouteTo:(Room*)endRoom fromRoom:(Room*)actualRoom inLevel:(GameLevel*) level andRoomsChechedArr:(NSMutableArray*) checkedRooms
+-(NSArray*) GetWalkRouteTo:(Room*)endRoom fromRoom:(Room*)actualRoom inLevel:(GameLevel*) level andRoomsChechedArr:(NSMutableArray*) checkedRooms
 {
-    int routeNumRoom[] = [NSMutableArray array];
-    int *sortedRooms = [actualRoom.doors sortedArrayUsingComparator:^(Door* door1, Door* door2) {
+    NSMutableArray *routeNumRoom = [NSMutableArray array];
+    
+    NSArray *sortedRooms = [actualRoom.doors sortedArrayUsingComparator:^(Door* door1, Door* door2) {
         float door1Distance = [self DistanceBetween:door1 and:endRoom];
         float door2Distance = [self DistanceBetween:door2 and:endRoom];
         

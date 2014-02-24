@@ -8,7 +8,9 @@
 
 #import "Cat.h"
 
-@implementation Cat
+@implementation Cat{
+
+}
 
 -(id) init
 {

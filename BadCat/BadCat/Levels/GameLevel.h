@@ -21,7 +21,7 @@
 @property(nonatomic,strong) Cat *cat;
 
 -(void) addRoom:(Room*)room;
--(Room*) RoomWithNumber:(int)roomNumber;
+-(Room*) GetRoomWithNumber:(int)roomNumber;
 //void doSome(NSString *string, NSString *sstring);
 
 @end

@@ -31,7 +31,7 @@
     [self.roomArray addObject:room];
 }
 
--(Room*)RoomWithNumber:(int)roomNumber{
+-(Room*)GetRoomWithNumber:(int)roomNumber{
     for(Room* room in self.roomArray){
         if(room.numberRoom == roomNumber){
             return room;

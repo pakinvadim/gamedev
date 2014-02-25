@@ -15,7 +15,7 @@
 const int IndentDoor = 50;
 
 - (CGPoint) EnterPosition {
-    Room *room = (Room*)[self parent];
+    Room *room = self.CurrentRoom;
     
     if(self.Type == Left){
         return ccp(room.position.x + self.position.x + IndentDoor, room.FloorPosition);
@@ -27,6 +27,10 @@ const int IndentDoor = 50;
         return ccp(room.position.x + self.position.x, room.FloorPosition);
     }
     return ccp(0,0);
+}
+
+- (Room*)CurrentRoom{
+    return (Room*)[self parent];
 }
 
 - (id)initWithType:(DoorType)type andDirect:(int) dir

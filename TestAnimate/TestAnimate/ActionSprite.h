@@ -10,7 +10,6 @@
 #import <GameKit/GameKit.h>
 #import "cocos2d.h"
 #import "Room.h"
-//
 
 typedef enum ActionSpriteState
 {
@@ -30,6 +29,7 @@ typedef enum ActionSpriteState
 
 
 @property(nonatomic)int startRoomNum;
+@property(nonatomic)float Speed;
 
 @property(nonatomic,strong) CCAction *idleAction;
 @property(nonatomic,strong) CCAction *walkLeftAction;
@@ -39,8 +39,9 @@ typedef enum ActionSpriteState
 
 @property(nonatomic,assign) ActionSpriteState actionState;
 
+-(float) GetDurationBetween: (CGPoint)start :(CGPoint)end;
 -(CCAnimation*) GetAnimationWithFrameNameLike: (NSString*) likeName andCountFrame:(int) countFrame andDelay:(float) delay;
--(void)GoTo:(CGPoint)point;
+-(void) GoTo:(CGPoint)touchPoint;
 -(void) Idle;
 -(void) Walk;
 -(void) WalkUp;

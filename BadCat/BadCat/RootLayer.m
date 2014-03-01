@@ -20,8 +20,8 @@
         [_actors.texture setAliasTexParameters];
         [self addChild:_actors z:-5];
         
-        self.level1 = [[GameLevel1Layer alloc] init];
-        [self addChild:self.level1];
+        self.ActualLevel = [[GameLevel1Layer alloc] init];
+        [self addChild:self.ActualLevel];
     }
     
     return self;

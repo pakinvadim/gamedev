@@ -10,11 +10,15 @@
 // Import the interfaces
 #import "IntroLayer.h"
 #import "RootLayer.h"
+#import <GameKit/GameKit.h>
+#import "cocos2d.h"
 
 #pragma mark - IntroLayer
 
 // HelloWorldLayer implementation
 @implementation IntroLayer
+
+RootLayer* rl;
 
 // Helper class method that creates a Scene with the HelloWorldLayer as the only child.
 +(CCScene *) scene
@@ -37,8 +41,12 @@
 {
 	if( (self=[super init])) {
         
-        RootLayer* rl = [[RootLayer alloc] init];
+        rl = [[RootLayer alloc] init];
         [self addChild:rl];
+        //[self scheduleOnce:@selector(yourMethod:) delay:3.0f];
+        
+
+        
 		// ask director for the window size
 		/*CGSize size = [[CCDirector sharedDirector] winSize];
 
@@ -57,6 +65,10 @@
 	}
 	
 	return self;
+}
+
+-(void) yourMethod:(ccTime) dt {
+
 }
 
 -(void) onEnter

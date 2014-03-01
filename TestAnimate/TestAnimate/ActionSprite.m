@@ -11,6 +11,9 @@
 
 @implementation ActionSprite
 
+-(float)X{ return self.position.x;}
+-(float)Y{ return self.position.y;}
+
 -(id) init{
 	if( self=[super init]){
         self.Speed = 200.f;
@@ -58,22 +61,29 @@
 -(void)GoTo:(CGPoint)touchPoint
 {
     GameLevel *level = (GameLevel*)[self parent];
-    Room *endRoom = [self GetRoomInPoint:touchPoint];
+    Room *endRoom = [level GetRoomInPoint:touchPoint];
     Room *actualRoom = [self GetActualRoom];
     if(endRoom.numberRoom != 0) //проверяем нажатие за пределы комнат
     {
         {NSLog([NSString stringWithFormat:@"actual room number %d",actualRoom.numberRoom]);
         NSLog([NSString stringWithFormat:@"walk room number %d",endRoom.numberRoom]);}
         NSMutableArray *way = [self GetWalkRouteTo:endRoom fromRoom:actualRoom];
-        {
-        NSString* s = @"";
-        for(NSNumber* nnn in way){
-            s = [NSString stringWithFormat:@"%@->%d",s,[nnn integerValue]];
-        }
-        NSLog([NSString stringWithFormat:@"route: %@",s]);
+
+        Door* touchDoor = [endRoom GetDoorInPoint:touchPoint];
+        CGPoint endPoint = ccp([self ConvertTouch:touchPoint].x, endRoom.FloorPosition);
+        if (touchDoor != nil){
+            [way addObject:[NSNumber numberWithInteger:touchDoor.direct]];
+            endPoint = ccp(0,0);
         }
         
-        CGPoint endPoint = ccp((0-level.position.x) + touchPoint.x, endRoom.FloorPosition);
+        {
+            NSString* s = @"";
+            for(NSNumber* nnn in way){
+                s = [NSString stringWithFormat:@"%@->%d",s,[nnn integerValue]];
+            }
+            NSLog([NSString stringWithFormat:@"route: %@",s]);
+        }
+    
         [way addObject:[NSValue valueWithCGPoint:endPoint]];
         [self stopAllActions];
         [self GoRoute:self routeData:way];
@@ -103,7 +113,7 @@
     if(route == nil || route.count == 0){
         return;
     }
-    GameLevel *level = (GameLevel*)[self parent];
+    
     Room *room = [self GetActualRoom];
     CCMoveTo *move = nil;
     CCMoveTo *move2 = nil;
@@ -111,6 +121,10 @@
     
     if(route.count == 1){
         CGPoint endPoint = [[route firstObject] CGPointValue];
+        if(endPoint.x == 0 && endPoint.y == 0) {return;}
+        
+        if(endPoint.x > room.MaxRightPosition) {endPoint.x = room.MaxRightPosition;}
+        else if(endPoint.x < room.MaxLeftPosition) {endPoint.x = room.MaxLeftPosition;}
         
         move = [CCMoveTo actionWithDuration:[self GetDurationBetween:self.position :endPoint] position: endPoint];
         [route removeObject:[route firstObject]];
@@ -120,49 +134,17 @@
         
         { NSLog([NSString stringWithFormat:@"Next room number %d",nextRoomNum]);
         }
-        
+        GameLevel *level = (GameLevel*)[self parent];
         Door *door = [room GetDoorWithDirect:nextRoomNum];
         Room *nextRoom = [level GetRoomWithNumber:nextRoomNum];
         Door *nextDoor = [nextRoom GetDoorWithDirect:room.numberRoom];
         
         move = [CCMoveTo actionWithDuration:[self GetDurationBetween:self.position :door.EnterPosition] position: door.EnterPosition];
-        move2 = [CCMoveTo actionWithDuration:[self GetDurationBetween:door.EnterPosition :nextDoor.EnterPosition] position: nextDoor.EnterPosition];
+        move2 = [CCMoveTo actionWithDuration:0 position: nextDoor.EnterPosition];
         [route removeObject:[route firstObject]];
         callbackAction = [CCCallFuncO actionWithTarget: self selector: @selector(GoRoute:routeData:) object:route];
     }
     [self runAction:[CCSequence actions: move, move2, callbackAction, nil]];
-}
-
--(Room*) GetActualRoom{
-    GameLevel *level = (GameLevel*)[self parent];
-    return [self GetRoomInPoint:ccp(level.position.x +  self.position.x,level.position.y+ self.position.y)];
-}
-
--(Room*) GetRoomInPoint:(CGPoint) point //Получить номер комнаты по координатам
-{
-    GameLevel *actualLevel = (GameLevel*)[self parent];
-    
-    for(Room *room in actualLevel.roomArray)
-    {
-        CGRect rectRoom = CGRectMake(room.position.x+actualLevel.position.x,
-                                     room.position.y+actualLevel.position.y,
-                                     [room boundingBox].size.width,
-                                     [room boundingBox].size.height);
-        if(CGRectContainsPoint(rectRoom, point))
-        {
-            {NSLog([NSString stringWithFormat:@"Room %f %f %f %f",
-                   room.position.x + actualLevel.position.x,
-                   room.position.y + actualLevel.position.y,
-                   [room boundingBox].size.width,
-                   [room boundingBox].size.height]);
-            
-            NSLog([NSString stringWithFormat:@"point %f %f",
-                   point.x,
-                   point.y]);}
-            return room;
-        }
-    }
-    return nil;
 }
 
 -(NSMutableArray*) GetWalkRouteTo:(Room*)endRoom fromRoom:(Room*)actualRoom{
@@ -236,11 +218,17 @@
     
     for (int i = 0; i < countFrame; i++) {
         CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"%@%02d.png",likeName,i]];
+        //[frame set]
         [tempFrames addObject:frame];
     }
     return [CCAnimation animationWithSpriteFrames:[tempFrames getNSArray] delay:delay];
     //return [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:animation]];
     //return [CCSequence actions:[CCAnimate actionWithAnimation:animation], nil, nil];
+}
+
+-(Room*) GetActualRoom{
+    GameLevel *level = (GameLevel*)[self parent];
+    return [level GetRoomInPoint:ccp(level.position.x + self.position.x, level.position.y + self.position.y)];
 }
 
 -(CGFloat) DistanceBetween:(CCSprite*)sprite1 and:(CCSprite*)sprite2{

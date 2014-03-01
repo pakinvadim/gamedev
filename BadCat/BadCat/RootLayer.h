@@ -7,6 +7,7 @@
 //
 #import "cocos2d.h"
 #import "CCLayer.h"
+#import "GameLevel.h"
 #import "GameLevel1Layer.h"
 
 @interface RootLayer :CCLayer
@@ -14,5 +15,5 @@
     CCSpriteBatchNode *_actors;
 }
 
-@property (nonatomic, retain) GameLevel1Layer *level1;
+@property (nonatomic, retain) GameLevel *ActualLevel;
 @end

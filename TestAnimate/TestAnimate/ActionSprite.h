@@ -10,6 +10,8 @@
 #import <GameKit/GameKit.h>
 #import "cocos2d.h"
 #import "Room.h"
+#import "RootSprite.h"
+
 
 typedef enum ActionSpriteState
 {
@@ -21,15 +23,14 @@ typedef enum ActionSpriteState
     ActionStateKnockedOut
 } ActionSpriteState;
 
-@interface ActionSprite : CCSprite
+@interface ActionSprite : RootSprite
 {
     
 }
 //@property(nonatomic,strong) CGPoint* ;
 
-
-@property(nonatomic)int startRoomNum;
-@property(nonatomic)float Speed;
+@property(nonatomic) int startRoomNum;
+@property(nonatomic) float Speed;
 
 @property(nonatomic,strong) CCAction *idleAction;
 @property(nonatomic,strong) CCAction *walkLeftAction;

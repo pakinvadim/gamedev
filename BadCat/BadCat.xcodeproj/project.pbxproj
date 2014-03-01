@@ -148,6 +148,7 @@
 		09E39BFE182995E3006D94C1 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E39BFD182995E3006D94C1 /* IntroLayer.m */; };
 		09E39C0F182997ED006D94C1 /* ActionSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E39C08182997ED006D94C1 /* ActionSprite.m */; };
 		09E39C18182998D2006D94C1 /* RootLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E39C17182998D2006D94C1 /* RootLayer.m */; };
+		4897091818BFABF300EAD954 /* RootSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 4897091718BFABF300EAD954 /* RootSprite.m */; };
 		48C6BD4218B9513500DD3042 /* GameLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C6BD3F18B9513500DD3042 /* GameLevel.m */; };
 		48C6BD4318B9513500DD3042 /* GameLevel1Layer.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C6BD4118B9513500DD3042 /* GameLevel1Layer.m */; };
 		48C6BD4618B9516200DD3042 /* Cat.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C6BD4518B9516200DD3042 /* Cat.m */; };
@@ -445,6 +446,8 @@
 		09E39C08182997ED006D94C1 /* ActionSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActionSprite.m; path = ../../TestAnimate/TestAnimate/ActionSprite.m; sourceTree = "<group>"; };
 		09E39C16182998D2006D94C1 /* RootLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootLayer.h; sourceTree = "<group>"; };
 		09E39C17182998D2006D94C1 /* RootLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootLayer.m; sourceTree = "<group>"; };
+		4897091618BFABF300EAD954 /* RootSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootSprite.h; sourceTree = "<group>"; };
+		4897091718BFABF300EAD954 /* RootSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootSprite.m; sourceTree = "<group>"; };
 		48C6BD3E18B9513500DD3042 /* GameLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameLevel.h; path = Levels/GameLevel.h; sourceTree = "<group>"; };
 		48C6BD3F18B9513500DD3042 /* GameLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameLevel.m; path = Levels/GameLevel.m; sourceTree = "<group>"; };
 		48C6BD4018B9513500DD3042 /* GameLevel1Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameLevel1Layer.h; path = Levels/GameLevel1Layer.h; sourceTree = "<group>"; };
@@ -481,10 +484,10 @@
 		094AAB58182C29F7000FA8BE /* House */ = {
 			isa = PBXGroup;
 			children = (
-				48C6BD4718B9517600DD3042 /* Door.h */,
-				48C6BD4818B9517600DD3042 /* Door.m */,
 				48C6BD4918B9517600DD3042 /* Room.h */,
 				48C6BD4A18B9517600DD3042 /* Room.m */,
+				48C6BD4718B9517600DD3042 /* Door.h */,
+				48C6BD4818B9517600DD3042 /* Door.m */,
 			);
 			name = House;
 			sourceTree = "<group>";
@@ -529,6 +532,8 @@
 				09E39C151829981F006D94C1 /* Def */,
 				09E39C16182998D2006D94C1 /* RootLayer.h */,
 				09E39C17182998D2006D94C1 /* RootLayer.m */,
+				4897091618BFABF300EAD954 /* RootSprite.h */,
+				4897091718BFABF300EAD954 /* RootSprite.m */,
 				09E39C14182997FC006D94C1 /* Levels */,
 				09E39C13182997F3006D94C1 /* Bots */,
 				094AAB58182C29F7000FA8BE /* House */,
@@ -924,10 +929,10 @@
 		09E39C13182997F3006D94C1 /* Bots */ = {
 			isa = PBXGroup;
 			children = (
-				48C6BD4418B9516200DD3042 /* Cat.h */,
-				48C6BD4518B9516200DD3042 /* Cat.m */,
 				09E39C07182997ED006D94C1 /* ActionSprite.h */,
 				09E39C08182997ED006D94C1 /* ActionSprite.m */,
+				48C6BD4418B9516200DD3042 /* Cat.h */,
+				48C6BD4518B9516200DD3042 /* Cat.m */,
 			);
 			name = Bots;
 			sourceTree = "<group>";
@@ -1049,6 +1054,7 @@
 			files = (
 				09E39B42182995E1006D94C1 /* CCTexturePVR.m in Sources */,
 				09E39B92182995E2006D94C1 /* ccUtils.c in Sources */,
+				4897091818BFABF300EAD954 /* RootSprite.m in Sources */,
 				09E39AE3182995E1006D94C1 /* CCLayer.m in Sources */,
 				09E39B45182995E1006D94C1 /* CCTileMapAtlas.m in Sources */,
 				09E39B48182995E1006D94C1 /* CCTMXLayer.m in Sources */,

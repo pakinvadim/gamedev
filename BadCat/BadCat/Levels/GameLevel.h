@@ -22,6 +22,7 @@
 
 -(void) addRoom:(Room*)room;
 -(Room*) GetRoomWithNumber:(int)roomNumber;
+-(Room*) GetRoomInPoint:(CGPoint) point;
 //void doSome(NSString *string, NSString *sstring);
 
 @end

@@ -8,13 +8,26 @@
 
 #import "Room.h"
 #import "Door.h"
+#import "GameLevel.h"
 
 @implementation Room
 
-const int Indent = 60;
+const int Indent = 50;
 
 -(CGPoint)Center{
     return ccp(self.position.x + [self boundingBox].size.width/2, self.position.y + [self boundingBox].size.height/2);
+}
+
+-(float) MaxLeftPosition{
+    return self.position.x + Indent;
+}
+
+-(float) MaxRightPosition{
+    return self.position.x + [self boundingBox].size.width - Indent;
+}
+
+-(float) MaxTop{
+    return self.FloorPosition;
 }
 
 -(float) FloorPosition {
@@ -37,7 +50,7 @@ const int Indent = 60;
     Door *door = [[Door alloc] initWithType:type andDirect:dir];
     
     if (type == Right){
-        door.position = ccp([self boundingBox].size.width, 0);
+        door.position = ccp([self boundingBox].size.width - [door boundingBox].size.width, 0);
     }
     else if (type == Left){
         door.position = ccp(0, 0);
@@ -47,6 +60,15 @@ const int Indent = 60;
     }
     [self.doors addObject:door];
     [self addChild:door z:150];
+}
+
+-(Door*) GetDoorInPoint:(CGPoint) point{
+    for(Door *door in self.doors){
+        if([door ContainPoint:point]){
+            return door;
+        }
+    }
+    return nil;
 }
 
 -(Door*) GetDoorWithDirect:(int) direct{

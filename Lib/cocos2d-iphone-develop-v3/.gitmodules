@@ -1,3 +1,0 @@
-[submodule "external/Chipmunk"]
-	path = external/Chipmunk
-	url = git@github.com:slembcke/Chipmunk2D.git

@@ -201,36 +201,6 @@
             endingLineNumber = "95"
             landmarkName = "-GoToRoomWithNumber:from:"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ActionSprite GoToRoomWithNumber:from:]"
-                  moduleName = "BadCat"
-                  urlString = "file://localhost/Users/cris/Desktop/dev/TestAnimate/TestAnimate/ActionSprite.m"
-                  timestampString = "414726458.171734"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
-                  offsetFromSymbolStart = "78">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ActionSprite GoToRoomWithNumber:from:]"
-                  moduleName = "BadCat"
-                  urlString = "file://localhost/Users/cris/Desktop/dev/TestAnimate/TestAnimate/ActionSprite.m"
-                  timestampString = "414726458.172029"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
-                  offsetFromSymbolStart = "792">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

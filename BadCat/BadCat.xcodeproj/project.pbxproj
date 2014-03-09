@@ -146,8 +146,8 @@
 		09E39BF5182995E3006D94C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E39BF4182995E3006D94C1 /* main.m */; };
 		09E39BF8182995E3006D94C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E39BF7182995E3006D94C1 /* AppDelegate.m */; };
 		09E39BFE182995E3006D94C1 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E39BFD182995E3006D94C1 /* IntroLayer.m */; };
-		09E39C0F182997ED006D94C1 /* ActionSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E39C08182997ED006D94C1 /* ActionSprite.m */; };
 		09E39C18182998D2006D94C1 /* RootLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E39C17182998D2006D94C1 /* RootLayer.m */; };
+		09F9829618CBC1DB001DB7AD /* ActionSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F9829518CBC1DB001DB7AD /* ActionSprite.m */; };
 		4897091818BFABF300EAD954 /* RootSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 4897091718BFABF300EAD954 /* RootSprite.m */; };
 		48C6BD4218B9513500DD3042 /* GameLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C6BD3F18B9513500DD3042 /* GameLevel.m */; };
 		48C6BD4318B9513500DD3042 /* GameLevel1Layer.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C6BD4118B9513500DD3042 /* GameLevel1Layer.m */; };
@@ -442,10 +442,10 @@
 		09E39BF7182995E3006D94C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		09E39BFC182995E3006D94C1 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		09E39BFD182995E3006D94C1 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
-		09E39C07182997ED006D94C1 /* ActionSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActionSprite.h; path = ../../TestAnimate/TestAnimate/ActionSprite.h; sourceTree = "<group>"; };
-		09E39C08182997ED006D94C1 /* ActionSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActionSprite.m; path = ../../TestAnimate/TestAnimate/ActionSprite.m; sourceTree = "<group>"; };
 		09E39C16182998D2006D94C1 /* RootLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootLayer.h; sourceTree = "<group>"; };
 		09E39C17182998D2006D94C1 /* RootLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootLayer.m; sourceTree = "<group>"; };
+		09F9829418CBC1DB001DB7AD /* ActionSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActionSprite.h; path = Bots/ActionSprite.h; sourceTree = "<group>"; };
+		09F9829518CBC1DB001DB7AD /* ActionSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActionSprite.m; path = Bots/ActionSprite.m; sourceTree = "<group>"; };
 		4897091618BFABF300EAD954 /* RootSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootSprite.h; sourceTree = "<group>"; };
 		4897091718BFABF300EAD954 /* RootSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootSprite.m; sourceTree = "<group>"; };
 		48C6BD3E18B9513500DD3042 /* GameLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameLevel.h; path = Levels/GameLevel.h; sourceTree = "<group>"; };
@@ -929,8 +929,8 @@
 		09E39C13182997F3006D94C1 /* Bots */ = {
 			isa = PBXGroup;
 			children = (
-				09E39C07182997ED006D94C1 /* ActionSprite.h */,
-				09E39C08182997ED006D94C1 /* ActionSprite.m */,
+				09F9829418CBC1DB001DB7AD /* ActionSprite.h */,
+				09F9829518CBC1DB001DB7AD /* ActionSprite.m */,
 				48C6BD4418B9516200DD3042 /* Cat.h */,
 				48C6BD4518B9516200DD3042 /* Cat.m */,
 			);
@@ -1068,7 +1068,6 @@
 				09E39B51182995E1006D94C1 /* CCTMXXMLParser.m in Sources */,
 				09E39BE8182995E2006D94C1 /* ray2.c in Sources */,
 				09E39B83182995E2006D94C1 /* base64.c in Sources */,
-				09E39C0F182997ED006D94C1 /* ActionSprite.m in Sources */,
 				09E39AA6182995E0006D94C1 /* CCActionTween.m in Sources */,
 				09E39ADD182995E1006D94C1 /* CCLabelBMFont.m in Sources */,
 				09E39B8A182995E2006D94C1 /* ccCArray.m in Sources */,
@@ -1122,6 +1121,7 @@
 				09E39B36182995E1006D94C1 /* CCSpriteFrameCache.m in Sources */,
 				09E39ABF182995E0006D94C1 /* CCDirector.m in Sources */,
 				09E39AAF182995E0006D94C1 /* CCAtlasNode.m in Sources */,
+				09F9829618CBC1DB001DB7AD /* ActionSprite.m in Sources */,
 				09E39BF5182995E3006D94C1 /* main.m in Sources */,
 				09E39B73182995E2006D94C1 /* CCTouchHandler.m in Sources */,
 				09E39AED182995E1006D94C1 /* CCMotionStreak.m in Sources */,

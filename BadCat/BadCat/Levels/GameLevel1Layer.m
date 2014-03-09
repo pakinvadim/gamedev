@@ -50,7 +50,6 @@
         
         self.cat = [[Cat alloc] init];
         //self.cat.position = ccp(120,520);
-        //self.cat.startRoomNum = 1;
         [self addChild:self.cat z:10 ];
         self.cat.startRoomNum = 1;
 

@@ -32,11 +32,17 @@ typedef enum ActionSpriteState
 @property(nonatomic) int startRoomNum;
 @property(nonatomic) float Speed;
 
-@property(nonatomic,strong) CCAction *idleAction;
-@property(nonatomic,strong) CCAction *walkLeftAction;
-@property(nonatomic,strong) CCAction *walkRightAction;
-@property(nonatomic,strong) CCAction *walkUpAction;
-@property(nonatomic,strong) CCAction *walkDownAction;
+@property(nonatomic,strong) CCAnimation *IdleAnimation;
+@property(nonatomic,strong) CCAnimation *walkLeftAnimation;
+@property(nonatomic,strong) CCAnimation *WalkRightAnimation;
+@property(nonatomic,strong) CCAnimation *WalkUpAnimation;
+@property(nonatomic,strong) CCAnimation *WalkDownAnimation;
+
+@property(nonatomic,strong) CCAnimate *IdleAnimate;
+@property(nonatomic,strong) CCAnimate *WalkLeftAnimate;
+@property(nonatomic,strong) CCAnimate *WalkRightAnimate;
+@property(nonatomic,strong) CCAnimate *WalkUpAnimate;
+@property(nonatomic,strong) CCAnimate *WalkDownAnimate;
 
 @property(nonatomic,assign) ActionSpriteState actionState;
 

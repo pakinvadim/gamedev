@@ -17,23 +17,24 @@
     
 	if( (self=[super init]) )
     {
-        CCAnimation *walkRightAnim = [self GetAnimationWithFrameNameLike:@"cat_walk_" andCountFrame:6 andDelay:0.1];
-        self.walkRightAction = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:walkRightAnim]];
+        self.WalkRightAnimation = [self GetAnimationWithFrameNameLike:@"walkLeft" andCountFrame:5 andDelay:0.1];
+        self.WalkRightAnimate = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:self.WalkRightAnimation]];
         
-        CCAnimation *walkLeftAnim = [self GetAnimationWithFrameNameLike:@"cat_walk_" andCountFrame:6 andDelay:0.1];
-        self.walkLeftAction = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:walkLeftAnim]];
+        self.WalkLeftAnimation = [self GetAnimationWithFrameNameLike:@"walkLeft" andCountFrame:5 andDelay:0.1];
+        //self.WalkLeftAction = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:walkLeftAnim]];
+        self.WalkLeftAnimate = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:self.walkLeftAnimation]];
         
-        CCAnimation *walkUpAnim = [self GetAnimationWithFrameNameLike:@"cat_walkUp_" andCountFrame:3 andDelay:0.2];
-        self.walkUpAction = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:walkUpAnim]];
+        self.WalkUpAnimation = [self GetAnimationWithFrameNameLike:@"walkTop" andCountFrame:4 andDelay:0.2];
+        self.WalkUpAnimate = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:self.WalkUpAnimation]];
         
-        CCAnimation *walkDownAnim = [self GetAnimationWithFrameNameLike:@"cat_walkDown_" andCountFrame:3 andDelay:0.2];
-        self.walkDownAction = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:walkDownAnim]];
+        self.WalkDownAnimation = [self GetAnimationWithFrameNameLike:@"walkBotton" andCountFrame:4 andDelay:0.2];
+        self.WalkDownAnimate = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:self.WalkDownAnimation]];
         
-        CCAnimation *idleAnim = [self GetAnimationWithFrameNameLike:@"cat_stand_" andCountFrame:2 andDelay:1];
-        self.idleAction = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:idleAnim]];
+        self.IdleAnimation = [self GetAnimationWithFrameNameLike:@"standBotton" andCountFrame:2 andDelay:1];
+        self.IdleAnimate = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:self.IdleAnimation]];
         
-        self.scale = 0.25;
-        self.startRoomNum = 1;
+        self.scale = 0.05;
+        //self.startRoomNum = 1;
         [self Idle];
         
 	}
@@ -72,7 +73,7 @@
 
 -(void) Walk
 {
-    [self runAction:self.idleAction];
+    [self runAction:self.IdleAnimate];
 }
 // on "dealloc" you need to release all your retained objects
 - (void) dealloc

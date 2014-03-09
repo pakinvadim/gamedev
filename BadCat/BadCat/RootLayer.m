@@ -15,10 +15,11 @@
     if(self = [super init])
     {
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"cat.plist"];
-        _actors = [CCSpriteBatchNode batchNodeWithFile:@"cat.png"];
+        //[[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:@"cat.plist"];
+        //_actors = [CCSpriteBatchNode batchNodeWithFile:@"cat.png"];
         //_actors = [CCSpriteBatchNode batchNodeWithFile:@"room1.png"];
-        [_actors.texture setAliasTexParameters];
-        [self addChild:_actors z:-5];
+        //[_actors.texture setAliasTexParameters];
+        //[self addChild:_actors z:-5];
         
         self.ActualLevel = [[GameLevel1Layer alloc] init];
         [self addChild:self.ActualLevel];

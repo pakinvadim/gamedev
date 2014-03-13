@@ -373,6 +373,24 @@ void ccGLUniformModelViewProjectionMatrix( CCGLProgram* program )
 	
 	return [[[self alloc] initWithAnimation:anim] autorelease];
 }
++(id) actionWithDuration:(ccTime)duration animation:(CCAnimation*)animation
+{
+    float delay = animation.delayPerUnit;
+    int willFrameCount = duration / delay;
+    CCArray *frames = [CCArray arrayWithCapacity:willFrameCount];;
+    
+    for(int i = 0; frames.count < willFrameCount; i++){
+        CCAnimationFrame *aframe = [animation.frames objectAtIndex:i];
+        [frames addObject: aframe.spriteFrame];
+        if(i == animation.frames.count - 1){
+            i = -1;
+        }
+    }
+    CCAnimation *anim = [[[CCAnimation animationWithSpriteFrames:[frames getNSArray]] copy] autorelease];
+	anim.delayPerUnit =  duration / willFrameCount;
+	
+	return [[[self alloc] initWithAnimation:anim] autorelease];
+}
 +(id) actionWithDuration:(ccTime)duration animation:(CCAnimation*)animation restoreOriginalFrame:(BOOL)restoreOriginalFrame
 {
 	CCAnimation *anim = [[animation copy] autorelease];

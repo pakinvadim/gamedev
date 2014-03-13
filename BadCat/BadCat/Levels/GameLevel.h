@@ -17,12 +17,13 @@
 {
 }
 
-@property NSMutableArray *roomArray;
+@property(nonatomic,strong) NSMutableArray *roomArray;
 @property(nonatomic,strong) Cat *cat;
 
 -(void) addRoom:(Room*)room;
 -(Room*) GetRoomWithNumber:(int)roomNumber;
 -(Room*) GetRoomInPoint:(CGPoint) point;
+-(Door*) GetDoorInPoint:(CGPoint) point;
 //void doSome(NSString *string, NSString *sstring);
 
 @end

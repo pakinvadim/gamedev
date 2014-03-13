@@ -12,7 +12,7 @@
 
 @implementation Room
 
-const int Indent = 50;
+const int Indent = 30;
 
 -(CGPoint)Center{
     return ccp(self.position.x + [self boundingBox].size.width/2, self.position.y + [self boundingBox].size.height/2);

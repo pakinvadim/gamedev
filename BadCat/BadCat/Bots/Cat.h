@@ -13,7 +13,6 @@
 #import "cocos2d.h"
 
 @interface Cat : ActionSprite{
-
 }
 
 //-(void) GoTo:(CGPoint*)point;

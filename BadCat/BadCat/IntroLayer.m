@@ -67,10 +67,6 @@ RootLayer* rl;
 	return self;
 }
 
--(void) yourMethod:(ccTime) dt {
-
-}
-
 -(void) onEnter
 {
 	[super onEnter];

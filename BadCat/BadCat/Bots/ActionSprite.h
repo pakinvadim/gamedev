@@ -11,17 +11,7 @@
 #import "cocos2d.h"
 #import "Room.h"
 #import "RootSprite.h"
-
-
-typedef enum ActionSpriteState
-{
-    ActionStateNone = 0,
-    ActionStateIdle,
-    ActionStateAttack,
-    ActionStateWalk,
-    ActionStateHurt,
-    ActionStateKnockedOut
-} ActionSpriteState;
+#import "Enums.h"
 
 @interface ActionSprite : RootSprite
 {
@@ -29,14 +19,24 @@ typedef enum ActionSpriteState
 }
 //@property(nonatomic,strong) CGPoint* ;
 
+@property(nonatomic,strong) NSMutableArray* route2;
+@property(nonatomic) BOOL routeRun;
 @property(nonatomic) int startRoomNum;
 @property(nonatomic) float Speed;
+@property(nonatomic) float DoorAnimationDelay;
 
 @property(nonatomic,strong) CCAnimation *IdleAnimation;
 @property(nonatomic,strong) CCAnimation *walkLeftAnimation;
 @property(nonatomic,strong) CCAnimation *WalkRightAnimation;
 @property(nonatomic,strong) CCAnimation *WalkUpAnimation;
 @property(nonatomic,strong) CCAnimation *WalkDownAnimation;
+
+@property(nonatomic,strong) CCAnimation *DoorLeftInAnimation;
+@property(nonatomic,strong) CCAnimation *DoorLeftOutAnimation;
+@property(nonatomic,strong) CCAnimation *DoorRightInAnimation;
+@property(nonatomic,strong) CCAnimation *DoorRightOutAnimation;
+@property(nonatomic,strong) CCAnimation *DoorTopInAnimation;
+@property(nonatomic,strong) CCAnimation *DoorTopOutAnimation;
 
 @property(nonatomic,strong) CCAnimate *IdleAnimate;
 @property(nonatomic,strong) CCAnimate *WalkLeftAnimate;
@@ -45,9 +45,9 @@ typedef enum ActionSpriteState
 @property(nonatomic,strong) CCAnimate *WalkDownAnimate;
 
 @property(nonatomic,assign) ActionSpriteState actionState;
+@property(nonatomic,assign) BotType Type;
 
 -(float) GetDurationBetween: (CGPoint)start :(CGPoint)end;
--(CCAnimation*) GetAnimationWithFrameNameLike: (NSString*) likeName andCountFrame:(int) countFrame andDelay:(float) delay;
 -(void) GoTo:(CGPoint)touchPoint;
 -(void) Idle;
 -(void) Walk;

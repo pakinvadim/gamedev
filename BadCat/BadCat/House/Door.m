@@ -20,12 +20,11 @@ const int IndentDoor = 25;
 }
 
 -(float) Height{
-    return [self boundingBox].size.height;
+    return [self boundingBox].size.height-1.5;
 }
 
 - (CGPoint) EnterPosition {
     Room *room = self.CurrentRoom;
-    GameLevel *level = (GameLevel*)[self parent];
     if(self.Type == Left){
         return ccp(room.position.x + self.position.x + self.Width, room.FloorPosition);
     }
@@ -33,7 +32,7 @@ const int IndentDoor = 25;
         return ccp(room.position.x + self.position.x + self.Width, room.FloorPosition);
     }
     else if(self.Type == Top){
-        return ccp(room.position.x + self.position.x + self.Width, room.FloorPosition);
+        return ccp(room.position.x + self.position.x + self.Width, room.FloorPosition + 50);
     }
     return ccp(0,0);
 }
@@ -44,25 +43,20 @@ const int IndentDoor = 25;
 
 - (id)initWithType:(DoorType)type andDirect:(int) dir
 {
-    if ( type == Left ){
-        if(self = [super initWithFile:@"doorLeft_00.png"] ){
-            [self setAnchorPoint:ccp(0, 0)];
-        }
+    NSString *fileName = nil;
+    if ( type == Left ){ fileName = @"doorLeft"; }
+    else if (type == Right){ fileName = @"doorRight"; }
+    else if ( type == Top ){ fileName = @"doorUp"; }
+    
+    if(self = [super initWithFile:[NSString stringWithFormat:@"%@01.png",fileName]]){
+        self.Closed = [CCAnimate actionWithAnimation:[self GetAnimation:fileName countFrame:1 delay:1 :157 :420]];
+        [self setAnchorPoint:ccp(0, 0)];
+        self.Type = type;
+        self.direct = dir;
+        self.scale = 0.45;
+        return self;
     }
-    else if (type == Right){
-        if(self = [super initWithFile:@"doorRight_00.png"]){
-            [self setAnchorPoint:ccp(1, 0)];
-        }
-    }
-    else if ( type == Top ){
-        if(self = [super initWithFile:@"doorTop_00.png"]){
-            [self setAnchorPoint:ccp(0, 0)];
-        }
-    }
-    self.Type = type;
-    self.direct = dir;
-    self.scale = 0.30;
-    return self;
+    return nil;
 }
 
 -(bool) ContainPoint:(CGPoint) point{

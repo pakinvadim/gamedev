@@ -17,5 +17,6 @@
 
 
 -(CGPoint) ConvertTouch:(CGPoint) point;
-    
+-(CCAnimation*) GetAnimation: (NSString*) likeName countFrame:(int) countFrame delay:(float) delay :(float) Wi :(float)Hi;
+
 @end

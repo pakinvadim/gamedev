@@ -13,7 +13,7 @@
 @interface Room : RootSprite{
 }
 
-@property NSMutableArray *doors;
+@property (nonatomic)NSMutableArray *doors;
 @property int numberRoom;
 @property (nonatomic)float FloorPosition;
 @property (nonatomic)CGPoint Center;

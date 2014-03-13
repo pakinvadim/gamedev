@@ -16,19 +16,17 @@
 
 -(id) init{
 	if( self=[super init]){
-        self.Speed = 200.f;
+        self.Speed = 150.f;
+        self.DoorAnimationDelay = 0.2f;
 	}
 	return self;
 }
 
--(void) setStartRoomNum:(int)startRoomNum
-{
+-(void) setStartRoomNum:(int)startRoomNum{
     _startRoomNum = startRoomNum;
     GameLevel *actualLevel = (GameLevel*)[self parent];
-    for (Room *room in actualLevel.roomArray)
-    {
-        if (room.numberRoom == startRoomNum)
-        {
+    for (Room *room in actualLevel.roomArray){
+        if (room.numberRoom == startRoomNum){
             self.position = ccp(room.Center.x, room.FloorPosition);
         }
     }
@@ -59,32 +57,32 @@
 -(void)GoTo:(CGPoint)touchPoint
 {
     GameLevel *level = (GameLevel*)[self parent];
-    Room *endRoom = [level GetRoomInPoint:touchPoint];
     Room *actualRoom = [self GetActualRoom];
-    if(endRoom.numberRoom != 0) //проверяем нажатие за пределы комнат
-    {
+    Door *touchDoor = [level GetDoorInPoint:touchPoint];
+    Room *endRoom = [level GetRoomWithNumber:touchDoor.direct];
+    CGPoint endPoint = ccp(0,0);
+    if(endRoom == nil){
+        endRoom = [level GetRoomInPoint:touchPoint];
+        endPoint = ccp([self ConvertTouch:touchPoint].x, endRoom.FloorPosition);
+    }
+    if(endRoom != nil){
         {NSLog([NSString stringWithFormat:@"actual room number %d",actualRoom.numberRoom]);
         NSLog([NSString stringWithFormat:@"walk room number %d",endRoom.numberRoom]);}
-        NSMutableArray *way = [self GetWalkRouteTo:endRoom fromRoom:actualRoom];
-
-        Door* touchDoor = [endRoom GetDoorInPoint:touchPoint];
-        CGPoint endPoint = ccp([self ConvertTouch:touchPoint].x, endRoom.FloorPosition);
-        if (touchDoor != nil){
-            [way addObject:[NSNumber numberWithInteger:touchDoor.direct]];
-            endPoint = ccp(0,0);
-        }
+        self.route2 = [self GetWalkRouteTo:endRoom andEndPoint:endPoint fromRoom:actualRoom];
         
         {
             NSString* s = @"";
-            for(NSNumber* nnn in way){
-                s = [NSString stringWithFormat:@"%@->%d",s,[nnn integerValue]];
+            for(int i = 0; i < self.route2.count-1; i++){
+                int rn = [[self.route2 objectAtIndex:i] integerValue];
+                s = [NSString stringWithFormat:@"%@->%d",s,rn];
             }
             NSLog([NSString stringWithFormat:@"route: %@",s]);
         }
-    
-        [way addObject:[NSValue valueWithCGPoint:endPoint]];
-        [self stopAllActions];
-        [self GoRoute:self routeData:way];
+        
+        if(!self.routeRun){
+            [self stopAllActions];
+            [self GoRoute:self routeData:nil];
+        }
         
         /*if (self.actionState == ActionStateIdle)
          {
@@ -106,35 +104,38 @@
     }
 }
 
--(void)GoRoute:(id)sender routeData:(NSMutableArray*)route{
-    [self stopAllActions];
-    if(route == nil || route.count == 0){
+-(void)GoRoute:(id)sender routeData:(NSMutableArray*)route1{
+    if(self.route2 == nil || self.route2.count == 0){
         return;
     }
-    
+    self.routeRun = true;
+    NSMutableArray* actionList = [NSMutableArray array];
     Room *room = [self GetActualRoom];
     //CCSpawn* moveAnimate = nil;
-    CCSpawn *moveToDoor = nil;
-    CCMoveTo *enterDoor = nil;
+    CCSpawn *moveDown = nil;
+    CCSpawn *moveX = nil;
+    CCSpawn *moveUp = nil;
+    CCSpawn *enterInDoor = nil;
+    
     CCCallFuncO *callbackAction = nil;
     CGPoint endPosition;
-    float duration;
     
-    if(route.count == 1){
-        endPosition = [[route firstObject] CGPointValue];
-        if(endPosition.x == 0 && endPosition.y == 0) {return;}
+    if(self.route2.count == 1){
+        endPosition = [[self.route2 firstObject] CGPointValue];
+        [self.route2 removeObject:[self.route2 firstObject]];
+        self.routeRun = FALSE;
+        if(endPosition.x == 0 && endPosition.y == 0) { return;}
         
         if(endPosition.x > room.MaxRightPosition) {endPosition.x = room.MaxRightPosition;}
         else if(endPosition.x < room.MaxLeftPosition) {endPosition.x = room.MaxLeftPosition;}
         
-        CGPoint startPosition = self.position;
-        duration = [self GetDurationBetween:startPosition :endPosition];
+        CGPoint moveXStart = ccp(self.position.x, room.FloorPosition);
         
-        moveToDoor = [CCMoveTo actionWithDuration:duration position: endPosition];
-        [route removeObject:[route firstObject]];
+        moveDown = [self GetBotMoveAnimation:Y :self.position :moveXStart];
+        moveX = [self GetBotMoveAnimation:X :moveXStart :endPosition];
     }
     else {
-        int nextRoomNum = [[route firstObject] integerValue];
+        int nextRoomNum = [[self.route2 firstObject] integerValue];
         
         { NSLog([NSString stringWithFormat:@"Next room number %d",nextRoomNum]);
         }
@@ -143,42 +144,91 @@
         Room *nextRoom = [level GetRoomWithNumber:nextRoomNum];
         Door *nextDoor = [nextRoom GetDoorWithDirect:room.numberRoom];
         
-        CGPoint startPosition = self.position;
-        endPosition = door.EnterPosition;
+        CGPoint moveXStart = ccp(self.position.x, room.FloorPosition);
+        CGPoint moveUpStart = ccp(door.EnterPosition.x, room.FloorPosition);
         
-        
-        moveToDoor = [self GetMoveAnimation:endPosition];
-        enterDoor = [CCMoveTo actionWithDuration:0 position: nextDoor.EnterPosition];
-        [route removeObject:[route firstObject]];
-        callbackAction = [CCCallFuncO actionWithTarget: self selector: @selector(GoRoute:routeData:) object:route];
+        moveDown = [self GetBotMoveAnimation:Y :self.position :moveXStart];
+        moveX = [self GetBotMoveAnimation:X: moveXStart :moveUpStart];
+        moveUp = [self GetBotMoveAnimation:Y: moveUpStart: door.EnterPosition];
+        enterInDoor = [self GetDoorMoveAnimation: door :nextDoor];
+        callbackAction = [CCCallFuncO actionWithTarget: self selector: @selector(GoRoute:routeData:) object:nil];
     }
-    
-    
+    [self AddAction:moveDown In:actionList];
+    [self AddAction:moveX In:actionList];
+    [self AddAction:moveUp In:actionList];
+    [self AddAction:enterInDoor In:actionList];
+    [self AddAction:callbackAction In:actionList];
+    [self.route2 removeObject:[self.route2 firstObject]];
     //[self runAction:moveAnimate];
-    [self runAction:moveToDoor, enterDoor, callbackAction, nil]];
+    [self runAction:[CCSequence actionWithArray :actionList]];
 }
 
--(CCSpawn*) GetMoveAnimation: (CGPoint) endPosition{
-    CCAnimate* moveAnimate = nil;
-    CGPoint startPosition = self.position;
+-(CCSpawn*) GetBotMoveAnimation:(MoveDirect) direct : (CGPoint)startPosition :(CGPoint) endPosition{
     float duration = [self GetDurationBetween:startPosition :endPosition];
-    
-    if(startPosition.x < endPosition.x){
-        moveAnimate = [CCAnimate actionWithDuration:duration animation:self.WalkRightAnimation restoreOriginalFrame:YES];
-        //moveAnimate = self.WalkRightAnimate;
-        self.flipX = YES;
+    CCAnimate* animate = nil;
+    CCMoveTo* move = [CCMoveTo actionWithDuration:duration position: endPosition];
+    if(direct == X){
+        if(startPosition.x < endPosition.x){ //RIGHT
+            animate = [CCAnimate actionWithDuration:duration animation:self.WalkRightAnimation];
+            self.flipX = YES;
+        }
+        else if(startPosition.x > endPosition.x){ //LEFT
+            animate = [CCAnimate actionWithDuration:duration animation:self.walkLeftAnimation];
+            self.flipX = NO;
+        }
     }
-    else if(startPosition.x > endPosition.x){
-        moveAnimate = [CCAnimate actionWithDuration:duration animation:self.walkLeftAnimation restoreOriginalFrame:YES];
-        //moveAnimate = [CCAnimate actionWithAnimation:self.walkLeftAnimation];
-        //moveAnimate = self.WalkRightAnimate;
+    else if(direct == Y){
         self.flipX = NO;
+        if(startPosition.y < endPosition.y){ //TOP
+            animate = [CCAnimate actionWithDuration:duration animation:self.WalkUpAnimation];
+        }
+        else if(startPosition.y > endPosition.y){ //BOTTON
+            animate = [CCAnimate actionWithDuration:duration animation:self.WalkDownAnimation];
+        }
     }
-    moveToDoor = [CCMoveTo actionWithDuration:duration position: endPosition];
-    return moveAnimate;
+    /*CCFiniteTimeAction aa;
+    [aa seta]
+    CCRepeatForever a;*/
+    //[animate setDuration:duration];
+    //[animate step:5];
+    //[animate elapsed:5];
+    //[self.walkLeftAnimation setDelayPerUnit:0.3f];
+    return [CCSpawn actions:move, animate, nil];
 }
 
--(NSMutableArray*) GetWalkRouteTo:(Room*)endRoom fromRoom:(Room*)actualRoom{
+-(CCSpawn*) GetDoorMoveAnimation: (Door*) inDoor :(Door*) outDoor{
+    NSArray *doorsArray = [[NSArray alloc]initWithObjects:inDoor,outDoor, nil];
+    CCCallFuncO *runDoorsAnim = [CCCallFuncO actionWithTarget: self selector: @selector(RunAnimationDoor:doorsArray:) object:doorsArray];
+    CCDelayTime *animTime = [CCDelayTime actionWithDuration: self.DoorAnimationDelay * 5];
+    CCMoveTo *move = [CCMoveTo actionWithDuration:0 position: outDoor.EnterPosition];
+    return [CCSpawn actions: [CCSequence actions: [CCHide action], move, runDoorsAnim, animTime, [CCShow action], nil] ,nil];
+}
+
+-(void) RunAnimationDoor: (id)sender doorsArray:(NSArray*) doors{
+    if(doors == nil || doors.count != 2){
+        return;
+    }
+    CCAnimation* animateIn = nil;
+    CCAnimation* animateOut = nil;
+    Door *inDoor = [doors objectAtIndex:0];
+    Door *outDoor = [doors objectAtIndex:1];
+    if(inDoor.Type == Left){
+        animateIn = self.DoorLeftInAnimation;
+        animateOut = self.DoorRightOutAnimation;
+    }
+    else if(inDoor.Type == Right){
+        animateIn = self.DoorRightInAnimation;
+        animateOut = self.DoorLeftOutAnimation;
+    }
+    else if(inDoor.Type == Top){
+        animateIn = self.DoorTopInAnimation;
+        animateOut = self.DoorTopOutAnimation;
+    }
+    [inDoor runAction:[CCSequence actions:[CCAnimate actionWithAnimation:animateIn], inDoor.Closed, nil]];
+    [outDoor runAction:[CCSequence actions:[CCAnimate actionWithAnimation:animateOut], outDoor.Closed, nil]];
+}
+
+-(NSMutableArray*) GetWalkRouteTo:(Room*)endRoom andEndPoint:(CGPoint) endPoint fromRoom:(Room*)actualRoom{
     NSMutableArray *minWay = [NSMutableArray array];
     if (endRoom.numberRoom != actualRoom.numberRoom) // проверяем не нажали ли туже комнату
     {
@@ -197,6 +247,7 @@
             }
         }
     }
+    [minWay addObject:[NSValue valueWithCGPoint:endPoint]];
     return minWay;
 }
 
@@ -243,22 +294,6 @@
     }
 }
 
--(CCAnimation*) GetAnimationWithFrameNameLike: (NSString*) likeName andCountFrame:(int) countFrame andDelay:(float) delay
-{
-    CCArray *tempFrames = [CCArray arrayWithCapacity:countFrame];
-    
-    for (int i = 1; i <= countFrame; i++) {
-        //CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"%@%02d.png",likeName,i]];
-        CCSpriteFrame *frame = [CCSpriteFrame frameWithTextureFilename:[NSString stringWithFormat:@"%@%02d.png",likeName,i] rect:CGRectMake(0, 0, 1562, 1555)];
-        //CCSprite *frame = [[CCSprite alloc] initWithFile:[NSString stringWithFormat:@"%@%02d.png",likeName,i]];
-        //[frame set]
-        [tempFrames addObject:frame];
-    }
-    return [CCAnimation animationWithSpriteFrames:[tempFrames getNSArray] delay:delay];
-    //return [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:animation]];
-    //return [CCSequence actions:[CCAnimate actionWithAnimation:animation], nil, nil];
-}
-
 -(Room*) GetActualRoom{
     GameLevel *level = (GameLevel*)[self parent];
     return [level GetRoomInPoint:ccp(level.position.x + self.position.x, level.position.y + self.position.y)];
@@ -268,4 +303,9 @@
     return sqrtf((sprite1.position.x*sprite2.position.x)+(sprite1.position.y*sprite1.position.y));
 }
 
+-(void) AddAction: (CCAction*) action In:(NSMutableArray*)array{
+    if(action != nil){
+        [array addObject:action];
+    }
+}
 @end

@@ -9,34 +9,39 @@
 #import "Cat.h"
 
 @implementation Cat{
-
 }
 
--(id) init
-{
+-(id) init{
     
-	if( (self=[super init]) )
-    {
-        self.WalkRightAnimation = [self GetAnimationWithFrameNameLike:@"walkLeft" andCountFrame:5 andDelay:0.1];
-        self.WalkRightAnimate = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:self.WalkRightAnimation]];
+	if( (self = [super init]) ){
+        float animDelay = 0.1f;
+        self.WalkRightAnimation = [self GetAnimation:@"walkLeft" countFrame:5 delay:animDelay  :209 :207];
+        //self.WalkRightAnimate = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:self.WalkRightAnimation]];
         
-        self.WalkLeftAnimation = [self GetAnimationWithFrameNameLike:@"walkLeft" andCountFrame:5 andDelay:0.1];
+        self.WalkLeftAnimation = [self GetAnimation:@"walkLeft" countFrame:5 delay:animDelay :209 :207];
         //self.WalkLeftAction = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:walkLeftAnim]];
-        self.WalkLeftAnimate = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:self.walkLeftAnimation]];
+        //self.WalkLeftAnimate = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:self.walkLeftAnimation]];
         
-        self.WalkUpAnimation = [self GetAnimationWithFrameNameLike:@"walkTop" andCountFrame:4 andDelay:0.2];
-        self.WalkUpAnimate = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:self.WalkUpAnimation]];
+        self.WalkUpAnimation = [self GetAnimation:@"walkTop" countFrame:4 delay:animDelay :209 :207];
+        //self.WalkUpAnimate = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:self.WalkUpAnimation]];
         
-        self.WalkDownAnimation = [self GetAnimationWithFrameNameLike:@"walkBotton" andCountFrame:4 andDelay:0.2];
-        self.WalkDownAnimate = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:self.WalkDownAnimation]];
+        self.WalkDownAnimation = [self GetAnimation:@"walkBotton" countFrame:4 delay:animDelay :209 :207];
+        //self.WalkDownAnimate = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:self.WalkDownAnimation]];
         
-        self.IdleAnimation = [self GetAnimationWithFrameNameLike:@"standBotton" andCountFrame:2 andDelay:1];
+        self.IdleAnimation = [self GetAnimation:@"standBotton" countFrame:2 delay:1 :209 :207];
         self.IdleAnimate = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:self.IdleAnimation]];
         
-        self.scale = 0.05;
+        self.DoorLeftInAnimation = [self GetAnimation:@"doorLeftInCat" countFrame:5 delay:self.DoorAnimationDelay :157:420];
+        self.DoorLeftOutAnimation = [self GetAnimation:@"doorLeftOutCat" countFrame:5 delay:self.DoorAnimationDelay :157:420];
+        self.DoorRightInAnimation = [self GetAnimation:@"doorRightInCat" countFrame:5 delay:self.DoorAnimationDelay :157:420];
+        self.DoorRightOutAnimation = [self GetAnimation:@"doorRightOutCat" countFrame:5 delay:self.DoorAnimationDelay :157:420];
+        self.DoorTopInAnimation = [self GetAnimation:@"doorUpInCat" countFrame:5 delay:self.DoorAnimationDelay :157:420];
+        self.DoorTopOutAnimation = [self GetAnimation:@"doorUpOutCat" countFrame:5 delay:self.DoorAnimationDelay :157:420];
+        
+        self.Type = IsCat;
+        self.scale = 0.31;
         //self.startRoomNum = 1;
         [self Idle];
-        
 	}
 	return self;
 }

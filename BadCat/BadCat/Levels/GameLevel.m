@@ -57,6 +57,19 @@ CCLabelTTF *tditle;
     }
     return nil;
 }
+-(Door*) GetDoorInPoint:(CGPoint) point{
+    for(Room *room in self.roomArray){
+        for (Door *door in room.doors) {
+            CGRect rectDoor = CGRectMake( self.position.x + room.position.x + door.position.x
+                                         ,self.position.y + room.position.y + door.position.y,
+                                         door.Width, door.Height);
+            if(CGRectContainsPoint(rectDoor, point)){
+                return door;
+            }
+        }
+    }
+    return nil;
+}
 
 -(void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {

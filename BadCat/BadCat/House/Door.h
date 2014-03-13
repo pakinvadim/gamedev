@@ -8,6 +8,7 @@
 
 #import "RootSprite.h"
 #import "cocos2d.h"
+#import "Enums.h"
 
 typedef enum DoorType{
     Left,
@@ -25,9 +26,11 @@ typedef enum DoorType{
 @property DoorType Type;
 @property (nonatomic)CGPoint EnterPosition;
 @property (nonatomic)CGPoint ExitPosition;
+@property(nonatomic,strong) CCAnimate *Closed;
 
 //- (void) addDirect:(int) dir;
 - (id)initWithType:(DoorType)type andDirect:(int)dir;
 - (bool) ContainPoint:(CGPoint) point;
+
 
 @end

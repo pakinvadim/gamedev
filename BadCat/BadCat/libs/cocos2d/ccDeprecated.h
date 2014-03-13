@@ -261,6 +261,8 @@ DEPRECATED_ATTRIBUTE @interface MacView : CCGLView
 
 @interface CCAnimate (Deprecated)
 // new: actionWithAnimation:
++(id) actionWithDuration:(ccTime)duration animation:(CCAnimation*)animation;
+// new: actionWithAnimation:
 +(id) actionWithAnimation:(CCAnimation*)animation restoreOriginalFrame:(BOOL)restoreOriginalFrame DEPRECATED_ATTRIBUTE;
 // new: actiontWithAnimation:
 +(id) actionWithDuration:(ccTime)duration animation:(CCAnimation*)animation restoreOriginalFrame:(BOOL)restoreOriginalFrame DEPRECATED_ATTRIBUTE;

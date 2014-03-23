@@ -39,7 +39,7 @@
         self.DoorTopOutAnimation = [self GetAnimation:@"doorUpOutCat" countFrame:5 delay:self.DoorAnimationDelay :157:420];
         
         self.Type = IsCat;
-        self.scale = 0.31;
+        //self.scale = 0.31;
         //self.startRoomNum = 1;
         [self Idle];
 	}

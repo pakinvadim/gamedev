@@ -48,12 +48,12 @@ const int IndentDoor = 25;
     else if (type == Right){ fileName = @"doorRight"; }
     else if ( type == Top ){ fileName = @"doorUp"; }
     
-    if(self = [super initWithFile:[NSString stringWithFormat:@"%@01.png",fileName]]){
+    if(self = [super initWithFile:[NSString stringWithFormat:@"%@00.png",fileName]]){
         self.Closed = [CCAnimate actionWithAnimation:[self GetAnimation:fileName countFrame:1 delay:1 :157 :420]];
         [self setAnchorPoint:ccp(0, 0)];
         self.Type = type;
         self.direct = dir;
-        self.scale = 0.45;
+        //self.scale = 0.45;
         return self;
     }
     return nil;

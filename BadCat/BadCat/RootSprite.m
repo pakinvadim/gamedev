@@ -11,25 +11,31 @@
 @implementation RootSprite{
     
 }
-
+float const DoorAnimationDelay = 0.1f;
+-(id)init{
+    if( self=[super init]){
+    }
+    return self;
+}
 -(CGPoint) ConvertTouch:(CGPoint) point{
     CCNode *parent = (CCNode*)[self parent];
     return ccp((0-parent.position.x) + point.x, (0 - parent.position.y) + point.y);
 }
 
-- (CCAnimation*) GetAnimation: (NSString*) likeName countFrame:(int) countFrame delay:(float) delay :(float)Wi:(float)Hi{
-    CCArray *tempFrames = [CCArray arrayWithCapacity:countFrame];
-    
-    for (int i = 1; i <= countFrame; i++) {
-        //CCSpriteFrame *frame = [[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:[NSString stringWithFormat:@"%@%02d.png",likeName,i]];
-        
-        CCSpriteFrame *frame = [CCSpriteFrame frameWithTextureFilename:[NSString stringWithFormat:@"%@%02d.png",likeName,i] rect:CGRectMake(0, 0, Wi, Hi)];
-        //CCSprite *frame = [[CCSprite alloc] initWithFile:[NSString stringWithFormat:@"%@%02d.png",likeName,i]];
-        //[frame set]
+- (CCAnimation*) GetAnimation: (NSString*) likeName arrayNumbersFrame:(NSMutableArray*) arrayNumbersFrame delay:(float) delay :(float)Wi:(float)Hi{
+    NSMutableArray* tempFrames = [NSMutableArray array];
+    for (int i = 0; i < arrayNumbersFrame.count; i++) {
+        CCSpriteFrame *frame = [CCSpriteFrame frameWithTextureFilename:[NSString stringWithFormat:@"%@%02d.png",likeName,[[arrayNumbersFrame objectAtIndex:i]integerValue]] rect:CGRectMake(0, 0, Wi/2, Hi/2)];
         [tempFrames addObject:frame];
     }
-    return [CCAnimation animationWithSpriteFrames:[tempFrames getNSArray] delay:delay];
-    //return [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:animation]];
-    //return [CCSequence actions:[CCAnimate actionWithAnimation:animation], nil, nil];
+    return [CCAnimation animationWithSpriteFrames:tempFrames delay:delay];
+}
+
+- (CCAnimation*) GetAnimation: (NSString*) likeName countFrame:(int) countFrame delay:(float) delay :(float)Wi:(float)Hi{
+    NSMutableArray *array = [NSMutableArray array];
+    for(int i = 0; i < countFrame; i++){
+        [array addObject:[NSNumber numberWithInteger:i+1]];
+    }
+    return [self GetAnimation:likeName arrayNumbersFrame:array delay:delay :Wi :Hi];
 }
 @end

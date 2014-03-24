@@ -13,26 +13,18 @@
 @implementation Door
 
 @synthesize Type;
-const int IndentDoor = 25;
-
-- (float) Width{
-    return [self boundingBox].size.width/2;
-}
-
--(float) Height{
-    return [self boundingBox].size.height-1.5;
-}
+const int IndentDoor = 20;
 
 - (CGPoint) EnterPosition {
     Room *room = self.CurrentRoom;
     if(self.Type == Left){
-        return ccp(room.position.x + self.position.x + self.Width, room.FloorPosition);
+        return ccp(room.position.x + self.position.x + self.Width + IndentDoor, room.FloorPosition);
     }
     else if(self.Type == Right){
-        return ccp(room.position.x + self.position.x + self.Width, room.FloorPosition);
+        return ccp(room.position.x + self.position.x + self.Width - IndentDoor, room.FloorPosition);
     }
     else if(self.Type == Top){
-        return ccp(room.position.x + self.position.x + self.Width, room.FloorPosition + 50);
+        return ccp(room.position.x + self.position.x + self.Width, room.FloorPosition + 20);
     }
     return ccp(0,0);
 }
@@ -47,12 +39,22 @@ const int IndentDoor = 25;
     if ( type == Left ){ fileName = @"doorLeft"; }
     else if (type == Right){ fileName = @"doorRight"; }
     else if ( type == Top ){ fileName = @"doorUp"; }
-    
     if(self = [super initWithFile:[NSString stringWithFormat:@"%@00.png",fileName]]){
-        self.Closed = [CCAnimate actionWithAnimation:[self GetAnimation:fileName countFrame:1 delay:1 :157 :420]];
+        NSArray *arrayClosed = [NSArray arrayWithObjects:[NSNumber numberWithInteger:0], nil];
+        NSArray *arrayOpening = [NSArray arrayWithObjects:[NSNumber numberWithInteger:1],[NSNumber numberWithInteger:2],[NSNumber numberWithInteger:3],[NSNumber numberWithInteger:3],[NSNumber numberWithInteger:2],[NSNumber numberWithInteger:1], nil];
+        self.Closed = [CCAnimate actionWithAnimation:[self GetAnimation:fileName arrayNumbersFrame:arrayClosed delay:DoorAnimationDelay :186 :500]];
+        self.Opening = [CCAnimate actionWithAnimation:[self GetAnimation:fileName arrayNumbersFrame:arrayOpening delay:DoorAnimationDelay :186 :500]];
         [self setAnchorPoint:ccp(0, 0)];
         self.Type = type;
         self.direct = dir;
+        self.AnimationSprite = [[CCSprite alloc]init];
+        self.AnimationSprite.position = ccp(0,0);
+        [self.AnimationSprite setAnchorPoint:ccp(0,0)];
+        [self addChild:self.AnimationSprite z:200];
+        
+        if ( type == Left ){ self.Width = [self boundingBox].size.width; self.Height = 3/4*[self boundingBox].size.height;}
+        else if (type == Right){ self.Width = [self boundingBox].size.width/2; self.Height = [self boundingBox].size.height;}
+        else if ( type == Top ){ self.Width = [self boundingBox].size.width/2; self.Height = [self boundingBox].size.height;}
         //self.scale = 0.45;
         return self;
     }
@@ -74,8 +76,8 @@ const int IndentDoor = 25;
                               self.Width,self.Height);
     }
     else if (self.Type == Top ){
-        rectRoom = CGRectMake(level.position.x + room.position.x + self.position.x + self.Width/2,
-                              -level.position.y + room.position.y + self.position.y,
+        rectRoom = CGRectMake(level.position.x + room.position.x + self.position.x + self.Width,
+                              level.position.y + room.position.y + self.position.y,
                               self.Width,self.Height);
     }
     

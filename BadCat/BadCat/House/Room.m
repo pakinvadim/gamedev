@@ -12,7 +12,7 @@
 
 @implementation Room
 
-const int Indent = 30;
+const int Indent = 45;
 
 -(CGPoint)Center{
     return ccp(self.position.x + [self boundingBox].size.width/2, self.position.y + [self boundingBox].size.height/2);
@@ -56,7 +56,7 @@ const int Indent = 30;
         door.position = ccp(0, 0);
     }
     else if (type == Top){
-        door.position = ccp(positionX, 50);
+        door.position = ccp(positionX, 40);
     }
     [self.doors addObject:door];
     [self addChild:door z:150];

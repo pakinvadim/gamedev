@@ -17,7 +17,6 @@
 -(id) init{
 	if( self=[super init]){
         self.Speed = 150.f;
-        self.DoorAnimationDelay = 0.2f;
 	}
 	return self;
 }
@@ -199,7 +198,7 @@
 -(CCSpawn*) GetDoorMoveAnimation: (Door*) inDoor :(Door*) outDoor{
     NSArray *doorsArray = [[NSArray alloc]initWithObjects:inDoor,outDoor, nil];
     CCCallFuncO *runDoorsAnim = [CCCallFuncO actionWithTarget: self selector: @selector(RunAnimationDoor:doorsArray:) object:doorsArray];
-    CCDelayTime *animTime = [CCDelayTime actionWithDuration: self.DoorAnimationDelay * 5];
+    CCDelayTime *animTime = [CCDelayTime actionWithDuration: DoorAnimationDelay * 6];
     CCMoveTo *move = [CCMoveTo actionWithDuration:0 position: outDoor.EnterPosition];
     return [CCSpawn actions: [CCSequence actions: [CCHide action], move, runDoorsAnim, animTime, [CCShow action], nil] ,nil];
 }
@@ -224,8 +223,10 @@
         animateIn = self.DoorTopInAnimation;
         animateOut = self.DoorTopOutAnimation;
     }
-    [inDoor runAction:[CCSequence actions:[CCAnimate actionWithAnimation:animateIn], inDoor.Closed, nil]];
-    [outDoor runAction:[CCSequence actions:[CCAnimate actionWithAnimation:animateOut], outDoor.Closed, nil]];
+    [inDoor runAction:[CCSequence actions:inDoor.Opening, inDoor.Closed, nil]];
+    [inDoor.AnimationSprite runAction:[CCSequence actions:[CCShow action],[CCAnimate actionWithAnimation: animateIn],[CCHide action],nil]];
+    [outDoor runAction:[CCSequence actions:outDoor.Opening, outDoor.Closed, nil]];
+    [outDoor.AnimationSprite runAction:[CCSequence actions:[CCShow action],[CCAnimate actionWithAnimation:animateOut],[CCHide action],nil]];
 }
 
 -(NSMutableArray*) GetWalkRouteTo:(Room*)endRoom andEndPoint:(CGPoint) endPoint fromRoom:(Room*)actualRoom{

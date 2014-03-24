@@ -23,7 +23,6 @@
 @property(nonatomic) BOOL routeRun;
 @property(nonatomic) int startRoomNum;
 @property(nonatomic) float Speed;
-@property(nonatomic) float DoorAnimationDelay;
 
 @property(nonatomic,strong) CCAnimation *IdleAnimation;
 @property(nonatomic,strong) CCAnimation *walkLeftAnimation;

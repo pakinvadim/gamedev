@@ -15,28 +15,28 @@
     
 	if( (self = [super init]) ){
         float animDelay = 0.1f;
-        self.WalkRightAnimation = [self GetAnimation:@"walkLeft" countFrame:5 delay:animDelay  :209 :207];
+        self.WalkRightAnimation = [self GetAnimation:@"walkLeft" countFrame:5 delay:animDelay  :186 :185];
         //self.WalkRightAnimate = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:self.WalkRightAnimation]];
         
-        self.WalkLeftAnimation = [self GetAnimation:@"walkLeft" countFrame:5 delay:animDelay :209 :207];
+        self.WalkLeftAnimation = [self GetAnimation:@"walkLeft" countFrame:5 delay:animDelay :186 :185];
         //self.WalkLeftAction = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:walkLeftAnim]];
         //self.WalkLeftAnimate = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:self.walkLeftAnimation]];
         
-        self.WalkUpAnimation = [self GetAnimation:@"walkTop" countFrame:4 delay:animDelay :209 :207];
+        self.WalkUpAnimation = [self GetAnimation:@"walkTop" countFrame:4 delay:animDelay :186 :185];
         //self.WalkUpAnimate = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:self.WalkUpAnimation]];
         
-        self.WalkDownAnimation = [self GetAnimation:@"walkBotton" countFrame:4 delay:animDelay :209 :207];
+        self.WalkDownAnimation = [self GetAnimation:@"walkBotton" countFrame:4 delay:animDelay :186 :185];
         //self.WalkDownAnimate = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:self.WalkDownAnimation]];
         
-        self.IdleAnimation = [self GetAnimation:@"standBotton" countFrame:2 delay:1 :209 :207];
+        self.IdleAnimation = [self GetAnimation:@"standBotton" countFrame:2 delay:1 :186 :185];
         self.IdleAnimate = [CCRepeatForever actionWithAction:[CCAnimate actionWithAnimation:self.IdleAnimation]];
         
-        self.DoorLeftInAnimation = [self GetAnimation:@"doorLeftInCat" countFrame:5 delay:self.DoorAnimationDelay :157:420];
-        self.DoorLeftOutAnimation = [self GetAnimation:@"doorLeftOutCat" countFrame:5 delay:self.DoorAnimationDelay :157:420];
-        self.DoorRightInAnimation = [self GetAnimation:@"doorRightInCat" countFrame:5 delay:self.DoorAnimationDelay :157:420];
-        self.DoorRightOutAnimation = [self GetAnimation:@"doorRightOutCat" countFrame:5 delay:self.DoorAnimationDelay :157:420];
-        self.DoorTopInAnimation = [self GetAnimation:@"doorUpInCat" countFrame:5 delay:self.DoorAnimationDelay :157:420];
-        self.DoorTopOutAnimation = [self GetAnimation:@"doorUpOutCat" countFrame:5 delay:self.DoorAnimationDelay :157:420];
+        self.DoorLeftInAnimation = [self GetAnimation:@"CatAnimEnterDoorLeftIn" countFrame:6 delay:DoorAnimationDelay :186:172];
+        self.DoorLeftOutAnimation = [self GetAnimation:@"CatAnimEnterDoorLeftOut" countFrame:6 delay:DoorAnimationDelay :186:172];
+        self.DoorRightInAnimation = [self GetAnimation:@"CatAnimEnterDoorRightIn" countFrame:6 delay:DoorAnimationDelay :186:172];
+        self.DoorRightOutAnimation = [self GetAnimation:@"CatAnimEnterDoorRightOut" countFrame:6 delay:DoorAnimationDelay :186:141];
+        self.DoorTopInAnimation = [self GetAnimation:@"CatAnimEnterDoorTopIn" countFrame:6 delay:DoorAnimationDelay :186:258];
+        self.DoorTopOutAnimation = [self GetAnimation:@"CatAnimEnterDoorTopOut" countFrame:6 delay:DoorAnimationDelay :186:255];
         
         self.Type = IsCat;
         //self.scale = 0.31;

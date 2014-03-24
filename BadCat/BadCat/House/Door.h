@@ -19,14 +19,15 @@ typedef enum DoorType{
 @interface Door : RootSprite{
 }
 
-
-@property (readonly) float Width;
-@property (readonly) float Height;
+@property float Width;
+@property float Height;
 @property int direct;
 @property DoorType Type;
 @property (nonatomic)CGPoint EnterPosition;
 @property (nonatomic)CGPoint ExitPosition;
 @property(nonatomic,strong) CCAnimate *Closed;
+@property(nonatomic,strong) CCAnimate *Opening;
+@property(nonatomic,strong) CCSprite *AnimationSprite;
 
 //- (void) addDirect:(int) dir;
 - (id)initWithType:(DoorType)type andDirect:(int)dir;

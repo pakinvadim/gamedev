@@ -24,7 +24,7 @@ const int IndentDoor = 20;
         return ccp(room.position.x + self.position.x + self.Width - IndentDoor, room.FloorPosition);
     }
     else if(self.Type == Top){
-        return ccp(room.position.x + self.position.x + self.Width, room.FloorPosition + 20);
+        return ccp(room.position.x + self.position.x + self.Width/2, room.FloorPosition + 20);
     }
     return ccp(0,0);
 }
@@ -52,9 +52,9 @@ const int IndentDoor = 20;
         [self.AnimationSprite setAnchorPoint:ccp(0,0)];
         [self addChild:self.AnimationSprite z:200];
         
-        if ( type == Left ){ self.Width = [self boundingBox].size.width; self.Height = 3/4*[self boundingBox].size.height;}
+        if ( type == Left ){ self.Width = [self boundingBox].size.width/2; self.Height = [self boundingBox].size.height;}
         else if (type == Right){ self.Width = [self boundingBox].size.width/2; self.Height = [self boundingBox].size.height;}
-        else if ( type == Top ){ self.Width = [self boundingBox].size.width/2; self.Height = [self boundingBox].size.height;}
+        else if ( type == Top ){ self.Width = [self boundingBox].size.width; self.Height = [self boundingBox].size.height;}
         //self.scale = 0.45;
         return self;
     }

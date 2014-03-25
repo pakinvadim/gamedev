@@ -100,18 +100,57 @@ CCLabelTTF *tditle;
 
 - (void)ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    UITouch *touch = [touches anyObject];
-    CGPoint location = [touch locationInView:[touch view]];
-    location = [[CCDirector sharedDirector] convertToGL:location];
-    //location = [[CCDirector sharedDirector] convertToGL:location];
-    
-    //for(Room *room in self.roomArray)
-    {
-        self.position = ccp(_touchBegan_PointOfLayer.x + (location.x - _touchBegan_PointOfTouch.x)
-                               ,_touchBegan_PointOfLayer.y + (location.y - _touchBegan_PointOfTouch.y) );
+    NSArray* allTouches = [[event allTouches] allObjects];
+    if(touches.count == 2){
+        UITouch* touchOne = [allTouches objectAtIndex:0];
+        UITouch* touchTwo = [allTouches objectAtIndex:1];
+        CGPoint touchLocationOne = [touchOne locationInView: [touchOne view]];
+        CGPoint touchLocationTwo = [touchTwo locationInView: [touchTwo view]];
+        CGPoint previousLocationOne = [touchOne previousLocationInView: [touchOne view]];
+        CGPoint previousLocationTwo = [touchTwo previousLocationInView: [touchTwo view]];
+        
+        CGFloat currentDistance = sqrt(pow(touchLocationOne.x - touchLocationTwo.x, 2.0f) + pow(touchLocationOne.y - touchLocationTwo.y, 2.0f));
+        CGFloat previousDistance = sqrt(pow(previousLocationOne.x - previousLocationTwo.x, 2.0f) + pow(previousLocationOne.y - previousLocationTwo.y, 2.0f));
+        
+        CGFloat distanceDelta = currentDistance - previousDistance;
+        CGPoint pinchCenter = ccpMidpoint(touchLocationOne, touchLocationTwo);
+        pinchCenter = [self convertToNodeSpace:pinchCenter];
+        [self scale:self.scale - (distanceDelta * 0.005f) scaleCenter:pinchCenter];
+    }
+    else if(touches.count == 1){
+        UITouch *touch = [touches anyObject];
+        CGPoint location = [touch locationInView:[touch view]];
+        //CGPoint previousLocation = [touch previousLocationInView:[touch view]];
+        location = [[CCDirector sharedDirector] convertToGL:location];
+        //previousLocation =
+        //location = [[CCDirector sharedDirector] convertToGL:location];
+        
+        //for(Room *room in self.roomArray)
+        {
+            self.position = ccp(_touchBegan_PointOfLayer.x + (location.x - _touchBegan_PointOfTouch.x)
+                                ,_touchBegan_PointOfLayer.y + (location.y - _touchBegan_PointOfTouch.y) );
+        }
     }
     [self up];
     //CCLOG(@"move d");
+}
+
+- (void) scale:(CGFloat) newScale scaleCenter:(CGPoint) scaleCenter {
+    
+    // Get the original center point.
+    CGPoint oldCenterPoint = ccp(scaleCenter.x * self.scale, scaleCenter.y * self.scale);
+    
+    // Set the scale.
+    self.scale = newScale;
+    
+    // Get the new center point.
+    CGPoint newCenterPoint = ccp(scaleCenter.x * self.scale, scaleCenter.y * self.scale);
+    
+    // Then calculate the delta.
+    CGPoint centerPointDelta  = ccpSub(oldCenterPoint, newCenterPoint);
+    
+    // Now adjust your layer by the delta.
+    self.position = ccpAdd(self.position, centerPointDelta);
 }
 
 -(void) up{

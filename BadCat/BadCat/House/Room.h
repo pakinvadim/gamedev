@@ -25,6 +25,5 @@
 -(id) initWithFile:(NSString *)filename andPosition:(CGPoint) positionR andNumber:(int) number;
 -(void) AddDoorWithType:(DoorType) type  andDirect:(int)dir andPositionX:(float)positionX;
 -(Door*) GetDoorWithDirect:(int) direct;
--(Door*) GetDoorInPoint:(CGPoint) point;
 
 @end

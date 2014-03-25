@@ -62,15 +62,6 @@ const int Indent = 45;
     [self addChild:door z:150];
 }
 
--(Door*) GetDoorInPoint:(CGPoint) point{
-    for(Door *door in self.doors){
-        if([door ContainPoint:point]){
-            return door;
-        }
-    }
-    return nil;
-}
-
 -(Door*) GetDoorWithDirect:(int) direct{
     for (Door* door in self.doors){
         if(door.direct == direct){

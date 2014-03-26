@@ -19,6 +19,7 @@ typedef enum DoorType{
 @interface Door : RootSprite{
 }
 
+@property int VisualIndentDoor;
 @property float Width;
 @property float Height;
 @property int direct;

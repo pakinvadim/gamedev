@@ -19,6 +19,7 @@ CCLabelTTF *tditle;
     if( self=[super initWithColor:ccc4(255, 255, 255, 100)] )
     {
         self.touchEnabled = YES;
+        self.anchorPoint = ccp(0.0f, 0.0f);
         self.roomArray = [[NSMutableArray alloc] init];
         CGSize ss = CGSizeMake(600, 80);
         
@@ -51,6 +52,8 @@ CCLabelTTF *tditle;
     for(Room *room in self.roomArray){
         CGRect rectRoom = CGRectMake(room.position.x+self.position.x,room.position.y+self.position.y,
                                      [room boundingBox].size.width,[room boundingBox].size.height);
+        /*CGRect rectRoom = CGRectMake((room.position.x+self.position.x)*self.scale,(room.position.y+self.position.y)*self.scale,
+                                     [room boundingBox].size.width*self.scale,[room boundingBox].size.height *self.scale);*/
         if(CGRectContainsPoint(rectRoom, point)){
             return room;
         }
@@ -60,10 +63,11 @@ CCLabelTTF *tditle;
 -(Door*) GetDoorInPoint:(CGPoint) point{
     for(Room *room in self.roomArray){
         for (Door *door in room.doors) {
-            CGRect rectDoor = CGRectMake( self.position.x + room.position.x + door.position.x
+            CGRect rectDoor = CGRectMake( self.position.x + room.position.x + door.position.x + door.VisualIndentDoor
                                          ,self.position.y + room.position.y + door.position.y,
                                          door.Width, door.Height);
             if(CGRectContainsPoint(rectDoor, point)){
+                NSLog([NSString stringWithFormat:@"touch door with direct: %d in room %d",door.direct,room.numberRoom]);
                 return door;
             }
         }
@@ -74,7 +78,8 @@ CCLabelTTF *tditle;
 -(void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     UITouch *touch = [touches anyObject];
-    CGPoint location = [touch locationInView:[touch view]];
+    //CGPoint location = [touch locationInView:[touch view]];
+    CGPoint location = [self convertTouchToNodeSpace:touch];
     location = [[CCDirector sharedDirector] convertToGL:location];
     CCLOG(@"Touch BEGAN");
     _touchBegan_PointOfTouch = location;
@@ -86,7 +91,8 @@ CCLabelTTF *tditle;
     
     // Выбираем касание, с которым будем работать
     UITouch *touch = [touches anyObject];
-    CGPoint location = [touch locationInView:[touch view]];
+    //CGPoint location = [touch locationInView:[touch view]];
+    CGPoint location = [self convertTouchToNodeSpace:touch];
     location = [[CCDirector sharedDirector] convertToGL:location];
     
     
@@ -114,12 +120,13 @@ CCLabelTTF *tditle;
         
         CGFloat distanceDelta = currentDistance - previousDistance;
         CGPoint pinchCenter = ccpMidpoint(touchLocationOne, touchLocationTwo);
+        //CCLOG(@"DD %f PC %f %f",distanceDelta,pinchCenter.x,pinchCenter.y);
         pinchCenter = [self convertToNodeSpace:pinchCenter];
-        [self scale:self.scale - (distanceDelta * 0.005f) scaleCenter:pinchCenter];
+        [self scale: distanceDelta  scaleCenter:pinchCenter];/*0.00131*/
     }
     else if(touches.count == 1){
         UITouch *touch = [touches anyObject];
-        CGPoint location = [touch locationInView:[touch view]];
+        CGPoint location = [self convertTouchToNodeSpace:touch];
         //CGPoint previousLocation = [touch previousLocationInView:[touch view]];
         location = [[CCDirector sharedDirector] convertToGL:location];
         //previousLocation =
@@ -135,22 +142,22 @@ CCLabelTTF *tditle;
     //CCLOG(@"move d");
 }
 
-- (void) scale:(CGFloat) newScale scaleCenter:(CGPoint) scaleCenter {
+- (void) scale:(float) distanceDelta scaleCenter:(CGPoint) scaleCenter {
     
     // Get the original center point.
     CGPoint oldCenterPoint = ccp(scaleCenter.x * self.scale, scaleCenter.y * self.scale);
     
     // Set the scale.
-    self.scale = newScale;
+    self.scale += distanceDelta * 0.00131f;
     
     // Get the new center point.
     CGPoint newCenterPoint = ccp(scaleCenter.x * self.scale, scaleCenter.y * self.scale);
     
     // Then calculate the delta.
     CGPoint centerPointDelta  = ccpSub(oldCenterPoint, newCenterPoint);
-    
+    CCLOG(@"old %f %f new %f %f",oldCenterPoint.x,oldCenterPoint.y,newCenterPoint.x,newCenterPoint.y);
     // Now adjust your layer by the delta.
-    self.position = ccpAdd(self.position, centerPointDelta);
+    self.position = ccpAdd(self.position, ccp(centerPointDelta.x ,centerPointDelta.y ));
 }
 
 -(void) up{

@@ -13,15 +13,15 @@
 @implementation Door
 
 @synthesize Type;
-const int IndentDoor = 20;
+const int EnterIndentDoor = 20;
 
 - (CGPoint) EnterPosition {
     Room *room = self.CurrentRoom;
     if(self.Type == Left){
-        return ccp(room.position.x + self.position.x + self.Width + IndentDoor, room.FloorPosition);
+        return ccp(room.position.x + self.position.x + self.Width + EnterIndentDoor, room.FloorPosition);
     }
     else if(self.Type == Right){
-        return ccp(room.position.x + self.position.x + self.Width - IndentDoor, room.FloorPosition);
+        return ccp(room.position.x + self.position.x + self.Width - EnterIndentDoor, room.FloorPosition);
     }
     else if(self.Type == Top){
         return ccp(room.position.x + self.position.x + self.Width/2, room.FloorPosition + 20);
@@ -52,9 +52,17 @@ const int IndentDoor = 20;
         [self.AnimationSprite setAnchorPoint:ccp(0,0)];
         [self addChild:self.AnimationSprite z:200];
         
-        if ( type == Left ){ self.Width = [self boundingBox].size.width/2; self.Height = [self boundingBox].size.height;}
-        else if (type == Right){ self.Width = [self boundingBox].size.width/2; self.Height = [self boundingBox].size.height;}
-        else if ( type == Top ){ self.Width = [self boundingBox].size.width; self.Height = [self boundingBox].size.height;}
+        if ( type == Left || type == Right){
+            self.Width = [self boundingBox].size.width/2;
+            self.Height = [self boundingBox].size.height;
+            if(type == Right){
+                self.VisualIndentDoor = self.Width;
+            }
+        }
+        else if ( type == Top ){
+            self.Width = [self boundingBox].size.width;
+            self.Height = [self boundingBox].size.height;
+        }
         //self.scale = 0.45;
         return self;
     }

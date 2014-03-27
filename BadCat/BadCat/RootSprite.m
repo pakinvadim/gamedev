@@ -17,6 +17,14 @@ float const DoorAnimationDelay = 0.1f;
     }
     return self;
 }
+
+-(CGPoint) PositionScale{
+    CGPoint position;
+    RootSprite* parant = (RootSprite*)self.parent;
+    position = parant.PositionScale + ccpMult(self.position, <#const CGFloat s#>)
+    return
+}
+
 -(CGPoint) ConvertTouch:(CGPoint) point{
     CCNode *parent = (CCNode*)[self parent];
     return ccp((0-parent.position.x) + point.x, (0 - parent.position.y) + point.y);

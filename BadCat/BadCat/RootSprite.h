@@ -16,7 +16,7 @@
 }
 extern float const DoorAnimationDelay;
 
--(CGPoint) ConvertTouch:(CGPoint) point;
+@property CGPoint PositionScale;
 -(CCAnimation*) GetAnimation: (NSString*) likeName countFrame:(int) countFrame delay:(float) delay :(float) Wi :(float)Hi;
 -(CCAnimation*) GetAnimation: (NSString*) likeName arrayNumbersFrame:(NSMutableArray*) arrayNumbersFrame delay:(float) delay :(float)Wi:(float)Hi;
 

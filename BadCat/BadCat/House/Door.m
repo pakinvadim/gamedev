@@ -7,13 +7,17 @@
 //
 
 #import "Door.h"
-#import "Room.h"
 #import "GameLevel.h"
 
 @implementation Door
 
 @synthesize Type;
 const int EnterIndentDoor = 20;
+
+- (CGPoint) PositionScale{
+    GameLevel * level = [self CurrentLevel];
+    return ccpAdd([self CurrentRoom].PositionScale, ccpMult(self.position, level.scale * level.scale));
+}
 
 - (CGPoint) EnterPosition {
     Room *room = self.CurrentRoom;
@@ -27,6 +31,10 @@ const int EnterIndentDoor = 20;
         return ccp(room.position.x + self.position.x + self.Width/2, room.FloorPosition + 20);
     }
     return ccp(0,0);
+}
+
+- (GameLevel*)CurrentLevel{
+    return (GameLevel*)[[self CurrentRoom] parent];
 }
 
 - (Room*)CurrentRoom{
@@ -45,6 +53,7 @@ const int EnterIndentDoor = 20;
         self.Closed = [CCAnimate actionWithAnimation:[self GetAnimation:fileName arrayNumbersFrame:arrayClosed delay:DoorAnimationDelay :186 :500]];
         self.Opening = [CCAnimate actionWithAnimation:[self GetAnimation:fileName arrayNumbersFrame:arrayOpening delay:DoorAnimationDelay :186 :500]];
         [self setAnchorPoint:ccp(0, 0)];
+        self.
         self.Type = type;
         self.direct = dir;
         self.AnimationSprite = [[CCSprite alloc]init];

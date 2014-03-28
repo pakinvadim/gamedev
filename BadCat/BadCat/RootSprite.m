@@ -7,6 +7,7 @@
 //
 
 #import "RootSprite.h"
+#import "GameLevel.h"
 
 @implementation RootSprite{
     
@@ -19,10 +20,8 @@ float const DoorAnimationDelay = 0.1f;
 }
 
 -(CGPoint) PositionScale{
-    CGPoint position;
-    RootSprite* parant = (RootSprite*)self.parent;
-    position = parant.PositionScale + ccpMult(self.position, <#const CGFloat s#>)
-    return
+    GameLevel* level = (GameLevel*)self.parent;
+    return ccpAdd(level.PositionScale, ccpMult(self.position, level.scale * level.scale));
 }
 
 -(CGPoint) ConvertTouch:(CGPoint) point{

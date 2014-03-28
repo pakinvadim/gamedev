@@ -17,6 +17,7 @@
 {
 }
 
+@property (nonatomic) CGPoint PositionScale;
 @property(nonatomic,strong) NSMutableArray *roomArray;
 @property(nonatomic,strong) Cat *cat;
 

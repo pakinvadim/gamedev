@@ -13,6 +13,11 @@
     CGPoint _touchBegan_PointOfTouch;
     CGPoint _touchBegan_PointOfLayer;
 }
+
+-(CGPoint) PositionScale{
+    return ccpMult(self.position, self.scale);
+}
+
 CCLabelTTF *tditle;
 -(id) init
 {
@@ -78,8 +83,8 @@ CCLabelTTF *tditle;
 -(void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     UITouch *touch = [touches anyObject];
-    //CGPoint location = [touch locationInView:[touch view]];
-    CGPoint location = [self convertTouchToNodeSpace:touch];
+    CGPoint location = [touch locationInView:[touch view]];
+    //CGPoint location = [self convertTouchToNodeSpace:touch];
     location = [[CCDirector sharedDirector] convertToGL:location];
     CCLOG(@"Touch BEGAN");
     _touchBegan_PointOfTouch = location;
@@ -91,8 +96,8 @@ CCLabelTTF *tditle;
     
     // Выбираем касание, с которым будем работать
     UITouch *touch = [touches anyObject];
-    //CGPoint location = [touch locationInView:[touch view]];
-    CGPoint location = [self convertTouchToNodeSpace:touch];
+    CGPoint location = [touch locationInView:[touch view]];
+    //CGPoint location = [self convertTouchToNodeSpace:touch];
     location = [[CCDirector sharedDirector] convertToGL:location];
     
     
@@ -126,7 +131,7 @@ CCLabelTTF *tditle;
     }
     else if(touches.count == 1){
         UITouch *touch = [touches anyObject];
-        CGPoint location = [self convertTouchToNodeSpace:touch];
+        CGPoint location = [touch locationInView:[touch view]];
         //CGPoint previousLocation = [touch previousLocationInView:[touch view]];
         location = [[CCDirector sharedDirector] convertToGL:location];
         //previousLocation =

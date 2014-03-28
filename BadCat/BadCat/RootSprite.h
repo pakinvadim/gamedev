@@ -14,10 +14,11 @@
 @interface RootSprite : CCSprite{
     
 }
+@property (nonatomic) CGPoint PositionScale;
 extern float const DoorAnimationDelay;
 
-@property CGPoint PositionScale;
 -(CCAnimation*) GetAnimation: (NSString*) likeName countFrame:(int) countFrame delay:(float) delay :(float) Wi :(float)Hi;
 -(CCAnimation*) GetAnimation: (NSString*) likeName arrayNumbersFrame:(NSMutableArray*) arrayNumbersFrame delay:(float) delay :(float)Wi:(float)Hi;
+-(CGPoint) ConvertTouch:(CGPoint) point;
 
 @end

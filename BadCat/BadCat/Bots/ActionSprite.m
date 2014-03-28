@@ -297,7 +297,7 @@
 
 -(Room*) GetActualRoom{
     GameLevel *level = (GameLevel*)[self parent];
-    return [level GetRoomInPoint:ccp(level.position.x + self.position.x, level.position.y + self.position.y)];
+    return [level GetRoomInPoint:self.PositionScale];
 }
 
 -(CGFloat) DistanceBetween:(CCSprite*)sprite1 and:(CCSprite*)sprite2{

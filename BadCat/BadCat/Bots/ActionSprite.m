@@ -123,16 +123,15 @@
     if(self.route2.count == 1){
         endPosition = [[self.route2 firstObject] CGPointValue];
         [self.route2 removeObject:[self.route2 firstObject]];
-        self.routeRun = FALSE;
-        if(endPosition.x == 0 && endPosition.y == 0) { return;}
-        
-        if(endPosition.x > room.MaxRightPosition) {endPosition.x = room.MaxRightPosition;}
-        else if(endPosition.x < room.MaxLeftPosition) {endPosition.x = room.MaxLeftPosition;}
-        
-        CGPoint moveXStart = ccp(self.position.x, room.FloorPosition);
-        
-        moveDown = [self GetBotMoveAnimation:Y :self.position :moveXStart];
-        moveX = [self GetBotMoveAnimation:X :moveXStart :endPosition];
+        if(endPosition.x != 0 && endPosition.y != 0) {
+            if(endPosition.x > room.MaxRightPosition) {endPosition.x = room.MaxRightPosition;}
+            else if(endPosition.x < room.MaxLeftPosition) {endPosition.x = room.MaxLeftPosition;}
+            
+            CGPoint moveXStart = ccp(self.position.x, room.FloorPosition);
+            
+            moveDown = [self GetBotMoveAnimation:Y :self.position :moveXStart];
+            moveX = [self GetBotMoveAnimation:X :moveXStart :endPosition];
+        }
     }
     else {
         int nextRoomNum = [[self.route2 firstObject] integerValue];
@@ -143,15 +142,19 @@
         Door *door = [room GetDoorWithDirect:nextRoomNum];
         Room *nextRoom = [level GetRoomWithNumber:nextRoomNum];
         Door *nextDoor = [nextRoom GetDoorWithDirect:room.numberRoom];
-        
-        CGPoint moveXStart = ccp(self.position.x, room.FloorPosition);
-        CGPoint moveUpStart = ccp(door.EnterPosition.x, room.FloorPosition);
-        
-        moveDown = [self GetBotMoveAnimation:Y :self.position :moveXStart];
-        moveX = [self GetBotMoveAnimation:X: moveXStart :moveUpStart];
-        moveUp = [self GetBotMoveAnimation:Y: moveUpStart: door.EnterPosition];
-        enterInDoor = [self GetDoorMoveAnimation: door :nextDoor];
-        callbackAction = [CCCallFuncO actionWithTarget: self selector: @selector(GoRoute:routeData:) object:nil];
+        if(door != nil && nextDoor != nil){
+            CGPoint moveXStart = ccp(self.position.x, room.FloorPosition);
+            CGPoint moveUpStart = ccp(door.EnterPosition.x, room.FloorPosition);
+            
+            moveDown = [self GetBotMoveAnimation:Y :self.position :moveXStart];
+            moveX = [self GetBotMoveAnimation:X: moveXStart :moveUpStart];
+            moveUp = [self GetBotMoveAnimation:Y: moveUpStart: door.EnterPosition];
+            enterInDoor = [self GetDoorMoveAnimation: door :nextDoor];
+            callbackAction = [CCCallFuncO actionWithTarget: self selector: @selector(GoRoute:routeData:) object:nil];
+        }
+        else{
+            [self.route2 removeAllObjects];
+        }
     }
     [self AddAction:moveDown In:actionList];
     [self AddAction:moveX In:actionList];
@@ -160,8 +163,11 @@
     [self AddAction:callbackAction In:actionList];
     [self.route2 removeObject:[self.route2 firstObject]];
     //[self runAction:moveAnimate];
-    [self runAction:[CCSequence actionWithArray :actionList]];
-    if(callbackAction == nil){
+    if(actionList.count != 0){
+        [self runAction:[CCSequence actionWithArray :actionList]];
+    }
+    if(self.route2.count == 0){
+        self.routeRun = FALSE;
         CCLOG(@"GO END");
     }
 }

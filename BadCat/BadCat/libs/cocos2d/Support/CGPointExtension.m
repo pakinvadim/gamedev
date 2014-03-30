@@ -90,6 +90,13 @@ CGPoint ccpCompOp(CGPoint p, float (*opFunc)(float))
 	return ccp(opFunc(p.x), opFunc(p.y));
 }
 
+BOOL ccpEqual(CGPoint a, CGPoint b)
+{
+	if(a.x == b.x && a.y == b.y)
+		return true;
+	return false;
+}
+
 BOOL ccpFuzzyEqual(CGPoint a, CGPoint b, float var)
 {
 	if(a.x - var <= b.x && b.x <= a.x + var)

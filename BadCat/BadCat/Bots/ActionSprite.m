@@ -16,7 +16,7 @@
 
 -(id) init{
 	if( self=[super init]){
-        self.Speed = 150.f;
+        self.Speed = 250.f;
 	}
 	return self;
 }
@@ -145,10 +145,11 @@
         if(door != nil && nextDoor != nil){
             CGPoint moveXStart = ccp(self.position.x, room.FloorPosition);
             CGPoint moveUpStart = ccp(door.EnterPosition.x, room.FloorPosition);
-            
-            moveDown = [self GetBotMoveAnimation:Y :self.position :moveXStart];
-            moveX = [self GetBotMoveAnimation:X: moveXStart :moveUpStart];
-            moveUp = [self GetBotMoveAnimation:Y: moveUpStart: door.EnterPosition];
+            if (!ccpEqual(moveXStart, moveUpStart)){//случай когда бот стоит уже возле двери
+                moveDown = [self GetBotMoveAnimation:Y :self.position :moveXStart];
+                moveX = [self GetBotMoveAnimation:X: moveXStart :moveUpStart];
+                moveUp = [self GetBotMoveAnimation:Y: moveUpStart: door.EnterPosition];
+            }
             enterInDoor = [self GetDoorMoveAnimation: door :nextDoor];
             callbackAction = [CCCallFuncO actionWithTarget: self selector: @selector(GoRoute:routeData:) object:nil];
         }
@@ -173,21 +174,29 @@
 }
 
 -(CCSpawn*) GetBotMoveAnimation:(MoveDirect) direct : (CGPoint)startPosition :(CGPoint) endPosition{
+    if((direct == X && startPosition.x == endPosition.x) ||
+       (direct == Y && startPosition.y == endPosition.y)){
+        return nil;
+    }
     float duration = [self GetDurationBetween:startPosition :endPosition];
+    CCFlipX* flipX = nil;
     CCAnimate* animate = nil;
     CCMoveTo* move = [CCMoveTo actionWithDuration:duration position: endPosition];
     if(direct == X){
         if(startPosition.x < endPosition.x){ //RIGHT
             animate = [CCAnimate actionWithDuration:duration animation:self.WalkRightAnimation];
-            self.flipX = YES;
+            flipX = [CCFlipX actionWithFlipX:YES];
+            //self.flipX = YES;
         }
         else if(startPosition.x > endPosition.x){ //LEFT
             animate = [CCAnimate actionWithDuration:duration animation:self.walkLeftAnimation];
-            self.flipX = NO;
+            flipX = [CCFlipX actionWithFlipX:NO];
+            //self.flipX = NO;
         }
     }
     else if(direct == Y){
-        self.flipX = NO;
+        flipX = [CCFlipX actionWithFlipX:NO];
+        //self.flipX = NO;
         if(startPosition.y < endPosition.y){ //TOP
             animate = [CCAnimate actionWithDuration:duration animation:self.WalkUpAnimation];
         }
@@ -202,13 +211,19 @@
     //[animate step:5];
     //[animate elapsed:5];
     //[self.walkLeftAnimation setDelayPerUnit:0.3f];
-    return [CCSpawn actions:move, animate, nil];
+    return [CCSpawn actions: flipX, move, animate, nil];
 }
 
 -(CCSpawn*) GetDoorMoveAnimation: (Door*) inDoor :(Door*) outDoor{
     NSArray *doorsArray = [[NSArray alloc]initWithObjects:inDoor,outDoor, nil];
     CCCallFuncO *runDoorsAnim = [CCCallFuncO actionWithTarget: self selector: @selector(RunAnimationDoor:doorsArray:) object:doorsArray];
-    CCDelayTime *animTime = [CCDelayTime actionWithDuration: DoorAnimationDelay * 6];
+    CCDelayTime *animTime;
+    if(inDoor.Type == Left || inDoor.Type == Right){
+        animTime = [CCDelayTime actionWithDuration: DoorAnimationDelay * 6];
+    }
+    else if(inDoor.Type == Top){
+        animTime = [CCDelayTime actionWithDuration: DoorAnimationDelay * 12]; //поднятие по лестнице длится дольше
+    }
     CCMoveTo *move = [CCMoveTo actionWithDuration:0 position: outDoor.EnterPosition];
     return [CCSpawn actions: [CCSequence actions: [CCHide action], move, runDoorsAnim, animTime, [CCShow action], nil] ,nil];
 }
@@ -221,22 +236,26 @@
     CCAnimation* animateOut = nil;
     Door *inDoor = [doors objectAtIndex:0];
     Door *outDoor = [doors objectAtIndex:1];
+    CCDelayTime *stairsTime = nil;
     if(inDoor.Type == Left){
         animateIn = self.DoorLeftInAnimation;
         animateOut = self.DoorRightOutAnimation;
+        stairsTime = [CCDelayTime actionWithDuration: 0];
     }
     else if(inDoor.Type == Right){
         animateIn = self.DoorRightInAnimation;
         animateOut = self.DoorLeftOutAnimation;
+        stairsTime = [CCDelayTime actionWithDuration: 0];
     }
     else if(inDoor.Type == Top){
         animateIn = self.DoorTopInAnimation;
         animateOut = self.DoorTopOutAnimation;
+        stairsTime = [CCDelayTime actionWithDuration: DoorAnimationDelay * 6];// задержка при поднятие по лестнице
     }
     [inDoor runAction:[CCSequence actions:inDoor.Opening, inDoor.Closed, nil]];
     [inDoor.AnimationSprite runAction:[CCSequence actions:[CCShow action],[CCAnimate actionWithAnimation: animateIn],[CCHide action],nil]];
-    [outDoor runAction:[CCSequence actions:outDoor.Opening, outDoor.Closed, nil]];
-    [outDoor.AnimationSprite runAction:[CCSequence actions:[CCShow action],[CCAnimate actionWithAnimation:animateOut],[CCHide action],nil]];
+    [outDoor runAction:[CCSequence actions: stairsTime, outDoor.Opening, outDoor.Closed, nil]];
+    [outDoor.AnimationSprite runAction:[CCSequence actions: stairsTime, [CCShow action],[CCAnimate actionWithAnimation:animateOut],[CCHide action],nil]];
 }
 
 -(NSMutableArray*) GetWalkRouteTo:(Room*)endRoom andEndPoint:(CGPoint) endPoint fromRoom:(Room*)actualRoom{

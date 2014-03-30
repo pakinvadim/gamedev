@@ -68,10 +68,19 @@ CCLabelTTF *tditle;
         for (Door *door in room.doors) {
             CGPoint roomPosition = ccpAdd(self.position, ccpMult(room.position, self.scale));
             CGPoint doorPosition = ccpAdd(roomPosition, ccpMult(door.position, self.scale));
-            CGRect rectDoor = CGRectMake( doorPosition.x + door.VisualIndentDoor
-                                         ,doorPosition.y,
-                                         door.contentSize.width * self.scale,
-                                         door.contentSize.height * self.scale);
+            CGSize doorSize = CGSizeMake(door.contentSize.width * self.scale, door.contentSize.height * self.scale);
+            if(door.Type == Left){
+                doorSize.width /= 2;
+            } else if(door.Type == Right){
+                doorSize.width /= 2;
+                doorPosition.x += doorSize.width;
+            } else if(door.Type == Top){
+                float topIdent = 55 * self.scale;
+                doorSize.height -= topIdent;
+                doorPosition.y += topIdent;
+            }
+            CGRect rectDoor = CGRectMake( doorPosition.x, doorPosition.y
+                                         ,doorSize.width ,doorSize.height);
             /*CGRect rectDoor = CGRectMake( self.position.x + room.position.x + door.position.x + door.VisualIndentDoor
                                          ,self.position.y + room.position.y + door.position.y,
                                          door.Width, door.Height);*/

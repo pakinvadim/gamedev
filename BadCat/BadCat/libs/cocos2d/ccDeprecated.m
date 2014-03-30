@@ -378,7 +378,9 @@ void ccGLUniformModelViewProjectionMatrix( CCGLProgram* program )
     float delay = animation.delayPerUnit;
     int willFrameCount = duration / delay;
     CCArray *frames = [CCArray arrayWithCapacity:willFrameCount];;
-    
+    if(willFrameCount == 0){
+        willFrameCount = 1;
+    }
     for(int i = 0; frames.count < willFrameCount; i++){
         CCAnimationFrame *aframe = [animation.frames objectAtIndex:i];
         [frames addObject: aframe.spriteFrame];

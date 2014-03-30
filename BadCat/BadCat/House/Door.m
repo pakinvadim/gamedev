@@ -46,7 +46,7 @@ const int EnterIndentDoor = 17;
     }
     else if(self.Type == Top){
         //return ccp(self.PositionScale.x /*+ self.Size.width/2*/, room.FloorPosition + 20);
-        return ccp(room.position.x + self.position.x + self.contentSize.width/2, room.FloorPosition + 20);
+        return ccp(room.position.x + self.position.x + self.contentSize.width/2, room.FloorPosition + 30);
     }
     return ccp(0,0);
 }

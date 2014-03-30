@@ -271,8 +271,12 @@ CGPoint ccpCompOp(CGPoint p, float (*opFunc)(float));
  @since v0.99.1
  */
 CGPoint ccpLerp(CGPoint a, CGPoint b, float alpha);
-
-
+    
+/** @returns YES if points equal.
+@since v0.99.1
+*/
+BOOL ccpEqual(CGPoint a, CGPoint b);
+    
 /** @returns if points have fuzzy equality which means equal with some degree of variance.
  @since v0.99.1
  */

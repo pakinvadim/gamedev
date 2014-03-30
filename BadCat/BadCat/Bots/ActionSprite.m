@@ -57,12 +57,12 @@
 {
     GameLevel *level = (GameLevel*)[self parent];
     Room *actualRoom = [self GetActualRoom];
-    Door *touchDoor = [level GetDoorInPoint:touchPoint];
+    Door *touchDoor = [level GetDoorInSceenPoint:touchPoint];
     Room *endRoom = [level GetRoomWithNumber:touchDoor.direct];
     CGPoint endPoint = ccp(0,0);
     if(endRoom == nil){
-        endRoom = [level GetRoomInPoint:touchPoint];
-        endPoint = ccp([self ConvertTouch:touchPoint].x, endRoom.FloorPosition);
+        endRoom = [level GetRoomInSceenPoint:touchPoint];
+        endPoint = ccp([self ConvertTouch:touchPoint].x / level.scale, endRoom.FloorPosition);
     }
     if(endRoom != nil){
         {NSLog([NSString stringWithFormat:@"actual room number %d",actualRoom.numberRoom]);
@@ -75,7 +75,8 @@
                 int rn = [[self.route2 objectAtIndex:i] integerValue];
                 s = [NSString stringWithFormat:@"%@->%d",s,rn];
             }
-            NSLog([NSString stringWithFormat:@"route: %@",s]);
+            CGPoint ep = [[self.route2 lastObject] CGPointValue];
+            NSLog([NSString stringWithFormat:@"route: %@ ->(%2.3f-%2.3f)",s, ep.x, ep.y]);
         }
         
         if(!self.routeRun){
@@ -160,6 +161,9 @@
     [self.route2 removeObject:[self.route2 firstObject]];
     //[self runAction:moveAnimate];
     [self runAction:[CCSequence actionWithArray :actionList]];
+    if(callbackAction == nil){
+        CCLOG(@"GO END");
+    }
 }
 
 -(CCSpawn*) GetBotMoveAnimation:(MoveDirect) direct : (CGPoint)startPosition :(CGPoint) endPosition{
@@ -297,7 +301,7 @@
 
 -(Room*) GetActualRoom{
     GameLevel *level = (GameLevel*)[self parent];
-    return [level GetRoomInPoint:self.PositionScale];
+    return [level GetRoomInSceenPoint:self.PositionOnSceen];
 }
 
 -(CGFloat) DistanceBetween:(CCSprite*)sprite1 and:(CCSprite*)sprite2{

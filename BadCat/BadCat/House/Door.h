@@ -19,10 +19,8 @@ typedef enum DoorType{
 @interface Door : RootSprite{
 }
 
-@property (nonatomic) CGPoint PositionScale;
+@property (nonatomic) CGPoint PositionGlobal;
 @property int VisualIndentDoor;
-@property float Width;
-@property float Height;
 @property int direct;
 @property DoorType Type;
 @property (nonatomic)CGPoint EnterPosition;
@@ -33,7 +31,7 @@ typedef enum DoorType{
 
 //- (void) addDirect:(int) dir;
 - (id)initWithType:(DoorType)type andDirect:(int)dir;
-- (bool) ContainPoint:(CGPoint) point;
+//- (bool) ContainPoint:(CGPoint) point;
 
 
 @end

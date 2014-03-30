@@ -12,6 +12,16 @@
 @implementation RootSprite{
     
 }
+-(CGPoint) PositionGlobal{
+    GameLevel* level = (GameLevel*)self.parent;
+    return ccpAdd(level.position, self.position);
+}
+
+-(CGPoint) PositionOnSceen{
+    GameLevel* level = (GameLevel*)self.parent;
+    return ccpAdd(level.position, ccpMult(self.position, level.scale));
+}
+
 float const DoorAnimationDelay = 0.1f;
 -(id)init{
     if( self=[super init]){
@@ -19,10 +29,7 @@ float const DoorAnimationDelay = 0.1f;
     return self;
 }
 
--(CGPoint) PositionScale{
-    GameLevel* level = (GameLevel*)self.parent;
-    return ccpAdd(level.PositionScale, ccpMult(self.position, level.scale * level.scale));
-}
+
 
 -(CGPoint) ConvertTouch:(CGPoint) point{
     CCNode *parent = (CCNode*)[self parent];

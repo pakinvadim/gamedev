@@ -14,15 +14,9 @@
     CGPoint _touchBegan_PointOfLayer;
 }
 
--(CGPoint) PositionScale{
-    return ccpMult(self.position, self.scale);
-}
-
 CCLabelTTF *tditle;
--(id) init
-{
-    if( self=[super initWithColor:ccc4(255, 255, 255, 100)] )
-    {
+-(id) init{
+    if( self=[super initWithColor:ccc4(255, 255, 255, 100)] ){
         self.touchEnabled = YES;
         self.anchorPoint = ccp(0.0f, 0.0f);
         self.roomArray = [[NSMutableArray alloc] init];
@@ -34,12 +28,10 @@ CCLabelTTF *tditle;
         tditle.position =  ccp( 0 , -50);
         [self addChild:tditle z:1000];
     }
-    
     return self;
 }
 
--(void) addRoom:(Room*)room
-{
+-(void) addRoom:(Room*)room{
     [self addChild:room z:0];
     [self.roomArray addObject:room];
 }
@@ -53,10 +45,16 @@ CCLabelTTF *tditle;
     return nil;
 }
 
--(Room*) GetRoomInPoint:(CGPoint) point{
+-(Room*) GetRoomInSceenPoint:(CGPoint) point{
     for(Room *room in self.roomArray){
-        CGRect rectRoom = CGRectMake(room.position.x+self.position.x,room.position.y+self.position.y,
-                                     [room boundingBox].size.width,[room boundingBox].size.height);
+        CGPoint roomPosition = ccpAdd(self.position, ccpMult(room.position, self.scale));
+        /*CGRect rectRoom = CGRectMake(roomPosition.x ,roomPosition.y ,
+                                     roomSize.width ,roomSize.height);*/
+
+        CGRect rectRoom = CGRectMake(roomPosition.x,
+                                     roomPosition.y,
+                                     room.contentSize.width * self.scale,
+                                     room.contentSize.height * self.scale);
         /*CGRect rectRoom = CGRectMake((room.position.x+self.position.x)*self.scale,(room.position.y+self.position.y)*self.scale,
                                      [room boundingBox].size.width*self.scale,[room boundingBox].size.height *self.scale);*/
         if(CGRectContainsPoint(rectRoom, point)){
@@ -65,12 +63,18 @@ CCLabelTTF *tditle;
     }
     return nil;
 }
--(Door*) GetDoorInPoint:(CGPoint) point{
+-(Door*) GetDoorInSceenPoint:(CGPoint) point{
     for(Room *room in self.roomArray){
         for (Door *door in room.doors) {
-            CGRect rectDoor = CGRectMake( self.position.x + room.position.x + door.position.x + door.VisualIndentDoor
+            CGPoint roomPosition = ccpAdd(self.position, ccpMult(room.position, self.scale));
+            CGPoint doorPosition = ccpAdd(roomPosition, ccpMult(door.position, self.scale));
+            CGRect rectDoor = CGRectMake( doorPosition.x + door.VisualIndentDoor
+                                         ,doorPosition.y,
+                                         door.contentSize.width * self.scale,
+                                         door.contentSize.height * self.scale);
+            /*CGRect rectDoor = CGRectMake( self.position.x + room.position.x + door.position.x + door.VisualIndentDoor
                                          ,self.position.y + room.position.y + door.position.y,
-                                         door.Width, door.Height);
+                                         door.Width, door.Height);*/
             if(CGRectContainsPoint(rectDoor, point)){
                 NSLog([NSString stringWithFormat:@"touch door with direct: %d in room %d",door.direct,room.numberRoom]);
                 return door;
@@ -80,8 +84,7 @@ CCLabelTTF *tditle;
     return nil;
 }
 
--(void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
+-(void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     UITouch *touch = [touches anyObject];
     CGPoint location = [touch locationInView:[touch view]];
     //CGPoint location = [self convertTouchToNodeSpace:touch];
@@ -101,10 +104,9 @@ CCLabelTTF *tditle;
     location = [[CCDirector sharedDirector] convertToGL:location];
     
     
-    if (_touchBegan_PointOfTouch.x == location.x && _touchBegan_PointOfTouch.y == location.y)
-    {
+    if (_touchBegan_PointOfTouch.x == location.x && _touchBegan_PointOfTouch.y == location.y){
+        CCLOG(@"GO BEGAN");
         [self.cat GoTo:location];
-        CCLOG(@"CanGO");
     }
     [self up];
 }
@@ -176,7 +178,7 @@ CCLabelTTF *tditle;
     for(Room* room in self.roomArray){
         s = [NSString stringWithFormat:@"%@ R%d(x%0.2f y%0.2f)  - ",s ,room.numberRoom, room.position.x];
         for(Door* d in room.doors){
-            s = [NSString stringWithFormat:@"%@ D%d(x%0.2f y%0.2f - w%0.2f h%0.2f)",s ,d.direct, d.position.x, d.position.y, d.Width, d.Height];
+            s = [NSString stringWithFormat:@"%@ D%d(x%0.2f y%0.2f - w%0.2f h%0.2f)",s ,d.direct, d.position.x, d.position.y, d.contentSize.width, d.contentSize.height];
         }
         s = [NSString stringWithFormat:@"%@%@", s, @"\n"];
         [tditle setString:s];

@@ -58,8 +58,12 @@ const int EnterIndentDoor = 17;
     else if (type == Right){ fileName = @"doorRight"; }
     else if ( type == Top ){ fileName = @"doorUp"; }
     if(self = [super initWithFile:[NSString stringWithFormat:@"%@00.png",fileName]]){
+        
+        
         NSArray *arrayClosed = [NSArray arrayWithObjects:[NSNumber numberWithInteger:0], nil];
         NSArray *arrayOpening = [NSArray arrayWithObjects:[NSNumber numberWithInteger:1],[NSNumber numberWithInteger:2],[NSNumber numberWithInteger:3],[NSNumber numberWithInteger:3],[NSNumber numberWithInteger:2],[NSNumber numberWithInteger:1], nil];
+        
+        
         self.Closed = [CCAnimate actionWithAnimation:[self GetAnimation:fileName arrayNumbersFrame:arrayClosed delay:DoorAnimationDelay :186 :500]];
         self.Opening = [CCAnimate actionWithAnimation:[self GetAnimation:fileName arrayNumbersFrame:arrayOpening delay:DoorAnimationDelay :186 :500]];
         [self setAnchorPoint:ccp(0, 0)];

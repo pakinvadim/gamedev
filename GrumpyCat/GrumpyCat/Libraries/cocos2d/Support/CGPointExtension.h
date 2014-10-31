@@ -82,7 +82,7 @@ ccpNeg(const CGPoint v)
 static inline CGPoint
 ccpAdd(const CGPoint v1, const CGPoint v2)
 {
-	return ccp(v1.x + v2.x, v1.y + v2.y);
+	return CGPointMake(v1.x + v2.x, v1.y + v2.y);
 }
 
 /** Calculates difference of two points.
@@ -91,7 +91,7 @@ ccpAdd(const CGPoint v1, const CGPoint v2)
 static inline CGPoint
 ccpSub(const CGPoint v1, const CGPoint v2)
 {
-	return ccp(v1.x - v2.x, v1.y - v2.y);
+	return CGPointMake(v1.x - v2.x, v1.y - v2.y);
 }
 
 /** Returns point multiplied by given factor.
@@ -100,7 +100,7 @@ ccpSub(const CGPoint v1, const CGPoint v2)
 static inline CGPoint
 ccpMult(const CGPoint v, const CGFloat s)
 {
-	return ccp(v.x*s, v.y*s);
+	return CGPointMake(v.x*s, v.y*s);
 }
 
 /** Calculates midpoint between two points.
@@ -109,7 +109,8 @@ ccpMult(const CGPoint v, const CGFloat s)
 static inline CGPoint
 ccpMidpoint(const CGPoint v1, const CGPoint v2)
 {
-	return ccpMult(ccpAdd(v1, v2), 0.5f);
+    CGPoint add = CGPointMake(v1.x + v2.x, v1.y + v2.y);
+	return CGPointMake(add.x*0.5f, add.y*0.5f);
 }
 
 /** Calculates dot product of two points.

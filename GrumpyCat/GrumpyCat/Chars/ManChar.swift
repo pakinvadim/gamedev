@@ -9,8 +9,8 @@
 import Foundation
 
 class ManChar : GameChar {
-    override init() {
-        super.init()
+    override init(scene:IntroScene) {
+        super.init(scene: scene)
     }
     
     override init(texture : CCTexture!, rect: CGRect){ super.init(texture: texture, rect: rect) }

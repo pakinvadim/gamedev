@@ -32,3 +32,9 @@ enum DoorType: Int{
     case Right = 1
     case Top = 2
 }
+
+enum TaskStatus:Int{
+    case Run = 0
+    case Done = 1
+    case None = 2
+}

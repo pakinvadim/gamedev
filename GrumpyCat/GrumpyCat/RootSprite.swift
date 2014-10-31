@@ -9,31 +9,28 @@
 import Foundation
 
 class RootSprite : CCSprite {
-    let DoorAnimationDelay: Float = 0.1;
-    var PositionGlobal:CGPoint {
-        get{
-            let level = parent as GameLevel;
-            return ccpAdd(level.position, self.position);
-        }
-    }
-    var PositionOnSceen:CGPoint {
-        get{
-            let level = parent as GameLevel;
-            return ccpAdd(level.position, ccpMult(self.position, CGFloat(level.scale)));
-        }
-    }
-    
-    
-    override init() {
+    var Scene:IntroScene?
+    var WinSize:CGSize?
+
+    init(scene:IntroScene) {
         super.init()
+        Scene = scene;
+        up()
     }
     
-    func GetAnimation(name: String, frameCount: Int, delay: CGFloat, wight: CGFloat, hight: CGFloat) -> CCAnimation{
+    init(scene: IntroScene, imageNamed imageName: String!) {
+        super.init(imageNamed: imageName)
+        Scene = scene;
+        WinSize = CCDirector.sharedDirector().viewSize()
+        up()
+    }
+    
+    class func GetAnimation(name: String, frameCount: Int, delay: CGFloat, wight: CGFloat, hight: CGFloat) -> CCAnimation{
         var arr:[Int] = [Int](0...frameCount-1)
         return GetAnimation(name, frameRange: arr, delay: delay, wight: wight, hight: hight);
     }
     
-    func GetAnimation(name: String, frameRange: [Int], delay:CGFloat, wight:CGFloat, hight:CGFloat) -> CCAnimation{
+    class func GetAnimation(name: String, frameRange: [Int], delay:CGFloat, wight:CGFloat, hight:CGFloat) -> CCAnimation{
         var tempFrames = [CCSpriteFrame]()
         for i in frameRange {
             let frame = CCSpriteFrame.frameWithImageNamed("\(name)\(i).png") as CCSpriteFrame
@@ -48,13 +45,37 @@ class RootSprite : CCSprite {
         }
         return CCAnimation.animationWithSpriteFrames(tempFrames, delay: Float(delay)) as CCAnimation
     }
+
     
-    func ConvertTouch(point:CGPoint) -> CGPoint{
-        return ccp((0 - parent.position.x) + point.x, (0 - parent.position.y) + point.y);
+    var ttf1:CCLabelTTF?
+    var rectWithBorder = CCDrawNode();
+    func up(){
+        ttf1 = CCLabelTTF()//("", "Helvetica", 12, CCSizeMake(245, 32), CCTextAlignmentCenter);
+        ttf1?.anchorPoint = CGPointMake(0,0)
+        addChild(ttf1)
+        addChild(rectWithBorder);
+
     }
     
+    override func update(delta: CCTime) {
+        ttf1!.string = "\(position.x) : \(position.y)"
+        
+        /*var b = boundingBox()
+        let vertices:UnsafePointer<CGPoint> = UnsafePointer([
+            CGPoint(x: 0,y: b.height),
+            CGPoint(x: b.width,y: b.height),
+            CGPoint(x: b.width,y: 0),
+            CGPoint(x: 0,y: 0)])
+        
+        rectWithBorder.clear()
+        rectWithBorder.drawPolyWithVerts(vertices, count: 4,
+            fillColor: CCColor(red: 255,green: 255,blue: 255,alpha: 0),
+            borderWidth: 1,
+            borderColor: CCColor(red: 1,green: 0,blue: 0,alpha: 1));*/
+    }
+    
+    override init(imageNamed imageName: String!) {super.init(imageNamed: imageName)}
     override init(texture : CCTexture!, rect: CGRect){ super.init(texture: texture, rect: rect) }
     override init(texture: CCTexture!, rect: CGRect, rotated: Bool) { super.init(texture: texture, rect: rect, rotated: rotated) }
-    override init(imageNamed imageName: String!) {super.init(imageNamed: imageName)}
     override init(spriteFrame: CCSpriteFrame!) {super.init(spriteFrame: spriteFrame)}
 }

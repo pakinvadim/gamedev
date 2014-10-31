@@ -1509,6 +1509,7 @@
 				GCC_PREFIX_HEADER = BadCat/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"BadCat/libs/kazmath/include\"";
 				INFOPLIST_FILE = BadCat/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-lsqlite3",
@@ -1528,6 +1529,7 @@
 				GCC_PREFIX_HEADER = BadCat/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"BadCat/libs/kazmath/include\"";
 				INFOPLIST_FILE = BadCat/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-lsqlite3",

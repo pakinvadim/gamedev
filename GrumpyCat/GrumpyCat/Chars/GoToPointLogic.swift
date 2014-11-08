@@ -22,8 +22,11 @@ class GoToPointLogic {
         let startRoom:Room = char.GetActualRoom()
         tasks += GetWayActions(scene, startRoom: startRoom, endRoom: endResult.Room!, endPoint: endResult.Point!)
         if(touchObj is ThingBase){
-            let thing = touchObj as ThingBase
-            tasks += thing.GetActionTasks(char)
+            if(touchObj is ThingGet){
+                tasks += (touchObj as ThingGet).GetItTask(char)
+            } else if (touchObj is ThingJoke){
+                tasks += (touchObj as ThingJoke).GetJokeTasks(char)
+            }
         }
         return tasks.reverse()
     }
@@ -64,14 +67,19 @@ class GoToPointLogic {
             let endPoint:CGPoint = endDoor.EnterPosition
             return (endRoom, endPoint)
         }
-        
         if(roomObj is ThingBase){
-            let thing = roomObj as ThingBase
-            let endRoom:Room = thing.CurrentRoom!
-            let endPoint:CGPoint = thing.GetActionPosition(char)
-            return (endRoom, endPoint)
+            let endRoom:Room = roomObj!.CurrentRoom!
+            if(roomObj is ThingGet){
+                let thing = roomObj as ThingGet
+                let endPoint:CGPoint = thing.GetItPosition(char)
+                return (endRoom, endPoint)
+            }
+            if(roomObj is ThingJoke){
+                let thing = roomObj as ThingJoke
+                let endPoint:CGPoint = thing.GetJokePosition(char)
+                return (endRoom, endPoint)
+            }
         }
-        
         let endRoom:Room? = scene.ActualLevel!.GetRoomInSceenPoint(touch)
         if(endRoom == nil){
             return (nil, nil)

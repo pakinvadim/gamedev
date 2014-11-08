@@ -12,20 +12,19 @@ class GameChar : RootSprite {
     var Speed: CGFloat = 250
     var Type:BotType?
     
-    var BreatheAction:CCAction?
-    var Breathe:CCAnimation?
-    
     var WalkDown:CCAnimation?
     var WalkLeft:CCAnimation?
     var WalkRight:CCAnimation?
     var WalkUp:CCAnimation?
     
-    var DoorLeftIn:CCAnimation?
-    var DoorLeftOut:CCAnimation?
-    var DoorRightIn:CCAnimation?
-    var DoorRightOut:CCAnimation?
-    var DoorTopIn:CCAnimation?
-    var DoorTopOut:CCAnimation?
+    var BreatheAction:CCAction?
+    
+    var DoorLeftInAction:CCAction?
+    var DoorLeftOutAction:CCAction?
+    var DoorRightInAction:CCAction?
+    var DoorRightOutAction:CCAction?
+    var DoorTopInAction:CCAction?
+    var DoorTopOutAction:CCAction?
     
     var PermanentTasks:[TaskBase] = [TaskBase]()
     var CurrentTasks:[TaskBase] = [TaskBase]()

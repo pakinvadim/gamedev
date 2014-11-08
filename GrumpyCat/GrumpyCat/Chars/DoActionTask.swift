@@ -14,10 +14,17 @@ class DoActionTask : TaskBase {
         Action = action
     }
     
-    init(action:CCAction, canStop:Bool){
+    init(action:CCAction, name:String){
+        super.init()
+        Action = action
+        Name = name
+    }
+    
+    init(action:CCAction, canStop:Bool, name:String){
         super.init()
         Action = action
         CanStop = canStop
+        Name = name
     }
     
     override func Populate(scene:IntroScene, char:GameChar){

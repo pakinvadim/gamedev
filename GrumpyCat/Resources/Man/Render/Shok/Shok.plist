@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>ManShok (1).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{134,2},{130,240}}</string>
+                <key>offset</key>
+                <string>{-47,-21}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{144,157},{130,240}}</string>
+                <key>sourceSize</key>
+                <string>{512,512}</string>
+            </dict>
+            <key>ManShok (2).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{130,248}}</string>
+                <key>offset</key>
+                <string>{-54,-30}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{137,162},{130,248}}</string>
+                <key>sourceSize</key>
+                <string>{512,512}</string>
+            </dict>
+            <key>ManShok (3).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{428,2},{144,236}}</string>
+                <key>offset</key>
+                <string>{-61,-36}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{123,174},{144,236}}</string>
+                <key>sourceSize</key>
+                <string>{512,512}</string>
+            </dict>
+            <key>ManShok (4).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{266,2},{160,236}}</string>
+                <key>offset</key>
+                <string>{-69,-36}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{107,174},{160,236}}</string>
+                <key>sourceSize</key>
+                <string>{512,512}</string>
+            </dict>
+            <key>ManShok (5).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{574,2},{184,234}}</string>
+                <key>offset</key>
+                <string>{-60,-37}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{104,176},{184,234}}</string>
+                <key>sourceSize</key>
+                <string>{512,512}</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>2</integer>
+            <key>realTextureFileName</key>
+            <string>Shok.png</string>
+            <key>size</key>
+            <string>{760,252}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:c270081de5dfcf2ca1600fbbd541a95f:e5611da8d5b50a25defdfe2ecdf58d06:caa4b7e63905d09657a919a2fe088c3b$</string>
+            <key>textureFileName</key>
+            <string>Shok.png</string>
+        </dict>
+    </dict>
+</plist>

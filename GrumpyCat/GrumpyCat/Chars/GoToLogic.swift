@@ -8,9 +8,13 @@
 
 import Foundation
 
-class GoToPointLogic {
+class GoToLogic {
     
-    class func GetActions(scene:IntroScene, char:GameChar, touch:CGPoint) -> [TaskBase]{
+    class func GoToRoomObject(scene:IntroScene, char:GameChar, object:RoomObject) -> [TaskBase]{
+        return GoToLocation(scene, char: char, touch: object.CenterPosition)
+    }
+    
+    class func GoToLocation(scene:IntroScene, char:GameChar, touch:CGPoint) -> [TaskBase]{
         var tasks:[TaskBase] = [TaskBase]()
         
         let touchObj:RoomObject? = GetTouchObject(scene, touch:touch)

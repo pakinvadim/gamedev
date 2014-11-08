@@ -30,7 +30,7 @@ class TaskBase : Equatable{
             println("\(self) \(Name) is nil")
             Status = TaskStatus.Done
         } else {
-            println("\(self) \(Name) is run")
+            println("\(char.name):\(self) \(Name) is run")
             Status = TaskStatus.Run
             char.flipX = Flip
             

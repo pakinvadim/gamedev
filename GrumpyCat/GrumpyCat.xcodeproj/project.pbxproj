@@ -212,6 +212,20 @@
 		84A8D2F419E85B37004A946D /* ScalarArithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A8D2F319E85B37004A946D /* ScalarArithmetic.swift */; };
 		84A8D2F619E862CC004A946D /* Door.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A8D2F519E862CC004A946D /* Door.swift */; };
 		84A8D2F819E8677C004A946D /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A8D2F719E8677C004A946D /* Enums.swift */; };
+		84A966C01A0DC23D001CDC11 /* ManAngry.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84A966B21A0DC23D001CDC11 /* ManAngry.plist */; };
+		84A966C11A0DC23D001CDC11 /* ManAngry.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A966B31A0DC23D001CDC11 /* ManAngry.png */; };
+		84A966C21A0DC23D001CDC11 /* ManDoorLeft.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84A966B41A0DC23D001CDC11 /* ManDoorLeft.plist */; };
+		84A966C31A0DC23D001CDC11 /* ManDoorLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A966B51A0DC23D001CDC11 /* ManDoorLeft.png */; };
+		84A966C41A0DC23D001CDC11 /* ManDoorRight.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84A966B61A0DC23D001CDC11 /* ManDoorRight.plist */; };
+		84A966C51A0DC23D001CDC11 /* ManDoorRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A966B71A0DC23D001CDC11 /* ManDoorRight.png */; };
+		84A966C61A0DC23D001CDC11 /* ManDoorTop.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84A966B81A0DC23D001CDC11 /* ManDoorTop.plist */; };
+		84A966C71A0DC23D001CDC11 /* ManDoorTop.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A966B91A0DC23D001CDC11 /* ManDoorTop.png */; };
+		84A966C81A0DC23D001CDC11 /* ManRepair.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84A966BA1A0DC23D001CDC11 /* ManRepair.plist */; };
+		84A966C91A0DC23D001CDC11 /* ManRepair.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A966BB1A0DC23D001CDC11 /* ManRepair.png */; };
+		84A966CA1A0DC23D001CDC11 /* ManWalk.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84A966BC1A0DC23D001CDC11 /* ManWalk.plist */; };
+		84A966CB1A0DC23D001CDC11 /* ManWalk.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A966BD1A0DC23D001CDC11 /* ManWalk.png */; };
+		84A966CC1A0DC23D001CDC11 /* Shok.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84A966BE1A0DC23D001CDC11 /* Shok.plist */; };
+		84A966CD1A0DC23D001CDC11 /* Shok.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A966BF1A0DC23D001CDC11 /* Shok.png */; };
 		84A98C1A19FAF4A000B0854B /* EnterDoorTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A98C1919FAF4A000B0854B /* EnterDoorTask.swift */; };
 		84A9DD3A1A03A4A800E3BE52 /* ThingJoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9DD391A03A4A800E3BE52 /* ThingJoke.swift */; };
 		84AA4DF419FD54890006DE99 /* InventoryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA4DF319FD54890006DE99 /* InventoryInfo.swift */; };
@@ -219,7 +233,7 @@
 		84AA4DF919FD7D6B0006DE99 /* UIBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA4DF819FD7D6B0006DE99 /* UIBase.swift */; };
 		84AA4DFB19FD85CD0006DE99 /* ThingGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA4DFA19FD85CD0006DE99 /* ThingGet.swift */; };
 		84AFC0BB19F3D53A00A0EBDE /* TaskBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFC0BA19F3D53A00A0EBDE /* TaskBase.swift */; };
-		84AFC0BF19F4110200A0EBDE /* GoToPointLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFC0BE19F4110200A0EBDE /* GoToPointLogic.swift */; };
+		84AFC0BF19F4110200A0EBDE /* GoToLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFC0BE19F4110200A0EBDE /* GoToLogic.swift */; };
 		84AFC0C519F424A500A0EBDE /* WayInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFC0C419F424A500A0EBDE /* WayInfo.swift */; };
 		84AFC0C919F45E7200A0EBDE /* MoveInRoomTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFC0C819F45E7200A0EBDE /* MoveInRoomTask.swift */; };
 		84AFC0CB19F45F5200A0EBDE /* MoveTaskBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFC0CA19F45F5200A0EBDE /* MoveTaskBase.swift */; };
@@ -705,6 +719,20 @@
 		84A8D2F319E85B37004A946D /* ScalarArithmetic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScalarArithmetic.swift; sourceTree = "<group>"; };
 		84A8D2F519E862CC004A946D /* Door.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Door.swift; sourceTree = "<group>"; };
 		84A8D2F719E8677C004A946D /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		84A966B21A0DC23D001CDC11 /* ManAngry.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ManAngry.plist; sourceTree = "<group>"; };
+		84A966B31A0DC23D001CDC11 /* ManAngry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ManAngry.png; sourceTree = "<group>"; };
+		84A966B41A0DC23D001CDC11 /* ManDoorLeft.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ManDoorLeft.plist; sourceTree = "<group>"; };
+		84A966B51A0DC23D001CDC11 /* ManDoorLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ManDoorLeft.png; sourceTree = "<group>"; };
+		84A966B61A0DC23D001CDC11 /* ManDoorRight.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ManDoorRight.plist; sourceTree = "<group>"; };
+		84A966B71A0DC23D001CDC11 /* ManDoorRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ManDoorRight.png; sourceTree = "<group>"; };
+		84A966B81A0DC23D001CDC11 /* ManDoorTop.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ManDoorTop.plist; sourceTree = "<group>"; };
+		84A966B91A0DC23D001CDC11 /* ManDoorTop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ManDoorTop.png; sourceTree = "<group>"; };
+		84A966BA1A0DC23D001CDC11 /* ManRepair.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ManRepair.plist; sourceTree = "<group>"; };
+		84A966BB1A0DC23D001CDC11 /* ManRepair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ManRepair.png; sourceTree = "<group>"; };
+		84A966BC1A0DC23D001CDC11 /* ManWalk.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ManWalk.plist; sourceTree = "<group>"; };
+		84A966BD1A0DC23D001CDC11 /* ManWalk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ManWalk.png; sourceTree = "<group>"; };
+		84A966BE1A0DC23D001CDC11 /* Shok.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Shok.plist; sourceTree = "<group>"; };
+		84A966BF1A0DC23D001CDC11 /* Shok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Shok.png; sourceTree = "<group>"; };
 		84A98C1919FAF4A000B0854B /* EnterDoorTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterDoorTask.swift; sourceTree = "<group>"; };
 		84A9DD391A03A4A800E3BE52 /* ThingJoke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThingJoke.swift; sourceTree = "<group>"; };
 		84AA4DF319FD54890006DE99 /* InventoryInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InventoryInfo.swift; path = UI/InventoryInfo.swift; sourceTree = "<group>"; };
@@ -712,7 +740,7 @@
 		84AA4DF819FD7D6B0006DE99 /* UIBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBase.swift; sourceTree = "<group>"; };
 		84AA4DFA19FD85CD0006DE99 /* ThingGet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThingGet.swift; sourceTree = "<group>"; };
 		84AFC0BA19F3D53A00A0EBDE /* TaskBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskBase.swift; sourceTree = "<group>"; };
-		84AFC0BE19F4110200A0EBDE /* GoToPointLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoToPointLogic.swift; sourceTree = "<group>"; };
+		84AFC0BE19F4110200A0EBDE /* GoToLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoToLogic.swift; sourceTree = "<group>"; };
 		84AFC0C419F424A500A0EBDE /* WayInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WayInfo.swift; sourceTree = "<group>"; };
 		84AFC0C819F45E7200A0EBDE /* MoveInRoomTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveInRoomTask.swift; sourceTree = "<group>"; };
 		84AFC0CA19F45F5200A0EBDE /* MoveTaskBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveTaskBase.swift; sourceTree = "<group>"; };
@@ -1658,6 +1686,27 @@
 			name = Things;
 			sourceTree = "<group>";
 		};
+		84A966B11A0DC23D001CDC11 /* Man */ = {
+			isa = PBXGroup;
+			children = (
+				84A966B21A0DC23D001CDC11 /* ManAngry.plist */,
+				84A966B31A0DC23D001CDC11 /* ManAngry.png */,
+				84A966B41A0DC23D001CDC11 /* ManDoorLeft.plist */,
+				84A966B51A0DC23D001CDC11 /* ManDoorLeft.png */,
+				84A966B61A0DC23D001CDC11 /* ManDoorRight.plist */,
+				84A966B71A0DC23D001CDC11 /* ManDoorRight.png */,
+				84A966B81A0DC23D001CDC11 /* ManDoorTop.plist */,
+				84A966B91A0DC23D001CDC11 /* ManDoorTop.png */,
+				84A966BA1A0DC23D001CDC11 /* ManRepair.plist */,
+				84A966BB1A0DC23D001CDC11 /* ManRepair.png */,
+				84A966BC1A0DC23D001CDC11 /* ManWalk.plist */,
+				84A966BD1A0DC23D001CDC11 /* ManWalk.png */,
+				84A966BE1A0DC23D001CDC11 /* Shok.plist */,
+				84A966BF1A0DC23D001CDC11 /* Shok.png */,
+			);
+			path = Man;
+			sourceTree = "<group>";
+		};
 		84AA4DF019FD4BB10006DE99 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -1691,7 +1740,7 @@
 			isa = PBXGroup;
 			children = (
 				84AFC0C419F424A500A0EBDE /* WayInfo.swift */,
-				84AFC0BE19F4110200A0EBDE /* GoToPointLogic.swift */,
+				84AFC0BE19F4110200A0EBDE /* GoToLogic.swift */,
 			);
 			name = TasksLogic;
 			sourceTree = "<group>";
@@ -1731,6 +1780,7 @@
 		84E1BDBA19E1E3D9008B3C8F /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
+				84A966B11A0DC23D001CDC11 /* Man */,
 				84AA4DF519FD55220006DE99 /* UI */,
 				84A6C52519FC4ECA00577430 /* House */,
 				84E1BDBB19E1E3D9008B3C8F /* BatCatAnim */,
@@ -1925,14 +1975,18 @@
 				84E1BE0F19E1E3D9008B3C8F /* CatAnimEnterDoorRightIn3.png in Resources */,
 				84E1BE0019E1E3D9008B3C8F /* CatAnimEnterDoorLeftIn0.png in Resources */,
 				84E1BE1419E1E3D9008B3C8F /* CatAnimEnterDoorRightOut2.png in Resources */,
+				84A966C51A0DC23D001CDC11 /* ManDoorRight.png in Resources */,
 				84E1BE2819E1E3D9008B3C8F /* walkBotton2.png in Resources */,
 				84E1BE3B19E1E3D9008B3C8F /* doorUp0.png in Resources */,
+				84A966CD1A0DC23D001CDC11 /* Shok.png in Resources */,
+				84A966C81A0DC23D001CDC11 /* ManRepair.plist in Resources */,
 				84E1BE0E19E1E3D9008B3C8F /* CatAnimEnterDoorRightIn2.png in Resources */,
 				65F5D6D019854038007C8B2B /* Icon@2x.png in Resources */,
 				84E1BE1819E1E3D9008B3C8F /* CatAnimEnterDoorTopIn0.png in Resources */,
 				84E1BE3A19E1E3D9008B3C8F /* doorRight3.png in Resources */,
 				84E1BE2919E1E3D9008B3C8F /* walkBotton3.png in Resources */,
 				84E1BE3519E1E3D9008B3C8F /* doorLeft2.png in Resources */,
+				84A966C11A0DC23D001CDC11 /* ManAngry.png in Resources */,
 				84E1BE0919E1E3D9008B3C8F /* CatAnimEnterDoorLeftOut3.png in Resources */,
 				84E1BE3E19E1E3D9008B3C8F /* doorUp3.png in Resources */,
 				84E1BE0719E1E3D9008B3C8F /* CatAnimEnterDoorLeftOut1.png in Resources */,
@@ -1953,12 +2007,16 @@
 				84E1BE0619E1E3D9008B3C8F /* CatAnimEnterDoorLeftOut0.png in Resources */,
 				84A6A4451A024A0000DE6F58 /* otv-2.jpg in Resources */,
 				84E1BE3419E1E3D9008B3C8F /* doorLeft1.png in Resources */,
+				84A966C01A0DC23D001CDC11 /* ManAngry.plist in Resources */,
 				84E1BE2519E1E3D9008B3C8F /* standBotton1.png in Resources */,
+				84A966C61A0DC23D001CDC11 /* ManDoorTop.plist in Resources */,
 				84E1BE3619E1E3D9008B3C8F /* doorLeft3.png in Resources */,
 				65F5D6C519854038007C8B2B /* Default.png in Resources */,
 				84E1BE2E19E1E3D9008B3C8F /* walkLeft4.png in Resources */,
+				84A966CB1A0DC23D001CDC11 /* ManWalk.png in Resources */,
 				84E1BE2719E1E3D9008B3C8F /* walkBotton1.png in Resources */,
 				84E1BE2B19E1E3D9008B3C8F /* walkLeft1.png in Resources */,
+				84A966CC1A0DC23D001CDC11 /* Shok.plist in Resources */,
 				84E1BE3C19E1E3D9008B3C8F /* doorUp1.png in Resources */,
 				84E1BE2119E1E3D9008B3C8F /* CatAnimEnterDoorTopOut3.png in Resources */,
 				84A732831A048EDB00991C9B /* tv-2.jpg in Resources */,
@@ -1972,6 +2030,7 @@
 				84E1BE0D19E1E3D9008B3C8F /* CatAnimEnterDoorRightIn1.png in Resources */,
 				84E1BE2A19E1E3D9008B3C8F /* walkLeft0.png in Resources */,
 				84E1BE1919E1E3D9008B3C8F /* CatAnimEnterDoorTopIn1.png in Resources */,
+				84A966C41A0DC23D001CDC11 /* ManDoorRight.plist in Resources */,
 				84E1BE1719E1E3D9008B3C8F /* CatAnimEnterDoorRightOut5.png in Resources */,
 				84E1BE0B19E1E3D9008B3C8F /* CatAnimEnterDoorLeftOut5.png in Resources */,
 				84A6A4461A024A0000DE6F58 /* otv.png in Resources */,
@@ -1991,10 +2050,12 @@
 				65F5D6C919854038007C8B2B /* Default-568h@2x.png in Resources */,
 				65F5D6E919854038007C8B2B /* iTunesArtwork in Resources */,
 				65F5D6E419854038007C8B2B /* Icon-Spotlight-iOS7.png in Resources */,
+				84A966C91A0DC23D001CDC11 /* ManRepair.png in Resources */,
 				84E1BE1619E1E3D9008B3C8F /* CatAnimEnterDoorRightOut4.png in Resources */,
 				84E1BE2019E1E3D9008B3C8F /* CatAnimEnterDoorTopOut2.png in Resources */,
 				84E1BE0819E1E3D9008B3C8F /* CatAnimEnterDoorLeftOut2.png in Resources */,
 				65F5D6D819854038007C8B2B /* Icon-76@2x.png in Resources */,
+				84A966CA1A0DC23D001CDC11 /* ManWalk.plist in Resources */,
 				84E1BE1C19E1E3D9008B3C8F /* CatAnimEnterDoorTopIn4.png in Resources */,
 				65F5D6E619854038007C8B2B /* Icon-Spotlight-iOS7@2x.png in Resources */,
 				84E1BE3D19E1E3D9008B3C8F /* doorUp2.png in Resources */,
@@ -2002,8 +2063,11 @@
 				84E1BE1B19E1E3D9008B3C8F /* CatAnimEnterDoorTopIn3.png in Resources */,
 				84E1BE0C19E1E3D9008B3C8F /* CatAnimEnterDoorRightIn0.png in Resources */,
 				84E1BE2C19E1E3D9008B3C8F /* walkLeft2.png in Resources */,
+				84A966C31A0DC23D001CDC11 /* ManDoorLeft.png in Resources */,
 				84E1BE2619E1E3D9008B3C8F /* walkBotton0.png in Resources */,
+				84A966C71A0DC23D001CDC11 /* ManDoorTop.png in Resources */,
 				84E1BE0519E1E3D9008B3C8F /* CatAnimEnterDoorLeftIn5.png in Resources */,
+				84A966C21A0DC23D001CDC11 /* ManDoorLeft.plist in Resources */,
 				84E1BE3219E1E3D9008B3C8F /* walkTop3.png in Resources */,
 				84E1BE1A19E1E3D9008B3C8F /* CatAnimEnterDoorTopIn2.png in Resources */,
 				65F5D6EB19854038007C8B2B /* iTunesArtwork@2x in Resources */,
@@ -2034,7 +2098,7 @@
 				65F5D7CA19854039007C8B2B /* CCTiledMapObjectGroup.m in Sources */,
 				65F5D81C1985403A007C8B2B /* ZipUtils.m in Sources */,
 				65F5D71C19854039007C8B2B /* CCCache.m in Sources */,
-				84AFC0BF19F4110200A0EBDE /* GoToPointLogic.swift in Sources */,
+				84AFC0BF19F4110200A0EBDE /* GoToLogic.swift in Sources */,
 				65F5D8751985403A007C8B2B /* OALAudioFile.m in Sources */,
 				65F5D74C19854039007C8B2B /* CCDrawNode.m in Sources */,
 				65F5D8371985403A007C8B2B /* OALAudioTracks.m in Sources */,

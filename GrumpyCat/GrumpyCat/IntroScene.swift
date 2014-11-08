@@ -18,6 +18,7 @@ class IntroScene : CCScene {
         super.init()
         ActualLevel = Level1(scene: self)
         addChild(ActualLevel)
+        ActualLevel!.InitAll()
         userInteractionEnabled = true
         multipleTouchEnabled = true;
     }

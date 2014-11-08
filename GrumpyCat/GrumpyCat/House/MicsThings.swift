@@ -29,6 +29,7 @@ class Televizor : ThingJoke {
         CatStartActionPoint = CGPointMake(0, 0)
         ManStartActionPoint = CGPointMake(0, 0)
         CatMakeJokeTasks = [DoActionTask(action: RootSprite.GetAction("walkTop", frameCount: 4, delay: 0.1, wight: 186,  hight: 185))]
+        ManUsingTasks = [DoActionTask(action: scene.ActualLevel!.Man!.RepairAction!, name: "Repair")]
         //ManActionTasks = RootSprite.GetAction("walkTop", frameCount: 4, delay: 0.1, wight: 186,  hight: 185)
     }
     

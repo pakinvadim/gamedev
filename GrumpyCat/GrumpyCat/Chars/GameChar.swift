@@ -10,7 +10,6 @@ import Foundation
 
 class GameChar : RootSprite {
     var Speed: CGFloat = 250
-    var Type:BotType?
     
     var WalkDown:CCAnimation?
     var WalkLeft:CCAnimation?
@@ -97,7 +96,17 @@ class GameChar : RootSprite {
     }
     
     func GetPermentTask() -> TaskBase?{
-        var allDone = true
+        var runTask:TaskBase? = PermanentTasks.FirstOrDefault({t in t.Status == TaskStatus.Run})
+        if(runTask != nil){
+            return nil
+        }
+        var nextTask:TaskBase? = PermanentTasks.LastOrDefault({t in t.Status == TaskStatus.None})
+        if(nextTask == nil){
+            PermanentTasks.ForEach({t in t.Status = TaskStatus.None})
+            nextTask = PermanentTasks.last
+        }
+        return nextTask
+        /*var allDone = true
         for task:TaskBase in PermanentTasks{
             if(task.Status == TaskStatus.Run){
                 return nil
@@ -116,14 +125,21 @@ class GameChar : RootSprite {
                 return task
             }
         }
-        return nil
+        return nil*/
     }
     
     func GoTo(location:CGPoint){
         println("GoTo")
-        var tasks = GoToPointLogic.GetActions(Scene!, char: self, touch: location)
+        var tasks = GoToLogic.GoToLocation(Scene!, char: self, touch: location)
         for task in tasks{
             CurrentTasks.append(task)
+        }
+    }
+    
+    func PermanentActionObject(object:RoomObject){
+        var tasks = GoToLogic.GoToRoomObject(Scene!, char: self, object: object)
+        for task in tasks{
+            PermanentTasks.append(task)
         }
     }
     

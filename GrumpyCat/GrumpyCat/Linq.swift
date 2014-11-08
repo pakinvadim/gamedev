@@ -84,6 +84,15 @@ extension Array {
         return nil
     }
     
+    func LastOrDefault(fn: (T) -> Bool) -> T? {
+        for x in self.reverse() {
+            if fn(x) {
+                return x
+            }
+        }
+        return nil
+    }
+    
     func Skip(count:Int) -> [T] {
         var to = [T]()
         var i = count

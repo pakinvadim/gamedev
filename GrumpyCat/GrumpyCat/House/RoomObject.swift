@@ -13,6 +13,7 @@ class RoomObject : RootSprite{
     var Width:CGFloat = 0
     var Height:CGFloat = 0
     var Position:CGPoint{ get{ return CcpAdd(CurrentRoom!.position, position) } }
+    var CenterPosition:CGPoint{ get{ return CcpAdd(Position, CGPointMake(Height/2.0, Width/2.0)) } }
     
     override init(scene:IntroScene) {
         super.init(scene: scene)

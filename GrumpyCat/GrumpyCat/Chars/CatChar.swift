@@ -15,7 +15,8 @@ class CatChar : GameChar {
     
     override init(scene:IntroScene) {
         super.init(scene: scene)//imageNamed: "Icon-72.png")
-        Type = BotType.Cat
+        name = "Cat"
+        anchorPoint = CGPointMake(0.5, 0.15)
         
         WalkRight = RootSprite.GetAnimation("walkLeft", frameCount: 5, delay: AnimDelay, wight: 186,  hight: 185)
         WalkLeft = RootSprite.GetAnimation("walkLeft", frameCount: 5, delay: AnimDelay, wight: 186,  hight: 185)

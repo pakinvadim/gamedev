@@ -25,6 +25,25 @@ class RootSprite : CCSprite {
         up()
     }
     
+    class func GetActionNew(name: String, frameCount: Int, delay: CGFloat) -> CCAction{
+        let anim:CCAnimation = GetAnimationNew(name, frameCount:frameCount, delay:delay)
+        return CCActionAnimate.actionWithAnimation(anim) as CCAction
+    }
+    
+    class func GetAnimationNew(name: String, frameCount: Int, delay: CGFloat) -> CCAnimation{
+        var arr:[Int] = [Int](1...frameCount)
+        return GetAnimationNew(name, frameRange: arr, delay: delay);
+    }
+    
+    class func GetAnimationNew(name: String, frameRange: [Int], delay:CGFloat) -> CCAnimation{
+        var tempFrames = [CCSpriteFrame]()
+        for i in frameRange {
+            let frame = CCSpriteFrame.frameWithImageNamed("\(name) (\(i)).png") as CCSpriteFrame
+            tempFrames.append(frame)
+        }
+        return CCAnimation.animationWithSpriteFrames(tempFrames, delay: Float(delay)) as CCAnimation
+    }
+    
     class func GetAction(name: String, frameCount: Int, delay: CGFloat, wight: CGFloat, hight: CGFloat) -> CCAction{
         let anim:CCAnimation = GetAnimation(name, frameCount:frameCount, delay:delay, wight:wight, hight:hight)
         return CCActionAnimate.actionWithAnimation(anim) as CCAction

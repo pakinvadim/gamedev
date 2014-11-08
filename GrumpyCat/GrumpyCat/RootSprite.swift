@@ -25,6 +25,11 @@ class RootSprite : CCSprite {
         up()
     }
     
+    class func GetAction(name: String, frameCount: Int, delay: CGFloat, wight: CGFloat, hight: CGFloat) -> CCAction{
+        let anim:CCAnimation = GetAnimation(name, frameCount:frameCount, delay:delay, wight:wight, hight:hight)
+        return CCActionAnimate.actionWithAnimation(anim) as CCAction
+    }
+    
     class func GetAnimation(name: String, frameCount: Int, delay: CGFloat, wight: CGFloat, hight: CGFloat) -> CCAnimation{
         var arr:[Int] = [Int](0...frameCount-1)
         return GetAnimation(name, frameRange: arr, delay: delay, wight: wight, hight: hight);

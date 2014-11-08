@@ -44,31 +44,31 @@ class EnterDoorTask : TaskBase{
     }
     
     func GetAnimationDoor(char:GameChar, inDoor: Door, outDoor: Door) -> CCActionSequence{
-        var animateIn:CCAnimation?
-        var animateOut:CCAnimation?
+        var actionIn:CCAction?
+        var actionOut:CCAction?
         var stairsTime:CCActionDelay = CCActionDelay.actionWithDuration(0) as CCActionDelay
         var animationTime:CCActionDelay = CCActionDelay.actionWithDuration(CCTime(Door.DoorAnimationDelay * 7.0)) as CCActionDelay
         
         if(inDoor.Type == DoorType.Left){
-            animateIn = char.DoorLeftIn!
-            animateOut = char.DoorRightOut!
+            actionIn = char.DoorLeftInAction!
+            actionOut = char.DoorRightOutAction!
         }
         else if(inDoor.Type == DoorType.Right){
-            animateIn = char.DoorRightIn!
-            animateOut = char.DoorLeftOut!
+            actionIn = char.DoorRightInAction!
+            actionOut = char.DoorLeftOutAction!
             Flip = true
         }
         else if(inDoor.Type == DoorType.Top){
-            animateIn = char.DoorTopIn!
-            animateOut = char.DoorTopOut!
+            actionIn = char.DoorTopInAction!
+            actionOut = char.DoorTopOutAction!
             stairsTime = CCActionDelay.actionWithDuration(CCTime(Door.DoorAnimationDelay * 7.0)) as CCActionDelay;// задержка при поднятие по лестнице
             animationTime = CCActionDelay.actionWithDuration(CCTime(Door.DoorAnimationDelay * 14.0)) as CCActionDelay
         }
         let animation = CCActionCallBlock({
             inDoor.runAction(CCActionSequence.actionWithArray([inDoor.Opening!, inDoor.Closed!]) as CCAction)
-            inDoor.AnimationSprite!.runAction(CCActionSequence.actionWithArray([CCActionShow.action(), CCActionAnimate.actionWithAnimation(animateIn!),CCActionHide.action()]) as CCAction)
+            inDoor.AnimationSprite!.runAction(CCActionSequence.actionWithArray([CCActionShow.action(), actionIn!,CCActionHide.action()]) as CCAction)
             outDoor.runAction(CCActionSequence.actionWithArray([stairsTime, outDoor.Opening!, outDoor.Closed!]) as CCAction)
-            outDoor.AnimationSprite!.runAction(CCActionSequence.actionWithArray([stairsTime, CCActionShow.action(), CCActionAnimate.actionWithAnimation(animateOut), CCActionHide.action() as CCAction]) as CCAction)})
+            outDoor.AnimationSprite!.runAction(CCActionSequence.actionWithArray([stairsTime, CCActionShow.action(), actionOut, CCActionHide.action() as CCAction]) as CCAction)})
         
         return CCActionSequence.actionWithArray([animation, animationTime]) as CCActionSequence
 

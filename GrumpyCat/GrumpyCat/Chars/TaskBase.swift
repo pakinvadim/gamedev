@@ -17,6 +17,7 @@ class TaskBase : Equatable{
     var DoneBlock:CCActionCallBlock?
     var CanStop:Bool = true
     var Action:CCAction?
+    var Name:String = ""
     
     init(){
         DoneBlock = CCActionCallBlock({ self.Status = TaskStatus.Done })
@@ -26,10 +27,10 @@ class TaskBase : Equatable{
     
     func Populate(scene:IntroScene, char:GameChar, action:CCAction?){
         if(action == nil){
-            println("\(self) is nil")
+            println("\(self) \(Name) is nil")
             Status = TaskStatus.Done
         } else {
-            println("\(self) is run")
+            println("\(self) \(Name) is run")
             Status = TaskStatus.Run
             char.flipX = Flip
             

@@ -13,10 +13,7 @@ class Otvertka : ThingGet {
     init(scene:IntroScene){
         super.init(scene: scene, imageName: "otv.png")
         InvertoryTexture = CCTexture(file: "otv-2.jpg")//CCTextureCache.sharedTextureCache().addImage("")
-        
-        let CatActionAnimation = RootSprite.GetAnimation("walkTop", frameCount: 4, delay: 0.1, wight: 186,  hight: 185)
-        let CatAction = CCActionAnimate.actionWithAnimation(CatActionAnimation) as CCAction
-        CatActionTasks = [DoActionTask(action: CatAction, canStop:false), DoActionTask(action: CCActionCallBlock({self.PutToInventary()}))]
+        GetItPosition = CGPointMake(0, 0)
     }
     
     override init(imageNamed imageName: String!) {super.init(imageNamed: imageName)}
@@ -25,15 +22,14 @@ class Otvertka : ThingGet {
     override init(spriteFrame: CCSpriteFrame!) {super.init(spriteFrame: spriteFrame)}
 }
 
-class Televizor : ThingBase {
+class Televizor : ThingJoke {
     init(scene:IntroScene){
         super.init(scene: scene, imageName:"tv.jpeg")
-        
-        var CatActionAnimation = RootSprite.GetAnimation("walkTop", frameCount: 4, delay: 0.1, wight: 186,  hight: 185)
-        CatAction = CCActionAnimate.actionWithAnimation(CatActionAnimation) as? CCAction
-        
-        var ManActionAnimation = RootSprite.GetAnimation("walkTop", frameCount: 4, delay: 0.1, wight: 186,  hight: 185)
-        ManAction = CCActionAnimate.actionWithAnimation(CatActionAnimation) as? CCAction
+        JokeReadyTexture = CCTexture(file: "tv-2.jpg")
+        CatStartActionPoint = CGPointMake(0, 0)
+        ManStartActionPoint = CGPointMake(0, 0)
+        CatMakeJokeTasks = [DoActionTask(action: RootSprite.GetAction("walkTop", frameCount: 4, delay: 0.1, wight: 186,  hight: 185))]
+        //ManActionTasks = RootSprite.GetAction("walkTop", frameCount: 4, delay: 0.1, wight: 186,  hight: 185)
     }
     
     override init(imageNamed imageName: String!) {super.init(imageNamed: imageName)}

@@ -43,7 +43,6 @@ class InventoryInfo : UIBase {
     func AddThing(thing:ThingGet){
         Things.append(thing)
         UpdateItems()
-        thing.removeFromParent()
         thing.ChangeImage()
         addChild(thing, z: 10)
         UpdateAllItemsWidht()

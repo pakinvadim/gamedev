@@ -208,17 +208,17 @@
 		84A6C52419FC37D900577430 /* MicsThings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A6C52319FC37D900577430 /* MicsThings.swift */; };
 		84A6C52F19FC504100577430 /* room1.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A6C52E19FC504100577430 /* room1.png */; };
 		84A6C53119FC557700577430 /* tv.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 84A6C53019FC557700577430 /* tv.jpeg */; };
+		84A732831A048EDB00991C9B /* tv-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84A732821A048EDB00991C9B /* tv-2.jpg */; };
 		84A8D2F419E85B37004A946D /* ScalarArithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A8D2F319E85B37004A946D /* ScalarArithmetic.swift */; };
 		84A8D2F619E862CC004A946D /* Door.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A8D2F519E862CC004A946D /* Door.swift */; };
 		84A8D2F819E8677C004A946D /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A8D2F719E8677C004A946D /* Enums.swift */; };
 		84A98C1A19FAF4A000B0854B /* EnterDoorTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A98C1919FAF4A000B0854B /* EnterDoorTask.swift */; };
-		84A9DD3A1A03A4A800E3BE52 /* ThingAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9DD391A03A4A800E3BE52 /* ThingAction.swift */; };
+		84A9DD3A1A03A4A800E3BE52 /* ThingJoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9DD391A03A4A800E3BE52 /* ThingJoke.swift */; };
 		84AA4DF419FD54890006DE99 /* InventoryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA4DF319FD54890006DE99 /* InventoryInfo.swift */; };
 		84AA4DF719FD55220006DE99 /* inventory.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84AA4DF619FD55220006DE99 /* inventory.jpg */; };
 		84AA4DF919FD7D6B0006DE99 /* UIBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA4DF819FD7D6B0006DE99 /* UIBase.swift */; };
 		84AA4DFB19FD85CD0006DE99 /* ThingGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA4DFA19FD85CD0006DE99 /* ThingGet.swift */; };
 		84AFC0BB19F3D53A00A0EBDE /* TaskBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFC0BA19F3D53A00A0EBDE /* TaskBase.swift */; };
-		84AFC0BD19F3D5BC00A0EBDE /* BreatheTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFC0BC19F3D5BC00A0EBDE /* BreatheTask.swift */; };
 		84AFC0BF19F4110200A0EBDE /* GoToPointLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFC0BE19F4110200A0EBDE /* GoToPointLogic.swift */; };
 		84AFC0C519F424A500A0EBDE /* WayInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFC0C419F424A500A0EBDE /* WayInfo.swift */; };
 		84AFC0C919F45E7200A0EBDE /* MoveInRoomTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFC0C819F45E7200A0EBDE /* MoveInRoomTask.swift */; };
@@ -701,17 +701,17 @@
 		84A6C52319FC37D900577430 /* MicsThings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicsThings.swift; sourceTree = "<group>"; };
 		84A6C52E19FC504100577430 /* room1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = room1.png; path = House/Rooms/room1.png; sourceTree = "<group>"; };
 		84A6C53019FC557700577430 /* tv.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tv.jpeg; path = House/Things/tv.jpeg; sourceTree = "<group>"; };
+		84A732821A048EDB00991C9B /* tv-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "tv-2.jpg"; path = "House/Things/tv-2.jpg"; sourceTree = "<group>"; };
 		84A8D2F319E85B37004A946D /* ScalarArithmetic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScalarArithmetic.swift; sourceTree = "<group>"; };
 		84A8D2F519E862CC004A946D /* Door.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Door.swift; sourceTree = "<group>"; };
 		84A8D2F719E8677C004A946D /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		84A98C1919FAF4A000B0854B /* EnterDoorTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterDoorTask.swift; sourceTree = "<group>"; };
-		84A9DD391A03A4A800E3BE52 /* ThingAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThingAction.swift; sourceTree = "<group>"; };
+		84A9DD391A03A4A800E3BE52 /* ThingJoke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThingJoke.swift; sourceTree = "<group>"; };
 		84AA4DF319FD54890006DE99 /* InventoryInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InventoryInfo.swift; path = UI/InventoryInfo.swift; sourceTree = "<group>"; };
 		84AA4DF619FD55220006DE99 /* inventory.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = inventory.jpg; sourceTree = "<group>"; };
 		84AA4DF819FD7D6B0006DE99 /* UIBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBase.swift; sourceTree = "<group>"; };
 		84AA4DFA19FD85CD0006DE99 /* ThingGet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThingGet.swift; sourceTree = "<group>"; };
 		84AFC0BA19F3D53A00A0EBDE /* TaskBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskBase.swift; sourceTree = "<group>"; };
-		84AFC0BC19F3D5BC00A0EBDE /* BreatheTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreatheTask.swift; sourceTree = "<group>"; };
 		84AFC0BE19F4110200A0EBDE /* GoToPointLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoToPointLogic.swift; sourceTree = "<group>"; };
 		84AFC0C419F424A500A0EBDE /* WayInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WayInfo.swift; sourceTree = "<group>"; };
 		84AFC0C819F45E7200A0EBDE /* MoveInRoomTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveInRoomTask.swift; sourceTree = "<group>"; };
@@ -1623,7 +1623,7 @@
 			isa = PBXGroup;
 			children = (
 				84A6C52119FC352500577430 /* ThingBase.swift */,
-				84A9DD391A03A4A800E3BE52 /* ThingAction.swift */,
+				84A9DD391A03A4A800E3BE52 /* ThingJoke.swift */,
 				84AA4DFA19FD85CD0006DE99 /* ThingGet.swift */,
 				84A6C52319FC37D900577430 /* MicsThings.swift */,
 			);
@@ -1650,9 +1650,10 @@
 		84A6C52719FC4EDF00577430 /* Things */ = {
 			isa = PBXGroup;
 			children = (
-				84A6A4431A024A0000DE6F58 /* otv-2.jpg */,
 				84A6A4441A024A0000DE6F58 /* otv.png */,
+				84A6A4431A024A0000DE6F58 /* otv-2.jpg */,
 				84A6C53019FC557700577430 /* tv.jpeg */,
+				84A732821A048EDB00991C9B /* tv-2.jpg */,
 			);
 			name = Things;
 			sourceTree = "<group>";
@@ -1679,7 +1680,6 @@
 			children = (
 				84AFC0BA19F3D53A00A0EBDE /* TaskBase.swift */,
 				84A6BB9919FEFB7400EB8AA2 /* DoActionTask.swift */,
-				84AFC0BC19F3D5BC00A0EBDE /* BreatheTask.swift */,
 				84AFC0CA19F45F5200A0EBDE /* MoveTaskBase.swift */,
 				84AFC0C819F45E7200A0EBDE /* MoveInRoomTask.swift */,
 				84A98C1919FAF4A000B0854B /* EnterDoorTask.swift */,
@@ -1961,6 +1961,7 @@
 				84E1BE2B19E1E3D9008B3C8F /* walkLeft1.png in Resources */,
 				84E1BE3C19E1E3D9008B3C8F /* doorUp1.png in Resources */,
 				84E1BE2119E1E3D9008B3C8F /* CatAnimEnterDoorTopOut3.png in Resources */,
+				84A732831A048EDB00991C9B /* tv-2.jpg in Resources */,
 				65F5D6CE19854038007C8B2B /* Icon.png in Resources */,
 				84E1BE3919E1E3D9008B3C8F /* doorRight2.png in Resources */,
 				65F5D6DC19854038007C8B2B /* Icon-iPad-Spotlight-iOS7@2x.png in Resources */,
@@ -2050,7 +2051,6 @@
 				65F5D77119854039007C8B2B /* CCParallaxNode.m in Sources */,
 				84AA4DF919FD7D6B0006DE99 /* UIBase.swift in Sources */,
 				65F5D8041985403A007C8B2B /* ccUtils.c in Sources */,
-				84AFC0BD19F3D5BC00A0EBDE /* BreatheTask.swift in Sources */,
 				65F5D76119854039007C8B2B /* CCLayoutBox.m in Sources */,
 				65F5D7BA19854039007C8B2B /* CCTexture.m in Sources */,
 				65F5D80C1985403A007C8B2B /* CGPointExtension.m in Sources */,
@@ -2084,7 +2084,7 @@
 				65F5D79219854039007C8B2B /* CCProgressNode.m in Sources */,
 				65F5D79E19854039007C8B2B /* CCResponderManager.m in Sources */,
 				65F5D7D019854039007C8B2B /* CCTransition.m in Sources */,
-				84A9DD3A1A03A4A800E3BE52 /* ThingAction.swift in Sources */,
+				84A9DD3A1A03A4A800E3BE52 /* ThingJoke.swift in Sources */,
 				65F5D8271985403A007C8B2B /* OALActionManager.m in Sources */,
 				65F5D78B19854039007C8B2B /* CCPhysicsNode.m in Sources */,
 				65F5D82D1985403A007C8B2B /* OALUtilityActions.m in Sources */,

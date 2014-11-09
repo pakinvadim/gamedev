@@ -4,278 +4,278 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>ManDoorUpIn (1).png</key>
+            <key>MDUI (1).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1462,260},{150,224}}</string>
+                <string>{{760,492},{178,288}}</string>
                 <key>offset</key>
-                <string>{0,-63}</string>
+                <string>{165,-169}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{181,207},{150,224}}</string>
+                <string>{{165,169},{178,288}}</string>
                 <key>sourceSize</key>
-                <string>{512,512}</string>
+                <string>{178,288}</string>
             </dict>
-            <key>ManDoorUpIn (10).png</key>
+            <key>MDUI (10).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{206,2},{182,268}}</string>
+                <string>{{2,854},{168,268}}</string>
                 <key>offset</key>
-                <string>{-16,-84}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{149,206},{182,268}}</string>
-                <key>sourceSize</key>
-                <string>{512,512}</string>
-            </dict>
-            <key>ManDoorUpIn (2).png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{2,276},{150,232}}</string>
-                <key>offset</key>
-                <string>{0,-66}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{181,206},{150,232}}</string>
-                <key>sourceSize</key>
-                <string>{512,512}</string>
-            </dict>
-            <key>ManDoorUpIn (3).png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{918,264},{150,244}}</string>
-                <key>offset</key>
-                <string>{0,-72}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{181,206},{150,244}}</string>
-                <key>sourceSize</key>
-                <string>{512,512}</string>
-            </dict>
-            <key>ManDoorUpIn (4).png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{1766,258},{150,252}}</string>
-                <key>offset</key>
-                <string>{0,-77}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{181,207},{150,252}}</string>
-                <key>sourceSize</key>
-                <string>{512,512}</string>
-            </dict>
-            <key>ManDoorUpIn (5).png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{1620,2},{202,254}}</string>
-                <key>offset</key>
-                <string>{25,-78}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{180,207},{202,254}}</string>
-                <key>sourceSize</key>
-                <string>{512,512}</string>
-            </dict>
-            <key>ManDoorUpIn (6).png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{154,276},{224,254}}</string>
-                <key>offset</key>
-                <string>{9,-78}</string>
+                <string>{175,-170}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{153,207},{224,254}}</string>
+                <string>{{175,170},{168,268}}</string>
                 <key>sourceSize</key>
-                <string>{512,512}</string>
+                <string>{168,268}</string>
             </dict>
-            <key>ManDoorUpIn (7).png</key>
+            <key>MDUI (11).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{934,2},{178,256}}</string>
+                <string>{{1152,698},{168,250}}</string>
                 <key>offset</key>
-                <string>{-14,-78}</string>
+                <string>{175,-169}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{153,206},{178,256}}</string>
+                <string>{{175,169},{168,250}}</string>
                 <key>sourceSize</key>
-                <string>{512,512}</string>
+                <string>{168,250}</string>
             </dict>
-            <key>ManDoorUpIn (8).png</key>
+            <key>MDUI (2).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{562,2},{184,260}}</string>
+                <string>{{854,2},{182,288}}</string>
                 <key>offset</key>
-                <string>{-17,-80}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{147,206},{184,260}}</string>
-                <key>sourceSize</key>
-                <string>{512,512}</string>
-            </dict>
-            <key>ManDoorUpIn (9).png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{748,2},{184,260}}</string>
-                <key>offset</key>
-                <string>{-17,-80}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{147,206},{184,260}}</string>
-                <key>sourceSize</key>
-                <string>{512,512}</string>
-            </dict>
-            <key>ManDoorUpOut (1).png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{1456,2},{162,256}}</string>
-                <key>offset</key>
-                <string>{-4,-78}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{171,206},{162,256}}</string>
-                <key>sourceSize</key>
-                <string>{512,512}</string>
-            </dict>
-            <key>ManDoorUpOut (10).png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{1310,260},{150,240}}</string>
-                <key>offset</key>
-                <string>{2,-70}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{183,206},{150,240}}</string>
-                <key>sourceSize</key>
-                <string>{512,512}</string>
-            </dict>
-            <key>ManDoorUpOut (11).png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{1614,260},{150,224}}</string>
-                <key>offset</key>
-                <string>{2,-63}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{183,207},{150,224}}</string>
-                <key>sourceSize</key>
-                <string>{512,512}</string>
-            </dict>
-            <key>ManDoorUpOut (2).png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{1286,2},{168,256}}</string>
-                <key>offset</key>
-                <string>{-7,-78}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{165,206},{168,256}}</string>
-                <key>sourceSize</key>
-                <string>{512,512}</string>
-            </dict>
-            <key>ManDoorUpOut (3).png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{1114,2},{170,256}}</string>
-                <key>offset</key>
-                <string>{-8,-78}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{163,206},{170,256}}</string>
-                <key>sourceSize</key>
-                <string>{512,512}</string>
-            </dict>
-            <key>ManDoorUpOut (4).png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{390,2},{170,264}}</string>
-                <key>offset</key>
-                <string>{-8,-82}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{163,206},{170,264}}</string>
-                <key>sourceSize</key>
-                <string>{512,512}</string>
-            </dict>
-            <key>ManDoorUpOut (5).png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{2,2},{202,272}}</string>
-                <key>offset</key>
-                <string>{12,-86}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{167,206},{202,272}}</string>
-                <key>sourceSize</key>
-                <string>{512,512}</string>
-            </dict>
-            <key>ManDoorUpOut (6).png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{660,264},{246,256}}</string>
-                <key>offset</key>
-                <string>{38,-78}</string>
+                <string>{161,-169}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{171,206},{246,256}}</string>
+                <string>{{161,169},{182,288}}</string>
                 <key>sourceSize</key>
-                <string>{512,512}</string>
+                <string>{182,288}</string>
             </dict>
-            <key>ManDoorUpOut (7).png</key>
+            <key>MDUI (3).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{410,268},{240,248}}</string>
+                <string>{{716,202},{186,288}}</string>
                 <key>offset</key>
-                <string>{40,-75}</string>
+                <string>{157,-169}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{157,169},{186,288}}</string>
+                <key>sourceSize</key>
+                <string>{186,288}</string>
+            </dict>
+            <key>MDUI (4).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{572,500},{186,296}}</string>
+                <key>offset</key>
+                <string>{157,-169}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{157,169},{186,296}}</string>
+                <key>sourceSize</key>
+                <string>{186,296}</string>
+            </dict>
+            <key>MDUI (5).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{266,580},{218,304}}</string>
+                <key>offset</key>
+                <string>{160,-170}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{176,207},{240,248}}</string>
+                <string>{{160,170},{218,304}}</string>
                 <key>sourceSize</key>
-                <string>{512,512}</string>
+                <string>{218,304}</string>
             </dict>
-            <key>ManDoorUpOut (8).png</key>
+            <key>MDUI (6).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1070,260},{238,248}}</string>
+                <string>{{2,2},{268,288}}</string>
                 <key>offset</key>
-                <string>{46,-74}</string>
+                <string>{164,-169}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{183,206},{238,248}}</string>
+                <string>{{164,169},{268,288}}</string>
                 <key>sourceSize</key>
-                <string>{512,512}</string>
+                <string>{268,288}</string>
             </dict>
-            <key>ManDoorUpOut (9).png</key>
+            <key>MDUI (7).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1824,2},{156,254}}</string>
+                <string>{{2,292},{262,280}}</string>
                 <key>offset</key>
-                <string>{6,-78}</string>
+                <string>{168,-169}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{184,207},{156,254}}</string>
+                <string>{{168,169},{262,280}}</string>
                 <key>sourceSize</key>
-                <string>{512,512}</string>
+                <string>{262,280}</string>
+            </dict>
+            <key>MDUI (8).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,574},{262,278}}</string>
+                <key>offset</key>
+                <string>{174,-169}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{174,169},{262,278}}</string>
+                <key>sourceSize</key>
+                <string>{262,278}</string>
+            </dict>
+            <key>MDUI (9).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{864,782},{172,286}}</string>
+                <key>offset</key>
+                <string>{175,-170}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{175,170},{172,286}}</string>
+                <key>sourceSize</key>
+                <string>{172,286}</string>
+            </dict>
+            <key>MDUO (1).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1112,446},{170,250}}</string>
+                <key>offset</key>
+                <string>{171,-169}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{171,169},{170,250}}</string>
+                <key>sourceSize</key>
+                <string>{170,250}</string>
+            </dict>
+            <key>MDUO (10).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{560,800},{198,302}}</string>
+                <key>offset</key>
+                <string>{143,-169}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{143,169},{198,302}}</string>
+                <key>sourceSize</key>
+                <string>{198,302}</string>
+            </dict>
+            <key>MDUO (2).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{1076,186},{170,258}}</string>
+                <key>offset</key>
+                <string>{171,-170}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{171,170},{170,258}}</string>
+                <key>sourceSize</key>
+                <string>{170,258}</string>
+            </dict>
+            <key>MDUO (3).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{940,472},{170,274}}</string>
+                <key>offset</key>
+                <string>{171,-169}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{171,169},{170,274}}</string>
+                <key>sourceSize</key>
+                <string>{170,274}</string>
+            </dict>
+            <key>MDUO (4).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{904,186},{170,284}}</string>
+                <key>offset</key>
+                <string>{171,-169}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{171,169},{170,284}}</string>
+                <key>sourceSize</key>
+                <string>{170,284}</string>
+            </dict>
+            <key>MDUO (5).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{272,800},{222,286}}</string>
+                <key>offset</key>
+                <string>{170,-169}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{170,169},{222,286}}</string>
+                <key>sourceSize</key>
+                <string>{222,286}</string>
+            </dict>
+            <key>MDUO (6).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{266,292},{244,286}}</string>
+                <key>offset</key>
+                <string>{143,-170}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{143,170},{244,286}}</string>
+                <key>sourceSize</key>
+                <string>{244,286}</string>
+            </dict>
+            <key>MDUO (7).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{566,2},{198,286}}</string>
+                <key>offset</key>
+                <string>{143,-170}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{143,170},{198,286}}</string>
+                <key>sourceSize</key>
+                <string>{198,286}</string>
+            </dict>
+            <key>MDUO (8).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{272,2},{202,292}}</string>
+                <key>offset</key>
+                <string>{139,-169}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{139,169},{202,292}}</string>
+                <key>sourceSize</key>
+                <string>{202,292}</string>
+            </dict>
+            <key>MDUO (9).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{512,206},{202,292}}</string>
+                <key>offset</key>
+                <string>{139,-170}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{139,170},{202,292}}</string>
+                <key>sourceSize</key>
+                <string>{202,292}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -285,9 +285,9 @@
             <key>realTextureFileName</key>
             <string>ManDoorUp.png</string>
             <key>size</key>
-            <string>{1982,512}</string>
+            <string>{1322,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:d46d275c674af9aaa4dc4418b56dca88:037e50587a3e4c83bab6394d7cb0f495:18caffbf5765c8dbd697a75532c23276$</string>
+            <string>$TexturePacker:SmartUpdate:aa422387ed45d40d97d28dae4f53a25e:997c528ffe8ba763a4f127cc4a4ae072:18caffbf5765c8dbd697a75532c23276$</string>
             <key>textureFileName</key>
             <string>ManDoorUp.png</string>
         </dict>

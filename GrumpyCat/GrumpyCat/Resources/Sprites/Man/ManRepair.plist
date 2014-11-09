@@ -4,96 +4,96 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>ManRepair (1).png</key>
+            <key>MRepair (1).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{252,248}}</string>
+                <string>{{2,2},{270,262}}</string>
                 <key>offset</key>
-                <string>{1,-102}</string>
+                <string>{122,-218}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{131,234},{252,248}}</string>
+                <string>{{122,218},{270,262}}</string>
                 <key>sourceSize</key>
-                <string>{512,512}</string>
+                <string>{270,262}</string>
             </dict>
-            <key>ManRepair (2).png</key>
+            <key>MRepair (2).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{412,2},{184,244}}</string>
+                <string>{{2,266},{198,258}}</string>
                 <key>offset</key>
-                <string>{3,-104}</string>
+                <string>{160,-222}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{167,238},{184,244}}</string>
+                <string>{{160,222},{198,258}}</string>
                 <key>sourceSize</key>
-                <string>{512,512}</string>
+                <string>{198,258}</string>
             </dict>
-            <key>ManRepair (3).png</key>
+            <key>MRepair (3).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1064,2},{148,242}}</string>
+                <string>{{332,526},{158,254}}</string>
                 <key>offset</key>
-                <string>{7,-105}</string>
+                <string>{184,-225}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{189,240},{148,242}}</string>
+                <string>{{184,225},{158,254}}</string>
                 <key>sourceSize</key>
-                <string>{512,512}</string>
+                <string>{158,254}</string>
             </dict>
-            <key>ManRepair (4).png</key>
+            <key>MRepair (4).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{912,2},{150,242}}</string>
+                <string>{{170,526},{160,254}}</string>
                 <key>offset</key>
-                <string>{4,-105}</string>
+                <string>{180,-225}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{185,240},{150,242}}</string>
+                <string>{{180,225},{160,254}}</string>
                 <key>sourceSize</key>
-                <string>{512,512}</string>
+                <string>{160,254}</string>
             </dict>
-            <key>ManRepair (5).png</key>
+            <key>MRepair (5).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{754,2},{156,242}}</string>
+                <string>{{2,526},{166,256}}</string>
                 <key>offset</key>
-                <string>{6,-104}</string>
+                <string>{179,-223}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{184,239},{156,242}}</string>
+                <string>{{179,223},{166,256}}</string>
                 <key>sourceSize</key>
-                <string>{512,512}</string>
+                <string>{166,256}</string>
             </dict>
-            <key>ManRepair (6).png</key>
+            <key>MRepair (6).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{598,2},{154,244}}</string>
+                <string>{{202,266},{166,258}}</string>
                 <key>offset</key>
-                <string>{7,-104}</string>
+                <string>{180,-221}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{186,238},{154,244}}</string>
+                <string>{{180,221},{166,258}}</string>
                 <key>sourceSize</key>
-                <string>{512,512}</string>
+                <string>{166,258}</string>
             </dict>
-            <key>ManRepair (7).png</key>
+            <key>MRepair (7).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{256,2},{154,248}}</string>
+                <string>{{274,2},{164,262}}</string>
                 <key>offset</key>
-                <string>{9,-102}</string>
+                <string>{183,-218}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{188,234},{154,248}}</string>
+                <string>{{183,218},{164,262}}</string>
                 <key>sourceSize</key>
-                <string>{512,512}</string>
+                <string>{164,262}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -103,9 +103,9 @@
             <key>realTextureFileName</key>
             <string>ManRepair.png</string>
             <key>size</key>
-            <string>{1214,252}</string>
+            <string>{492,784}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:47242de14103f00f637a21c139e7dc9e:89af84997e05192cc195ce6ac19aafe7:7f4a527710d94719b6d2603f00a79038$</string>
+            <string>$TexturePacker:SmartUpdate:e8c1f9daad82d3b50904fa200f016eaf:7857425945d1b6e198946057aed60ff4:7f4a527710d94719b6d2603f00a79038$</string>
             <key>textureFileName</key>
             <string>ManRepair.png</string>
         </dict>

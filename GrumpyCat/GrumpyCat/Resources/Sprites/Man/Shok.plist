@@ -4,135 +4,135 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>ManShok (1).png</key>
+            <key>MShok (1).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1498,2},{118,262}}</string>
+                <string>{{260,330},{124,270}}</string>
                 <key>offset</key>
-                <string>{-19,-107}</string>
+                <string>{175,-222}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{178,232},{118,262}}</string>
+                <string>{{175,222},{124,270}}</string>
                 <key>sourceSize</key>
-                <string>{512,512}</string>
+                <string>{124,270}</string>
             </dict>
-            <key>ManShok (10).png</key>
+            <key>MShok (10).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{192,248}}</string>
+                <string>{{2,2},{204,254}}</string>
                 <key>offset</key>
-                <string>{-62,-114}</string>
+                <string>{86,-238}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{98,246},{192,248}}</string>
+                <string>{{86,238},{204,254}}</string>
                 <key>sourceSize</key>
-                <string>{512,512}</string>
+                <string>{204,254}</string>
             </dict>
-            <key>ManShok (2).png</key>
+            <key>MShok (2).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1498,122},{118,250}}</string>
+                <string>{{532,330},{124,260}}</string>
                 <key>offset</key>
-                <string>{-26,-100}</string>
+                <string>{167,-220}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{171,231},{118,250}}</string>
+                <string>{{167,220},{124,260}}</string>
                 <key>sourceSize</key>
-                <string>{512,512}</string>
+                <string>{124,260}</string>
             </dict>
-            <key>ManShok (3).png</key>
+            <key>MShok (3).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{960,2},{140,252}}</string>
+                <string>{{528,186},{142,262}}</string>
                 <key>offset</key>
-                <string>{-55,-100}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{131,230},{140,252}}</string>
-                <key>sourceSize</key>
-                <string>{512,512}</string>
-            </dict>
-            <key>ManShok (4).png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{196,2},{178,264}}</string>
-                <key>offset</key>
-                <string>{-73,-106}</string>
+                <string>{130,-219}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{94,230},{178,264}}</string>
+                <string>{{130,219},{142,262}}</string>
                 <key>sourceSize</key>
-                <string>{512,512}</string>
+                <string>{142,262}</string>
             </dict>
-            <key>ManShok (5).png</key>
+            <key>MShok (4).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1102,2},{138,254}}</string>
+                <string>{{208,2},{182,274}}</string>
                 <key>offset</key>
-                <string>{-58,-111}</string>
+                <string>{91,-218}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{129,240},{138,254}}</string>
+                <string>{{91,218},{182,274}}</string>
                 <key>sourceSize</key>
-                <string>{512,512}</string>
+                <string>{182,274}</string>
             </dict>
-            <key>ManShok (6).png</key>
+            <key>MShok (5).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1358,2},{138,248}}</string>
+                <string>{{260,186},{142,266}}</string>
                 <key>offset</key>
-                <string>{-58,-114}</string>
+                <string>{126,-226}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{126,226},{142,266}}</string>
+                <key>sourceSize</key>
+                <string>{142,266}</string>
+            </dict>
+            <key>MShok (6).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{794,178},{144,258}}</string>
+                <key>offset</key>
+                <string>{124,-234}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{129,246},{138,248}}</string>
+                <string>{{124,234},{144,258}}</string>
                 <key>sourceSize</key>
-                <string>{512,512}</string>
+                <string>{144,258}</string>
             </dict>
-            <key>ManShok (7).png</key>
+            <key>MShok (7).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{798,2},{160,250}}</string>
+                <string>{{2,258},{164,256}}</string>
                 <key>offset</key>
-                <string>{-69,-113}</string>
+                <string>{104,-236}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{107,244},{160,250}}</string>
+                <string>{{104,236},{164,256}}</string>
                 <key>sourceSize</key>
-                <string>{512,512}</string>
+                <string>{164,256}</string>
             </dict>
-            <key>ManShok (8).png</key>
+            <key>MShok (8).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{634,2},{162,250}}</string>
+                <string>{{740,2},{174,256}}</string>
                 <key>offset</key>
-                <string>{-70,-113}</string>
+                <string>{94,-236}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{105,244},{162,250}}</string>
+                <string>{{94,236},{174,256}}</string>
                 <key>sourceSize</key>
-                <string>{512,512}</string>
+                <string>{174,256}</string>
             </dict>
-            <key>ManShok (9).png</key>
+            <key>MShok (9).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{462,2},{170,250}}</string>
+                <string>{{484,2},{182,254}}</string>
                 <key>offset</key>
-                <string>{-73,-113}</string>
+                <string>{86,-238}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{98,244},{170,250}}</string>
+                <string>{{86,238},{182,254}}</string>
                 <key>sourceSize</key>
-                <string>{512,512}</string>
+                <string>{182,254}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -142,9 +142,9 @@
             <key>realTextureFileName</key>
             <string>Shok.png</string>
             <key>size</key>
-            <string>{1762,256}</string>
+            <string>{1014,456}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:f7a56cd9b7a3519a4a31b84b7732125f:7332d872f424ea166d104a49dd1bebe2:caa4b7e63905d09657a919a2fe088c3b$</string>
+            <string>$TexturePacker:SmartUpdate:ab44f8133bca2766fb1fb30a196a0cf7:bb3cae29946aa27880396fae6dfecb1f:caa4b7e63905d09657a919a2fe088c3b$</string>
             <key>textureFileName</key>
             <string>Shok.png</string>
         </dict>

@@ -56,7 +56,7 @@
         <key>jxrCompressionLevel</key>
         <uint>0</uint>
         <key>ditherType</key>
-        <enum type="SettingsBase::DitherType">NearestNeighbour</enum>
+        <enum type="SettingsBase::DitherType">FloydSteinbergAlpha</enum>
         <key>backgroundColor</key>
         <uint>0</uint>
         <key>libGdx</key>
@@ -98,7 +98,7 @@
             <int>-1</int>
         </QSize>
         <key>reduceBorderArtifacts</key>
-        <false/>
+        <true/>
         <key>algorithmSettings</key>
         <struct type="AlgorithmSettings">
             <key>algorithm</key>
@@ -153,7 +153,7 @@
         <key>forceIdenticalLayout</key>
         <false/>
         <key>outputFormat</key>
-        <enum type="SettingsBase::OutputFormat">RGBA8888</enum>
+        <enum type="SettingsBase::OutputFormat">RGBA4444</enum>
         <key>contentProtection</key>
         <struct type="ContentProtection">
             <key>key</key>
@@ -180,7 +180,7 @@
             <key>trimThreshold</key>
             <uint>1</uint>
             <key>trimMode</key>
-            <enum type="SpriteSettings::TrimMode">Trim</enum>
+            <enum type="SpriteSettings::TrimMode">CropKeepPos</enum>
             <key>heuristicMask</key>
             <false/>
             <key>pivotPoint</key>
@@ -188,16 +188,16 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>ManShok (1).png</filename>
-            <filename>ManShok (2).png</filename>
-            <filename>ManShok (3).png</filename>
-            <filename>ManShok (4).png</filename>
-            <filename>ManShok (5).png</filename>
-            <filename>ManShok (6).png</filename>
-            <filename>ManShok (7).png</filename>
-            <filename>ManShok (8).png</filename>
-            <filename>ManShok (9).png</filename>
-            <filename>ManShok (10).png</filename>
+            <filename>MShok (1).png</filename>
+            <filename>MShok (2).png</filename>
+            <filename>MShok (3).png</filename>
+            <filename>MShok (4).png</filename>
+            <filename>MShok (5).png</filename>
+            <filename>MShok (6).png</filename>
+            <filename>MShok (7).png</filename>
+            <filename>MShok (8).png</filename>
+            <filename>MShok (9).png</filename>
+            <filename>MShok (10).png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

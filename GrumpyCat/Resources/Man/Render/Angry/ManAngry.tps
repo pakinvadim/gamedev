@@ -56,7 +56,7 @@
         <key>jxrCompressionLevel</key>
         <uint>0</uint>
         <key>ditherType</key>
-        <enum type="SettingsBase::DitherType">NearestNeighbour</enum>
+        <enum type="SettingsBase::DitherType">FloydSteinbergAlpha</enum>
         <key>backgroundColor</key>
         <uint>0</uint>
         <key>libGdx</key>
@@ -74,7 +74,7 @@
         <key>jpgQuality</key>
         <uint>80</uint>
         <key>pngOptimizationLevel</key>
-        <uint>1</uint>
+        <uint>0</uint>
         <key>webpQualityLevel</key>
         <uint>101</uint>
         <key>textureSubPath</key>
@@ -98,7 +98,7 @@
             <int>-1</int>
         </QSize>
         <key>reduceBorderArtifacts</key>
-        <false/>
+        <true/>
         <key>algorithmSettings</key>
         <struct type="AlgorithmSettings">
             <key>algorithm</key>
@@ -119,7 +119,7 @@
             <key>basic</key>
             <struct type="AlgorithmBasicSettings">
                 <key>sortBy</key>
-                <enum type="AlgorithmBasicSettings::SortBy">Best</enum>
+                <enum type="AlgorithmBasicSettings::SortBy">Name</enum>
                 <key>order</key>
                 <enum type="AlgorithmBasicSettings::Order">Ascending</enum>
             </struct>
@@ -153,7 +153,7 @@
         <key>forceIdenticalLayout</key>
         <false/>
         <key>outputFormat</key>
-        <enum type="SettingsBase::OutputFormat">RGBA8888</enum>
+        <enum type="SettingsBase::OutputFormat">RGBA4444</enum>
         <key>contentProtection</key>
         <struct type="ContentProtection">
             <key>key</key>
@@ -180,7 +180,7 @@
             <key>trimThreshold</key>
             <uint>1</uint>
             <key>trimMode</key>
-            <enum type="SpriteSettings::TrimMode">Trim</enum>
+            <enum type="SpriteSettings::TrimMode">CropKeepPos</enum>
             <key>heuristicMask</key>
             <false/>
             <key>pivotPoint</key>
@@ -188,26 +188,26 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>ManAngry (1).png</filename>
-            <filename>ManAngry (2).png</filename>
-            <filename>ManAngry (3).png</filename>
-            <filename>ManAngry (4).png</filename>
-            <filename>ManAngry (5).png</filename>
-            <filename>ManAngry (6).png</filename>
-            <filename>ManAngry (7).png</filename>
-            <filename>ManAngry (8).png</filename>
-            <filename>ManAngry (9).png</filename>
-            <filename>ManAngry (10).png</filename>
-            <filename>ManAngry (11).png</filename>
-            <filename>ManAngry (12).png</filename>
-            <filename>ManAngry (13).png</filename>
-            <filename>ManAngry (14).png</filename>
-            <filename>ManAngry (15).png</filename>
-            <filename>ManAngry (16).png</filename>
-            <filename>ManAngry (17).png</filename>
-            <filename>ManAngry (18).png</filename>
-            <filename>ManAngry (19).png</filename>
-            <filename>ManAngry (20).png</filename>
+            <filename>MAngry (1).png</filename>
+            <filename>MAngry (2).png</filename>
+            <filename>MAngry (3).png</filename>
+            <filename>MAngry (4).png</filename>
+            <filename>MAngry (5).png</filename>
+            <filename>MAngry (6).png</filename>
+            <filename>MAngry (7).png</filename>
+            <filename>MAngry (8).png</filename>
+            <filename>MAngry (9).png</filename>
+            <filename>MAngry (10).png</filename>
+            <filename>MAngry (11).png</filename>
+            <filename>MAngry (12).png</filename>
+            <filename>MAngry (13).png</filename>
+            <filename>MAngry (14).png</filename>
+            <filename>MAngry (15).png</filename>
+            <filename>MAngry (16).png</filename>
+            <filename>MAngry (17).png</filename>
+            <filename>MAngry (18).png</filename>
+            <filename>MAngry (19).png</filename>
+            <filename>MAngry (20).png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

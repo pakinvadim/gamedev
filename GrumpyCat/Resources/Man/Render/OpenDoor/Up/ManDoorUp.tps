@@ -56,7 +56,7 @@
         <key>jxrCompressionLevel</key>
         <uint>0</uint>
         <key>ditherType</key>
-        <enum type="SettingsBase::DitherType">NearestNeighbour</enum>
+        <enum type="SettingsBase::DitherType">FloydSteinbergAlpha</enum>
         <key>backgroundColor</key>
         <uint>0</uint>
         <key>libGdx</key>
@@ -98,7 +98,7 @@
             <int>-1</int>
         </QSize>
         <key>reduceBorderArtifacts</key>
-        <false/>
+        <true/>
         <key>algorithmSettings</key>
         <struct type="AlgorithmSettings">
             <key>algorithm</key>
@@ -153,7 +153,7 @@
         <key>forceIdenticalLayout</key>
         <false/>
         <key>outputFormat</key>
-        <enum type="SettingsBase::OutputFormat">RGBA8888</enum>
+        <enum type="SettingsBase::OutputFormat">RGBA4444</enum>
         <key>contentProtection</key>
         <struct type="ContentProtection">
             <key>key</key>
@@ -180,7 +180,7 @@
             <key>trimThreshold</key>
             <uint>1</uint>
             <key>trimMode</key>
-            <enum type="SpriteSettings::TrimMode">Trim</enum>
+            <enum type="SpriteSettings::TrimMode">CropKeepPos</enum>
             <key>heuristicMask</key>
             <false/>
             <key>pivotPoint</key>
@@ -188,27 +188,27 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>ManDoorUpIn (1).png</filename>
-            <filename>ManDoorUpIn (2).png</filename>
-            <filename>ManDoorUpIn (3).png</filename>
-            <filename>ManDoorUpIn (4).png</filename>
-            <filename>ManDoorUpIn (5).png</filename>
-            <filename>ManDoorUpIn (6).png</filename>
-            <filename>ManDoorUpIn (7).png</filename>
-            <filename>ManDoorUpIn (8).png</filename>
-            <filename>ManDoorUpIn (9).png</filename>
-            <filename>ManDoorUpIn (10).png</filename>
-            <filename>ManDoorUpOut (1).png</filename>
-            <filename>ManDoorUpOut (2).png</filename>
-            <filename>ManDoorUpOut (3).png</filename>
-            <filename>ManDoorUpOut (4).png</filename>
-            <filename>ManDoorUpOut (5).png</filename>
-            <filename>ManDoorUpOut (6).png</filename>
-            <filename>ManDoorUpOut (7).png</filename>
-            <filename>ManDoorUpOut (8).png</filename>
-            <filename>ManDoorUpOut (9).png</filename>
-            <filename>ManDoorUpOut (10).png</filename>
-            <filename>ManDoorUpOut (11).png</filename>
+            <filename>MDUI (1).png</filename>
+            <filename>MDUI (2).png</filename>
+            <filename>MDUI (3).png</filename>
+            <filename>MDUI (4).png</filename>
+            <filename>MDUI (5).png</filename>
+            <filename>MDUI (6).png</filename>
+            <filename>MDUI (7).png</filename>
+            <filename>MDUI (8).png</filename>
+            <filename>MDUI (9).png</filename>
+            <filename>MDUI (10).png</filename>
+            <filename>MDUI (11).png</filename>
+            <filename>MDUO (1).png</filename>
+            <filename>MDUO (2).png</filename>
+            <filename>MDUO (3).png</filename>
+            <filename>MDUO (4).png</filename>
+            <filename>MDUO (5).png</filename>
+            <filename>MDUO (6).png</filename>
+            <filename>MDUO (7).png</filename>
+            <filename>MDUO (8).png</filename>
+            <filename>MDUO (9).png</filename>
+            <filename>MDUO (10).png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

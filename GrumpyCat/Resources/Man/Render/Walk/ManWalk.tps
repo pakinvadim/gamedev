@@ -56,7 +56,7 @@
         <key>jxrCompressionLevel</key>
         <uint>0</uint>
         <key>ditherType</key>
-        <enum type="SettingsBase::DitherType">NearestNeighbour</enum>
+        <enum type="SettingsBase::DitherType">FloydSteinbergAlpha</enum>
         <key>backgroundColor</key>
         <uint>0</uint>
         <key>libGdx</key>
@@ -98,7 +98,7 @@
             <int>-1</int>
         </QSize>
         <key>reduceBorderArtifacts</key>
-        <false/>
+        <true/>
         <key>algorithmSettings</key>
         <struct type="AlgorithmSettings">
             <key>algorithm</key>
@@ -153,7 +153,7 @@
         <key>forceIdenticalLayout</key>
         <false/>
         <key>outputFormat</key>
-        <enum type="SettingsBase::OutputFormat">RGBA8888</enum>
+        <enum type="SettingsBase::OutputFormat">RGBA4444</enum>
         <key>contentProtection</key>
         <struct type="ContentProtection">
             <key>key</key>
@@ -180,7 +180,7 @@
             <key>trimThreshold</key>
             <uint>1</uint>
             <key>trimMode</key>
-            <enum type="SpriteSettings::TrimMode">Trim</enum>
+            <enum type="SpriteSettings::TrimMode">CropKeepPos</enum>
             <key>heuristicMask</key>
             <false/>
             <key>pivotPoint</key>
@@ -188,38 +188,38 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>ManWalkDown (1).png</filename>
-            <filename>ManWalkDown (2).png</filename>
-            <filename>ManWalkDown (3).png</filename>
-            <filename>ManWalkDown (4).png</filename>
-            <filename>ManWalkDown (5).png</filename>
-            <filename>ManWalkDown (6).png</filename>
-            <filename>ManWalkDown (7).png</filename>
-            <filename>ManWalkDown (8).png</filename>
-            <filename>ManWalkLeft (1).png</filename>
-            <filename>ManWalkLeft (2).png</filename>
-            <filename>ManWalkLeft (3).png</filename>
-            <filename>ManWalkLeft (4).png</filename>
-            <filename>ManWalkLeft (5).png</filename>
-            <filename>ManWalkLeft (6).png</filename>
-            <filename>ManWalkLeft (7).png</filename>
-            <filename>ManWalkLeft (8).png</filename>
-            <filename>ManWalkRight (1).png</filename>
-            <filename>ManWalkRight (2).png</filename>
-            <filename>ManWalkRight (3).png</filename>
-            <filename>ManWalkRight (4).png</filename>
-            <filename>ManWalkRight (5).png</filename>
-            <filename>ManWalkRight (6).png</filename>
-            <filename>ManWalkRight (7).png</filename>
-            <filename>ManWalkRight (8).png</filename>
-            <filename>ManWalkUp (1).png</filename>
-            <filename>ManWalkUp (2).png</filename>
-            <filename>ManWalkUp (3).png</filename>
-            <filename>ManWalkUp (4).png</filename>
-            <filename>ManWalkUp (5).png</filename>
-            <filename>ManWalkUp (6).png</filename>
-            <filename>ManWalkUp (7).png</filename>
-            <filename>ManWalkUp (8).png</filename>
+            <filename>MWD (1).png</filename>
+            <filename>MWD (2).png</filename>
+            <filename>MWD (3).png</filename>
+            <filename>MWD (4).png</filename>
+            <filename>MWD (5).png</filename>
+            <filename>MWD (6).png</filename>
+            <filename>MWD (7).png</filename>
+            <filename>MWD (8).png</filename>
+            <filename>MWL (1).png</filename>
+            <filename>MWL (2).png</filename>
+            <filename>MWL (3).png</filename>
+            <filename>MWL (4).png</filename>
+            <filename>MWL (5).png</filename>
+            <filename>MWL (6).png</filename>
+            <filename>MWL (7).png</filename>
+            <filename>MWL (8).png</filename>
+            <filename>MWR (1).png</filename>
+            <filename>MWR (2).png</filename>
+            <filename>MWR (3).png</filename>
+            <filename>MWR (4).png</filename>
+            <filename>MWR (5).png</filename>
+            <filename>MWR (6).png</filename>
+            <filename>MWR (7).png</filename>
+            <filename>MWR (8).png</filename>
+            <filename>MWU (1).png</filename>
+            <filename>MWU (2).png</filename>
+            <filename>MWU (3).png</filename>
+            <filename>MWU (4).png</filename>
+            <filename>MWU (5).png</filename>
+            <filename>MWU (6).png</filename>
+            <filename>MWU (7).png</filename>
+            <filename>MWU (8).png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

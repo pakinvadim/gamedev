@@ -25,7 +25,7 @@ class GameChar : RootSprite {
     var DoorTopInAction:CCAction?
     var DoorTopOutAction:CCAction?
     
-    var PermanentTasks:[TaskBase] = [TaskBase]()
+    var PermanentLogics:[LogicBase] = [LogicBase]()
     var CurrentTasks:[TaskBase] = [TaskBase]()
 
     override init(scene:IntroScene) {
@@ -43,15 +43,15 @@ class GameChar : RootSprite {
         if(!result.Empty){
             return;
         }
-        var permentTask:TaskBase? = GetPermentTask()
-        if(permentTask != nil){
-            permentTask!.Populate(Scene!, char: self)
+        var permanentLogic:LogicBase? = GetPermanentLogic()
+        if(permanentLogic != nil){
+            let tasks = permanentLogic!.GetTasks(Scene!, char: self)
+            AddCurrentTasks(tasks)
         }
     }
     
     func CanDo() -> Bool{
         self.stopAllActions()
-        PermanentTasks.ForEach({t in if(t.Status == TaskStatus.Run){t.Status = TaskStatus.None}})
         return true;
     }
     
@@ -61,15 +61,15 @@ class GameChar : RootSprite {
             return (nil, true)
         }
         
-        if(lastTask!.Status == TaskStatus.Run){
+        if(lastTask!.Status == ActStatus.Run){
             return (nil, false)
         }
-        if(lastTask!.Status == TaskStatus.Done){
+        if(lastTask!.Status == ActStatus.Done){
             CurrentTasks.removeLast()
             return GetCurrentTask()
         }
         
-        var runTask:TaskBase? = CurrentTasks.FirstOrDefault({t in t.Status == TaskStatus.Run})
+        var runTask:TaskBase? = CurrentTasks.FirstOrDefault({t in t.Status == ActStatus.Run})
         if(runTask != nil){
             if(!runTask!.CanStop){
                 return(nil, false)
@@ -79,33 +79,26 @@ class GameChar : RootSprite {
             CurrentTasks.removeRange(Range(start: 0, end: CurrentTasks.IndexOf(runTask!)! + 1))
         }
         return (lastTask, false)
-        /*for (index:Int, task:TaskBase) in enumerate(CurrentTasks){
-            if(task.Status == TaskStatus.Run){
-                return (nil, false)
-            }
-        }
-        var task:TaskBase? = CurrentTasks.last
-        while (task != nil && task!.Status == TaskStatus.Done) {
-            CurrentTasks.removeLast()
-            task = CurrentTasks.last
-        }
-        if(task == nil){
-            return (nil, true)
-        }
-        return (task!, false)*/
     }
     
-    func GetPermentTask() -> TaskBase?{
-        var runTask:TaskBase? = PermanentTasks.FirstOrDefault({t in t.Status == TaskStatus.Run})
-        if(runTask != nil){
+    func GetPermanentLogic() -> LogicBase?{
+        if(PermanentLogics.count == 0){
             return nil
         }
-        var nextTask:TaskBase? = PermanentTasks.LastOrDefault({t in t.Status == TaskStatus.None})
+        PermanentLogics.ForEach({l in if(l.Status == ActStatus.Run){ l.Status = ActStatus.None }})
+        
+        var nextLogic:LogicBase? = PermanentLogics.FirstOrDefault({ l in l.Status == ActStatus.None })
+        if(nextLogic == nil){
+            PermanentLogics.ForEach({l in l.Status = ActStatus.None})
+            nextLogic = PermanentLogics.first
+        }
+        return nextLogic
+        /*var nextTask:TaskBase? = PermanentTasks.LastOrDefault({t in t.Status == ActStatus.None})
         if(nextTask == nil){
-            PermanentTasks.ForEach({t in t.Status = TaskStatus.None})
+            PermanentTasks.ForEach({t in t.Status = ActStatus.None})
             nextTask = PermanentTasks.last
         }
-        return nextTask
+        return nextTask*/
         /*var allDone = true
         for task:TaskBase in PermanentTasks{
             if(task.Status == TaskStatus.Run){
@@ -130,16 +123,13 @@ class GameChar : RootSprite {
     
     func GoTo(location:CGPoint){
         println("GoTo")
-        var tasks = GoToLogic.GoToLocation(Scene!, char: self, touch: location)
-        for task in tasks{
-            CurrentTasks.append(task)
-        }
+        var tasks = GoToManager.GoToLocation(Scene!, char: self, location: location)
+        AddCurrentTasks(tasks)
     }
     
-    func PermanentActionObject(object:RoomObject){
-        var tasks = GoToLogic.GoToRoomObject(Scene!, char: self, object: object)
+    func AddCurrentTasks(tasks:[TaskBase]){
         for task in tasks{
-            PermanentTasks.append(task)
+            CurrentTasks.append(task)
         }
     }
     
@@ -152,7 +142,7 @@ class GameChar : RootSprite {
             }
     }
     
-    var Way:WayInfo?
+    var Way:WayInfoManager?
     var RouteRun:Bool = false
     
     

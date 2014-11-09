@@ -38,3 +38,20 @@ class Televizor : ThingJoke {
     override init(texture: CCTexture!, rect: CGRect, rotated: Bool) { super.init(texture: texture, rect: rect, rotated: rotated) }
     override init(spriteFrame: CCSpriteFrame!) {super.init(spriteFrame: spriteFrame)}
 }
+
+class Televizor2 : ThingJoke {
+    init(scene:IntroScene){
+        super.init(scene: scene, imageName:"tv.jpeg")
+        JokeReadyTexture = CCTexture(file: "tv-2.jpg")
+        CatStartActionPoint = CGPointMake(0, 0)
+        ManStartActionPoint = CGPointMake(0, 0)
+        CatMakeJokeTasks = [DoActionTask(action: RootSprite.GetAction("walkTop", frameCount: 4, delay: 0.1, wight: 186,  hight: 185))]
+        ManUsingTasks = [DoActionTask(action: scene.ActualLevel!.Man!.RepairAction!, name: "Repair")]
+        //ManActionTasks = RootSprite.GetAction("walkTop", frameCount: 4, delay: 0.1, wight: 186,  hight: 185)
+    }
+    
+    override init(imageNamed imageName: String!) {super.init(imageNamed: imageName)}
+    override init(texture : CCTexture!, rect: CGRect){ super.init(texture: texture, rect: rect) }
+    override init(texture: CCTexture!, rect: CGRect, rotated: Bool) { super.init(texture: texture, rect: rect, rotated: rotated) }
+    override init(spriteFrame: CCSpriteFrame!) {super.init(spriteFrame: spriteFrame)}
+}

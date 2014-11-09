@@ -8,7 +8,7 @@
 
 import Foundation
 
-class WayInfo {
+class WayInfoManager {
     var EndPoint:CGPoint?
     var Way:[Int] = [Int]()
     var Ways:[[Int]] = [[Int]]()
@@ -30,8 +30,8 @@ class WayInfo {
         }
     }
     
-    class func GetWay(scene:IntroScene, startRoom:Room, endRoom:Room, endPoint:CGPoint) -> WayInfo{
-        var wayInfo:WayInfo = WayInfo()
+    class func GetWay(scene:IntroScene, startRoom:Room, endRoom:Room, endPoint:CGPoint) -> WayInfoManager{
+        var wayInfo:WayInfoManager = WayInfoManager()
         if (endRoom.Numb != startRoom.Numb) // проверяем не нажали ли туже комнату
         {
             var tempWay:[Int] = [startRoom.Numb]
@@ -42,7 +42,7 @@ class WayInfo {
         return wayInfo;
     }
     
-    class func GetWalkRouteTo(scene:IntroScene, endRoom:Room, startRoom:Room, inout wayInfo:WayInfo, inout tempWay:[Int]){
+    class func GetWalkRouteTo(scene:IntroScene, endRoom:Room, startRoom:Room, inout wayInfo:WayInfoManager, inout tempWay:[Int]){
         /*NSArray *sortedRooms = [actualRoom.doors sortedArrayUsingComparator:^(Door* door1, Door* door2) {
         float door1Distance = [self DistanceBetween:door1 and:endRoom];
         float door2Distance = [self DistanceBetween:door2 and:endRoom];

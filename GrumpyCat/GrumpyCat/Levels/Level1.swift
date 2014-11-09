@@ -20,10 +20,13 @@ class Level1 : GameLevel {
         
         let otvertka = Otvertka(scene: Scene!)
         let televizor = Televizor(scene: Scene!)
+        let televizor2 = Televizor2(scene: Scene!)
         Room2!.AddThing(otvertka, position: CGPointMake(1060, 265))
-        Room2!.AddThing(televizor, position: CGPointMake(300, 265))
+        Room2!.AddThing(televizor, position: CGPointMake(600, 265))
+        Room4!.AddThing(televizor2, position: CGPointMake(300, 265))
         
-        Man!.PermanentActionObject(televizor)
+        Man!.PermanentLogics.append(GoToRoomObjectLogic(object: televizor))
+        Man!.PermanentLogics.append(GoToRoomObjectLogic(object: televizor2))
     }
     
     override init(texture : CCTexture!, rect: CGRect){ super.init(texture: texture, rect: rect) }

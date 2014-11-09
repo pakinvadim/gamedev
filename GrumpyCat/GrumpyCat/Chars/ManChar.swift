@@ -20,7 +20,7 @@ class ManChar : GameChar {
         let animDelay: CGFloat = 0.1
         WalkRight = RootSprite.GetAnimationNew("ManWalkRight", frameCount: 8, delay: animDelay)
         WalkLeft = RootSprite.GetAnimationNew("ManWalkLeft", frameCount: 8, delay: animDelay)
-        WalkUp = RootSprite.GetAnimationNew("ManWalkTop", frameCount: 8, delay: animDelay)
+        WalkUp = RootSprite.GetAnimationNew("ManWalkUp", frameCount: 8, delay: animDelay)
         WalkDown = RootSprite.GetAnimationNew("ManWalkDown", frameCount: 8, delay: animDelay)
         
         DoorLeftInAction = RootSprite.GetActionNew("ManDoorLeftIn", frameCount:11, delay:Door.DoorAnimationDelay)
@@ -31,7 +31,7 @@ class ManChar : GameChar {
         DoorTopOutAction = RootSprite.GetActionNew("ManDoorTopOut", frameCount:11, delay:Door.DoorAnimationDelay)
         
         //BreatheAction = RootSprite.GetActionNew("ManWalkDown", frameCount: 2, delay: 1)
-        RepairAction = RootSprite.GetActionNew("ManRepair", frameCount: 7, delay: 1)
+        RepairAction = RootSprite.GetActionNew("ManRepair", frameCount: 7, delay: animDelay)
         //PermanentTasks.append(DoActionTask(action: self.BreatheAction!, name: "Breathe"))
     }
     

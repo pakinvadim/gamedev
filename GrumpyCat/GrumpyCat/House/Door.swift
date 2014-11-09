@@ -9,8 +9,10 @@
 import Foundation
 
 class Door: RoomObject {
-    var Closed: CCActionAnimate?
-    var Opening: CCActionAnimate?
+    var SetClosed: CCAction?
+    var ClosedTexture: CCTexture?
+    //var Opening: CCActionAnimate?
+
     var AnimationSprite: CCSprite?
     let EnterIndentDoor: CGFloat = 17
     
@@ -36,18 +38,21 @@ class Door: RoomObject {
         
     init(scene:IntroScene, type: DoorType, direct: Int) {
         var name: String = ""
-        if ( type == DoorType.Left ){ name = "doorLeft"; }
-        else if (type == DoorType.Right){ name = "doorRight"; }
-        else if ( type == DoorType.Top ){ name = "doorUp"; }
+        if ( type == DoorType.Left ){ name = "DoorLeft.png"; }
+        else if (type == DoorType.Right){ name = "DoorRight.png"; }
+        else if ( type == DoorType.Top ){ name = "DoorTop.png"; }
         
-        super.init(scene: scene, imageNamed: "\(name)0.png")
+        super.init(scene: scene, imageNamed: name)
         Type = type
         Direct = direct
         AnimationSprite = CCSprite()
         AnimationSprite!.position = ccp(0, 0)
         AnimationSprite!.anchorPoint = ccp(0, 0)
-        Closed = CCActionAnimate.actionWithAnimation(RootSprite.GetAnimation(name, frameCount: 1, delay: Door.DoorAnimationDelay, wight: 186, hight: 500)) as CCActionAnimate
-        Opening = CCActionAnimate.actionWithAnimation(RootSprite.GetAnimation(name, frameRange: [1, 2, 3, 3, 2, 1], delay: Door.DoorAnimationDelay, wight: 186, hight: 500)) as CCActionAnimate
+        
+        ClosedTexture = CCTexture(file: name)
+        SetClosed = CCActionCallBlock({self.texture = self.ClosedTexture})
+        //CCActionAnimate.actionWithAnimation(RootSprite.GetAnimation(name, frameCount: 1, delay: Door.DoorAnimationDelay, wight: 186, hight: 500)) as CCActionAnimate
+        /*Opening = CCActionAnimate.actionWithAnimation(RootSprite.GetAnimation(name, frameRange: [1, 2, 3, 3, 2, 1], delay: Door.DoorAnimationDelay, wight: 186, hight: 500)) as CCActionAnimate*/
         
         addChild(AnimationSprite!)
     }

@@ -65,10 +65,13 @@ class EnterDoorTask : TaskBase{
             animationTime = CCActionDelay.actionWithDuration(CCTime(Door.DoorAnimationDelay * 14.0)) as CCActionDelay
         }
         let animation = CCActionCallBlock({
-            inDoor.runAction(CCActionSequence.actionWithArray([inDoor.Opening!, inDoor.Closed!]) as CCAction)
+            inDoor.runAction(CCActionSequence.actionWithArray([actionIn!, inDoor.SetClosed!]) as CCAction)
+            outDoor.runAction(CCActionSequence.actionWithArray([stairsTime, actionOut!, outDoor.SetClosed!]) as CCAction)
+            /*inDoor.runAction(CCActionSequence.actionWithArray([inDoor.Opening!, inDoor.Closed!]) as CCAction)
             inDoor.AnimationSprite!.runAction(CCActionSequence.actionWithArray([CCActionShow.action(), actionIn!,CCActionHide.action()]) as CCAction)
             outDoor.runAction(CCActionSequence.actionWithArray([stairsTime, outDoor.Opening!, outDoor.Closed!]) as CCAction)
-            outDoor.AnimationSprite!.runAction(CCActionSequence.actionWithArray([stairsTime, CCActionShow.action(), actionOut, CCActionHide.action() as CCAction]) as CCAction)})
+            outDoor.AnimationSprite!.runAction(CCActionSequence.actionWithArray([stairsTime, CCActionShow.action(), actionOut, CCActionHide.action() as CCAction]) as CCAction)*/
+        })
         
         return CCActionSequence.actionWithArray([animation, animationTime]) as CCActionSequence
 

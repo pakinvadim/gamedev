@@ -41,7 +41,7 @@ class CatChar : GameChar {
         //self.runAction(repeatAction)
         
         //DoStand()
-        PermanentTasks.append(DoActionTask(action: self.BreatheAction!, name: "Breathe"))
+        PermanentLogics.append(DoActionLogic(action: self.BreatheAction!, name: "Breathe"))
     }
     
     override init(texture : CCTexture!, rect: CGRect){ super.init(texture: texture, rect: rect) }

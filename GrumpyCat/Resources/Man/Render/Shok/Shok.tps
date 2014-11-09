@@ -6,7 +6,7 @@
         <key>texturePackerVersion</key>
         <string>3.5.3</string>
         <key>fileName</key>
-        <string>C:/Users/Vadim/Desktop/Gamedev/ManAnim/Shok/Shok.tps</string>
+        <string>C:/Users/Vadim/Desktop/Gamedev/GrumpyCat/Resources/Man/Render/Shok/Shok.tps</string>
         <key>autoSDSettings</key>
         <array>
             <struct type="AutoSDSettings">
@@ -38,7 +38,7 @@
         <key>dataFormat</key>
         <string>cocos2d</string>
         <key>textureFileName</key>
-        <filename>Shok.png</filename>
+        <filename>../../../../GrumpyCat/Resources/Sprites/Man/Shok.png</filename>
         <key>flipPVR</key>
         <false/>
         <key>pvrCompressionQuality</key>
@@ -145,7 +145,7 @@
             <key>data</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename>Shok.plist</filename>
+                <filename>../../../../GrumpyCat/Resources/Sprites/Man/Shok.plist</filename>
             </struct>
         </map>
         <key>multiPack</key>
@@ -193,6 +193,11 @@
             <filename>ManShok (3).png</filename>
             <filename>ManShok (4).png</filename>
             <filename>ManShok (5).png</filename>
+            <filename>ManShok (6).png</filename>
+            <filename>ManShok (7).png</filename>
+            <filename>ManShok (8).png</filename>
+            <filename>ManShok (9).png</filename>
+            <filename>ManShok (10).png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

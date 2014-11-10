@@ -22,7 +22,7 @@ class Level1 : GameLevel {
         let televizor = Televizor(scene: Scene!)
         let televizor2 = Televizor2(scene: Scene!)
         Room2!.AddThing(otvertka, position: CGPointMake(1060, 265))
-        Room2!.AddThing(televizor, position: CGPointMake(600, 265))
+        Room2!.AddThing(televizor, position: CGPointMake(800, 265))
         Room4!.AddThing(televizor2, position: CGPointMake(300, 265))
         
         Man!.PermanentLogics.append(GoToRoomObjectLogic(object: televizor))

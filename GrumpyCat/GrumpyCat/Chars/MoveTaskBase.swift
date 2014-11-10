@@ -58,7 +58,7 @@ class MoveTaskBase: TaskBase{
             duration = Double(abs(start.x - end.x) / char.Speed)
             if(start.x < end.x){ //RIGHT
                 animate = CCActionAnimate.actionWithDuration(duration, animation:char.WalkRight) as? CCActionAnimate
-                Flip = true
+                //Flip = true
             }
             else if(start.x > end.x){ //LEFT
                 animate = CCActionAnimate.actionWithDuration(duration, animation:char.WalkLeft) as? CCActionAnimate

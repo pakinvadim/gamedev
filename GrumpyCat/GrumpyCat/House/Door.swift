@@ -38,9 +38,9 @@ class Door: RoomObject {
         
     init(scene:IntroScene, type: DoorType, direct: Int) {
         var name: String = ""
-        if ( type == DoorType.Left ){ name = "DoorLeft"; }
-        else if (type == DoorType.Right){ name = "DoorRight"; }
-        else if ( type == DoorType.Top ){ name = "DoorTop"; }
+        if ( type == DoorType.Left ){ name = "DL"; }
+        else if (type == DoorType.Right){ name = "DR"; }
+        else if ( type == DoorType.Top ){ name = "DU"; }
         
         super.init(scene: scene, imageNamed: "\(name).png")
         Type = type

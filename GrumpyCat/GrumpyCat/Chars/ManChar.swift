@@ -18,10 +18,10 @@ class ManChar : GameChar {
         anchorPoint = CGPointMake(0.5, 0.15)
         
         let animDelay: CGFloat = 0.12
-        WalkRight = RootSprite.GetAnimationNew("MWR", frameCount: 8, delay: animDelay)
-        WalkLeft = RootSprite.GetAnimationNew("MWL", frameCount: 8, delay: animDelay)
-        WalkUp = RootSprite.GetAnimationNew("MWU", frameCount: 8, delay: animDelay)
-        WalkDown = RootSprite.GetAnimationNew("MWD", frameCount: 8, delay: animDelay)
+        WalkRight = RootSprite.GetAnimationNew("MAngry", frameCount: 19, delay: animDelay)
+        WalkLeft = RootSprite.GetAnimationNew("MAngry", frameCount: 19, delay: animDelay)
+        WalkUp = RootSprite.GetAnimationNew("MAngry", frameCount: 19, delay: animDelay)
+        WalkDown = RootSprite.GetAnimationNew("MAngry", frameCount: 19, delay: animDelay)
         
         DoorLeftInAction = RootSprite.GetActionNew("MDLI", frameCount:10, delay:Door.DoorAnimationDelay)
         DoorLeftOutAction = RootSprite.GetActionNew("MDLO", frameCount:10, delay:Door.DoorAnimationDelay)

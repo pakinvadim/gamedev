@@ -13,7 +13,7 @@ class Door: RoomObject {
     var ClosedTexture: CCTexture?
     //var Opening: CCActionAnimate?
 
-    var AnimationSprite: CCSprite?
+    //var AnimationSprite: CCSprite?
     let EnterIndentDoor: CGFloat = 17
     
     class var DoorAnimationDelay:CGFloat { get {return 0.1 } }
@@ -38,23 +38,19 @@ class Door: RoomObject {
         
     init(scene:IntroScene, type: DoorType, direct: Int) {
         var name: String = ""
-        if ( type == DoorType.Left ){ name = "DoorLeft.png"; }
-        else if (type == DoorType.Right){ name = "DoorRight.png"; }
-        else if ( type == DoorType.Top ){ name = "DoorTop.png"; }
+        if ( type == DoorType.Left ){ name = "DoorLeft"; }
+        else if (type == DoorType.Right){ name = "DoorRight"; }
+        else if ( type == DoorType.Top ){ name = "DoorTop"; }
         
-        super.init(scene: scene, imageNamed: name)
+        super.init(scene: scene, imageNamed: "\(name).png")
         Type = type
         Direct = direct
-        AnimationSprite = CCSprite()
-        AnimationSprite!.position = ccp(0, 0)
-        AnimationSprite!.anchorPoint = ccp(0, 0)
+        //AnimationSprite = CCSprite()
+        //AnimationSprite!.position = ccp(0, 0)
+        //AnimationSprite!.anchorPoint = ccp(0, 0)
         
-        ClosedTexture = CCTexture(file: name)
-        SetClosed = CCActionCallBlock({self.texture = self.ClosedTexture})
-        //CCActionAnimate.actionWithAnimation(RootSprite.GetAnimation(name, frameCount: 1, delay: Door.DoorAnimationDelay, wight: 186, hight: 500)) as CCActionAnimate
-        /*Opening = CCActionAnimate.actionWithAnimation(RootSprite.GetAnimation(name, frameRange: [1, 2, 3, 3, 2, 1], delay: Door.DoorAnimationDelay, wight: 186, hight: 500)) as CCActionAnimate*/
-        
-        addChild(AnimationSprite!)
+        SetClosed = RootSprite.GetActionNew(name, frameCount: 1, delay: 0.01)
+        //addChild(AnimationSprite!)
     }
     
     override init(texture : CCTexture!, rect: CGRect){ super.init(texture: texture, rect: rect) }

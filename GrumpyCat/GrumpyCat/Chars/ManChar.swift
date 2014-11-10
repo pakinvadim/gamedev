@@ -9,26 +9,26 @@
 import Foundation
 
 class ManChar : GameChar {
-    
     var RepairAction:CCAction?
     
     override init(scene:IntroScene) {
         super.init(scene: scene)
         name = "Man"
+        Speed = 210
         anchorPoint = CGPointMake(0.5, 0.15)
         
-        let animDelay: CGFloat = 0.1
+        let animDelay: CGFloat = 0.12
         WalkRight = RootSprite.GetAnimationNew("ManWalkRight", frameCount: 8, delay: animDelay)
         WalkLeft = RootSprite.GetAnimationNew("ManWalkLeft", frameCount: 8, delay: animDelay)
         WalkUp = RootSprite.GetAnimationNew("ManWalkUp", frameCount: 8, delay: animDelay)
         WalkDown = RootSprite.GetAnimationNew("ManWalkDown", frameCount: 8, delay: animDelay)
         
-        DoorLeftInAction = RootSprite.GetActionNew("ManDoorLeftIn", frameCount:11, delay:Door.DoorAnimationDelay)
-        DoorLeftOutAction = RootSprite.GetActionNew("ManDoorLeftOut", frameCount:10, delay:Door.DoorAnimationDelay)
-        DoorRightInAction = RootSprite.GetActionNew("ManDoorRightIn", frameCount:10, delay:Door.DoorAnimationDelay)
-        DoorRightOutAction = RootSprite.GetActionNew("ManDoorRightOut", frameCount:11, delay:Door.DoorAnimationDelay)
-        DoorTopInAction = RootSprite.GetActionNew("ManDoorTopIn", frameCount:10, delay:Door.DoorAnimationDelay)
-        DoorTopOutAction = RootSprite.GetActionNew("ManDoorTopOut", frameCount:11, delay:Door.DoorAnimationDelay)
+        DoorLeftInAction = RootSprite.GetActionNew("ManDoorLeftOut", frameCount:10, delay:Door.DoorAnimationDelay)
+        DoorLeftOutAction = RootSprite.GetActionNew("ManDoorLeftIn", frameCount:10, delay:Door.DoorAnimationDelay)
+        DoorRightInAction = RootSprite.GetActionNew("ManDoorRightOut", frameCount:10, delay:Door.DoorAnimationDelay)
+        DoorRightOutAction = RootSprite.GetActionNew("ManDoorRightIn", frameCount:10, delay:Door.DoorAnimationDelay)
+        DoorTopInAction = RootSprite.GetActionNew("ManDoorUpOut", frameCount:10, delay:Door.DoorAnimationDelay)
+        DoorTopOutAction = RootSprite.GetActionNew("ManDoorUpIn", frameCount:10, delay:Door.DoorAnimationDelay)
         
         //BreatheAction = RootSprite.GetActionNew("ManWalkDown", frameCount: 2, delay: 1)
         RepairAction = RootSprite.GetActionNew("ManRepair", frameCount: 7, delay: animDelay)

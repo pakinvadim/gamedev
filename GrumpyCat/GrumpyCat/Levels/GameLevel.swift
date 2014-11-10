@@ -22,13 +22,6 @@ class GameLevel : RootSprite {
     
     override init(scene:IntroScene){
         super.init(scene: scene)
-        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("ManAngry.plist")
-        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("ManDoorLeft.plist")
-        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("ManDoorRight.plist")
-        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("ManDoorTop.plist")
-        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("ManRepair.plist")
-        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("ManWalk.plist")
-        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("Shok.plist")
         userInteractionEnabled = true
         multipleTouchEnabled = true;
         anchorPoint = CGPointMake(0, 0)

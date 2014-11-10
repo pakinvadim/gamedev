@@ -38,7 +38,8 @@ class RootSprite : CCSprite {
     class func GetAnimationNew(name: String, frameRange: [Int], delay:CGFloat) -> CCAnimation{
         var tempFrames = [CCSpriteFrame]()
         for i in frameRange {
-            let frame = CCSpriteFrame.frameWithImageNamed("\(name) (\(i)).png") as CCSpriteFrame
+            let fileName = frameRange.count != 1 ? "\(name) (\(i)).png" : "\(name).png"
+            let frame = CCSpriteFrame.frameWithImageNamed(fileName) as CCSpriteFrame
             tempFrames.append(frame)
         }
         return CCAnimation.animationWithSpriteFrames(tempFrames, delay: Float(delay)) as CCAnimation
@@ -82,7 +83,7 @@ class RootSprite : CCSprite {
     }
     
     override func update(delta: CCTime) {
-        ttf1!.string = "\(position.x) : \(position.y)"
+        //ttf1!.string = "\(position.x) : \(position.y)"
         
         /*var b = boundingBox()
         let vertices:UnsafePointer<CGPoint> = UnsafePointer([

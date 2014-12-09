@@ -6,7 +6,7 @@
         <key>texturePackerVersion</key>
         <string>3.5.3</string>
         <key>fileName</key>
-        <string>C:/Users/Vadim/Desktop/Gamedev/GrumpyCat/Resources/Man/Render/Angry/ManAngry.tps</string>
+        <string>/Users/admin/Desktop/Gamedev/GrumpyCat/Resources/Man/Render/Angry/ManAngry.tps</string>
         <key>autoSDSettings</key>
         <array>
             <struct type="AutoSDSettings">
@@ -180,7 +180,7 @@
             <key>trimThreshold</key>
             <uint>1</uint>
             <key>trimMode</key>
-            <enum type="SpriteSettings::TrimMode">Crop</enum>
+            <enum type="SpriteSettings::TrimMode">CropKeepPos</enum>
             <key>heuristicMask</key>
             <false/>
             <key>pivotPoint</key>

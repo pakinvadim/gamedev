@@ -10,7 +10,7 @@ import Foundation
 
 class Room : RootSprite{
     var Numb: Int = 0
-    let Indent:CGFloat = 90
+    let Indent:CGFloat = 32
     var Doors:[Door] = [Door]()
     var Things:[ThingBase] = [ThingBase]()
     
@@ -35,13 +35,13 @@ class Room : RootSprite{
         door.CurrentRoom = self
         
         if (type == DoorType.Right){
-            door.position = CGPointMake(boundingBox().size.width - door.boundingBox().size.width, 0);
+            door.position = CGPointMake(boundingBox().size.width, 0);
         }
         else if (type == DoorType.Left){
-            door.position = CGPointMake(0, 0);
+            door.position = CGPointZero;
         }
         else if (type == DoorType.Top){
-            door.position = CGPointMake(positionX, 80);
+            door.position = CGPointMake(positionX, 200);
         }
         Doors.append(door);
         addChild(door, z: 150)

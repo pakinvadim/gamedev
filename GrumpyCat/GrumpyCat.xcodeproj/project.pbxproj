@@ -233,8 +233,6 @@
 		84AA4DF719FD55220006DE99 /* inventory.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84AA4DF619FD55220006DE99 /* inventory.jpg */; };
 		84AA4DF919FD7D6B0006DE99 /* UIBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA4DF819FD7D6B0006DE99 /* UIBase.swift */; };
 		84AA4DFB19FD85CD0006DE99 /* ThingGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA4DFA19FD85CD0006DE99 /* ThingGet.swift */; };
-		84ACD4181A1050F4006839A6 /* Door.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84ACD4141A1050F4006839A6 /* Door.plist */; };
-		84ACD4191A1050F4006839A6 /* Door.png in Resources */ = {isa = PBXBuildFile; fileRef = 84ACD4151A1050F4006839A6 /* Door.png */; };
 		84ACD41A1A1050F4006839A6 /* ManDoorUp.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84ACD4161A1050F4006839A6 /* ManDoorUp.plist */; };
 		84ACD41B1A1050F4006839A6 /* ManDoorUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 84ACD4171A1050F4006839A6 /* ManDoorUp.png */; };
 		84AFC0BB19F3D53A00A0EBDE /* TaskBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFC0BA19F3D53A00A0EBDE /* TaskBase.swift */; };
@@ -302,18 +300,6 @@
 		84E1BE3019E1E3D9008B3C8F /* walkTop1.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E1BDEF19E1E3D9008B3C8F /* walkTop1.png */; };
 		84E1BE3119E1E3D9008B3C8F /* walkTop2.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E1BDF019E1E3D9008B3C8F /* walkTop2.png */; };
 		84E1BE3219E1E3D9008B3C8F /* walkTop3.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E1BDF119E1E3D9008B3C8F /* walkTop3.png */; };
-		84E1BE3319E1E3D9008B3C8F /* doorLeft0.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E1BDF319E1E3D9008B3C8F /* doorLeft0.png */; };
-		84E1BE3419E1E3D9008B3C8F /* doorLeft1.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E1BDF419E1E3D9008B3C8F /* doorLeft1.png */; };
-		84E1BE3519E1E3D9008B3C8F /* doorLeft2.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E1BDF519E1E3D9008B3C8F /* doorLeft2.png */; };
-		84E1BE3619E1E3D9008B3C8F /* doorLeft3.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E1BDF619E1E3D9008B3C8F /* doorLeft3.png */; };
-		84E1BE3719E1E3D9008B3C8F /* doorRight0.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E1BDF719E1E3D9008B3C8F /* doorRight0.png */; };
-		84E1BE3819E1E3D9008B3C8F /* doorRight1.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E1BDF819E1E3D9008B3C8F /* doorRight1.png */; };
-		84E1BE3919E1E3D9008B3C8F /* doorRight2.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E1BDF919E1E3D9008B3C8F /* doorRight2.png */; };
-		84E1BE3A19E1E3D9008B3C8F /* doorRight3.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E1BDFA19E1E3D9008B3C8F /* doorRight3.png */; };
-		84E1BE3B19E1E3D9008B3C8F /* doorUp0.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E1BDFB19E1E3D9008B3C8F /* doorUp0.png */; };
-		84E1BE3C19E1E3D9008B3C8F /* doorUp1.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E1BDFC19E1E3D9008B3C8F /* doorUp1.png */; };
-		84E1BE3D19E1E3D9008B3C8F /* doorUp2.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E1BDFD19E1E3D9008B3C8F /* doorUp2.png */; };
-		84E1BE3E19E1E3D9008B3C8F /* doorUp3.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E1BDFE19E1E3D9008B3C8F /* doorUp3.png */; };
 		B02F11E3A8D606A6925A5493 /* IntroScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F16615489F963387AB292 /* IntroScene.swift */; };
 /* End PBXBuildFile section */
 
@@ -745,8 +731,6 @@
 		84AA4DF619FD55220006DE99 /* inventory.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = inventory.jpg; sourceTree = "<group>"; };
 		84AA4DF819FD7D6B0006DE99 /* UIBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBase.swift; sourceTree = "<group>"; };
 		84AA4DFA19FD85CD0006DE99 /* ThingGet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThingGet.swift; sourceTree = "<group>"; };
-		84ACD4141A1050F4006839A6 /* Door.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Door.plist; sourceTree = "<group>"; };
-		84ACD4151A1050F4006839A6 /* Door.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Door.png; sourceTree = "<group>"; };
 		84ACD4161A1050F4006839A6 /* ManDoorUp.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ManDoorUp.plist; sourceTree = "<group>"; };
 		84ACD4171A1050F4006839A6 /* ManDoorUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ManDoorUp.png; sourceTree = "<group>"; };
 		84AFC0BA19F3D53A00A0EBDE /* TaskBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskBase.swift; sourceTree = "<group>"; };
@@ -814,18 +798,6 @@
 		84E1BDEF19E1E3D9008B3C8F /* walkTop1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walkTop1.png; sourceTree = "<group>"; };
 		84E1BDF019E1E3D9008B3C8F /* walkTop2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walkTop2.png; sourceTree = "<group>"; };
 		84E1BDF119E1E3D9008B3C8F /* walkTop3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walkTop3.png; sourceTree = "<group>"; };
-		84E1BDF319E1E3D9008B3C8F /* doorLeft0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doorLeft0.png; sourceTree = "<group>"; };
-		84E1BDF419E1E3D9008B3C8F /* doorLeft1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doorLeft1.png; sourceTree = "<group>"; };
-		84E1BDF519E1E3D9008B3C8F /* doorLeft2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doorLeft2.png; sourceTree = "<group>"; };
-		84E1BDF619E1E3D9008B3C8F /* doorLeft3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doorLeft3.png; sourceTree = "<group>"; };
-		84E1BDF719E1E3D9008B3C8F /* doorRight0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doorRight0.png; sourceTree = "<group>"; };
-		84E1BDF819E1E3D9008B3C8F /* doorRight1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doorRight1.png; sourceTree = "<group>"; };
-		84E1BDF919E1E3D9008B3C8F /* doorRight2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doorRight2.png; sourceTree = "<group>"; };
-		84E1BDFA19E1E3D9008B3C8F /* doorRight3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doorRight3.png; sourceTree = "<group>"; };
-		84E1BDFB19E1E3D9008B3C8F /* doorUp0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doorUp0.png; sourceTree = "<group>"; };
-		84E1BDFC19E1E3D9008B3C8F /* doorUp1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doorUp1.png; sourceTree = "<group>"; };
-		84E1BDFD19E1E3D9008B3C8F /* doorUp2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doorUp2.png; sourceTree = "<group>"; };
-		84E1BDFE19E1E3D9008B3C8F /* doorUp3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doorUp3.png; sourceTree = "<group>"; };
 		B02F164AF8D293B0ED7D8171 /* GrumpyCat-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GrumpyCat-Bridging-Header.h"; sourceTree = "<group>"; };
 		B02F16615489F963387AB292 /* IntroScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1699,8 +1671,6 @@
 		84A966B11A0DC23D001CDC11 /* Man */ = {
 			isa = PBXGroup;
 			children = (
-				84ACD4141A1050F4006839A6 /* Door.plist */,
-				84ACD4151A1050F4006839A6 /* Door.png */,
 				84ACD4161A1050F4006839A6 /* ManDoorUp.plist */,
 				84ACD4171A1050F4006839A6 /* ManDoorUp.png */,
 				84A966B21A0DC23D001CDC11 /* ManAngry.plist */,
@@ -1799,7 +1769,6 @@
 				84AA4DF519FD55220006DE99 /* UI */,
 				84A6C52519FC4ECA00577430 /* House */,
 				84E1BDBB19E1E3D9008B3C8F /* BatCatAnim */,
-				84E1BDF219E1E3D9008B3C8F /* DoorAnim */,
 			);
 			name = Sprites;
 			path = Resources/Sprites;
@@ -1885,25 +1854,6 @@
 				84E1BDF119E1E3D9008B3C8F /* walkTop3.png */,
 			);
 			path = Walk;
-			sourceTree = "<group>";
-		};
-		84E1BDF219E1E3D9008B3C8F /* DoorAnim */ = {
-			isa = PBXGroup;
-			children = (
-				84E1BDF319E1E3D9008B3C8F /* doorLeft0.png */,
-				84E1BDF419E1E3D9008B3C8F /* doorLeft1.png */,
-				84E1BDF519E1E3D9008B3C8F /* doorLeft2.png */,
-				84E1BDF619E1E3D9008B3C8F /* doorLeft3.png */,
-				84E1BDF719E1E3D9008B3C8F /* doorRight0.png */,
-				84E1BDF819E1E3D9008B3C8F /* doorRight1.png */,
-				84E1BDF919E1E3D9008B3C8F /* doorRight2.png */,
-				84E1BDFA19E1E3D9008B3C8F /* doorRight3.png */,
-				84E1BDFB19E1E3D9008B3C8F /* doorUp0.png */,
-				84E1BDFC19E1E3D9008B3C8F /* doorUp1.png */,
-				84E1BDFD19E1E3D9008B3C8F /* doorUp2.png */,
-				84E1BDFE19E1E3D9008B3C8F /* doorUp3.png */,
-			);
-			path = DoorAnim;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1992,22 +1942,17 @@
 				84E1BE1419E1E3D9008B3C8F /* CatAnimEnterDoorRightOut2.png in Resources */,
 				84A966C51A0DC23D001CDC11 /* ManDoorRight.png in Resources */,
 				84E1BE2819E1E3D9008B3C8F /* walkBotton2.png in Resources */,
-				84E1BE3B19E1E3D9008B3C8F /* doorUp0.png in Resources */,
 				84A966CD1A0DC23D001CDC11 /* Shok.png in Resources */,
 				84A966C81A0DC23D001CDC11 /* ManRepair.plist in Resources */,
 				84E1BE0E19E1E3D9008B3C8F /* CatAnimEnterDoorRightIn2.png in Resources */,
 				65F5D6D019854038007C8B2B /* Icon@2x.png in Resources */,
 				84E1BE1819E1E3D9008B3C8F /* CatAnimEnterDoorTopIn0.png in Resources */,
-				84E1BE3A19E1E3D9008B3C8F /* doorRight3.png in Resources */,
 				84E1BE2919E1E3D9008B3C8F /* walkBotton3.png in Resources */,
-				84E1BE3519E1E3D9008B3C8F /* doorLeft2.png in Resources */,
 				84A966C11A0DC23D001CDC11 /* ManAngry.png in Resources */,
 				84E1BE0919E1E3D9008B3C8F /* CatAnimEnterDoorLeftOut3.png in Resources */,
-				84E1BE3E19E1E3D9008B3C8F /* doorUp3.png in Resources */,
 				84E1BE0719E1E3D9008B3C8F /* CatAnimEnterDoorLeftOut1.png in Resources */,
 				84E1BE1219E1E3D9008B3C8F /* CatAnimEnterDoorRightOut0.png in Resources */,
 				65F5D6E219854038007C8B2B /* Icon-Small@2x.png in Resources */,
-				84ACD4191A1050F4006839A6 /* Door.png in Resources */,
 				65F5D6D419854038007C8B2B /* Icon-72@2x.png in Resources */,
 				84E1BE0419E1E3D9008B3C8F /* CatAnimEnterDoorLeftIn4.png in Resources */,
 				84E1BE2F19E1E3D9008B3C8F /* walkTop0.png in Resources */,
@@ -2017,26 +1962,21 @@
 				84E1BE1D19E1E3D9008B3C8F /* CatAnimEnterDoorTopIn5.png in Resources */,
 				84E1BE1E19E1E3D9008B3C8F /* CatAnimEnterDoorTopOut0.png in Resources */,
 				84A6C53119FC557700577430 /* tv.jpeg in Resources */,
-				84E1BE3819E1E3D9008B3C8F /* doorRight1.png in Resources */,
 				84A6C52F19FC504100577430 /* room1.png in Resources */,
 				84E1BE2419E1E3D9008B3C8F /* standBotton0.png in Resources */,
 				84E1BE0619E1E3D9008B3C8F /* CatAnimEnterDoorLeftOut0.png in Resources */,
 				84A6A4451A024A0000DE6F58 /* otv-2.jpg in Resources */,
-				84E1BE3419E1E3D9008B3C8F /* doorLeft1.png in Resources */,
 				84A966C01A0DC23D001CDC11 /* ManAngry.plist in Resources */,
 				84E1BE2519E1E3D9008B3C8F /* standBotton1.png in Resources */,
-				84E1BE3619E1E3D9008B3C8F /* doorLeft3.png in Resources */,
 				65F5D6C519854038007C8B2B /* Default.png in Resources */,
 				84E1BE2E19E1E3D9008B3C8F /* walkLeft4.png in Resources */,
 				84A966CB1A0DC23D001CDC11 /* ManWalk.png in Resources */,
 				84E1BE2719E1E3D9008B3C8F /* walkBotton1.png in Resources */,
 				84E1BE2B19E1E3D9008B3C8F /* walkLeft1.png in Resources */,
 				84A966CC1A0DC23D001CDC11 /* Shok.plist in Resources */,
-				84E1BE3C19E1E3D9008B3C8F /* doorUp1.png in Resources */,
 				84E1BE2119E1E3D9008B3C8F /* CatAnimEnterDoorTopOut3.png in Resources */,
 				84A732831A048EDB00991C9B /* tv-2.jpg in Resources */,
 				65F5D6CE19854038007C8B2B /* Icon.png in Resources */,
-				84E1BE3919E1E3D9008B3C8F /* doorRight2.png in Resources */,
 				65F5D6DC19854038007C8B2B /* Icon-iPad-Spotlight-iOS7@2x.png in Resources */,
 				84E1BE1F19E1E3D9008B3C8F /* CatAnimEnterDoorTopOut1.png in Resources */,
 				65F5D6CB19854038007C8B2B /* Default-Landscape~ipad.png in Resources */,
@@ -2054,11 +1994,9 @@
 				65F5D6D219854038007C8B2B /* Icon-72.png in Resources */,
 				65F5D8AE1985403A007C8B2B /* LICENSE_CCBReader.txt in Resources */,
 				84E1BE1119E1E3D9008B3C8F /* CatAnimEnterDoorRightIn5.png in Resources */,
-				84E1BE3719E1E3D9008B3C8F /* doorRight0.png in Resources */,
 				84E1BE1519E1E3D9008B3C8F /* CatAnimEnterDoorRightOut3.png in Resources */,
 				84E1BE0A19E1E3D9008B3C8F /* CatAnimEnterDoorLeftOut4.png in Resources */,
 				65F5D81E1985403A007C8B2B /* LICENSE_cocos2d.txt in Resources */,
-				84E1BE3319E1E3D9008B3C8F /* doorLeft0.png in Resources */,
 				84ACD41A1A1050F4006839A6 /* ManDoorUp.plist in Resources */,
 				84E1BE2319E1E3D9008B3C8F /* CatAnimEnterDoorTopOut5.png in Resources */,
 				84E1BE3119E1E3D9008B3C8F /* walkTop2.png in Resources */,
@@ -2074,7 +2012,6 @@
 				84A966CA1A0DC23D001CDC11 /* ManWalk.plist in Resources */,
 				84E1BE1C19E1E3D9008B3C8F /* CatAnimEnterDoorTopIn4.png in Resources */,
 				65F5D6E619854038007C8B2B /* Icon-Spotlight-iOS7@2x.png in Resources */,
-				84E1BE3D19E1E3D9008B3C8F /* doorUp2.png in Resources */,
 				65F5D6D619854038007C8B2B /* Icon-76.png in Resources */,
 				84E1BE1B19E1E3D9008B3C8F /* CatAnimEnterDoorTopIn3.png in Resources */,
 				84E1BE0C19E1E3D9008B3C8F /* CatAnimEnterDoorRightIn0.png in Resources */,
@@ -2084,7 +2021,6 @@
 				84E1BE0519E1E3D9008B3C8F /* CatAnimEnterDoorLeftIn5.png in Resources */,
 				84ACD41B1A1050F4006839A6 /* ManDoorUp.png in Resources */,
 				84A966C21A0DC23D001CDC11 /* ManDoorLeft.plist in Resources */,
-				84ACD4181A1050F4006839A6 /* Door.plist in Resources */,
 				84E1BE3219E1E3D9008B3C8F /* walkTop3.png in Resources */,
 				84E1BE1A19E1E3D9008B3C8F /* CatAnimEnterDoorTopIn2.png in Resources */,
 				65F5D6EB19854038007C8B2B /* iTunesArtwork@2x in Resources */,

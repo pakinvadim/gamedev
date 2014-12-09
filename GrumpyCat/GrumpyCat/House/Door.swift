@@ -14,9 +14,9 @@ class Door: RoomObject {
     //var Opening: CCActionAnimate?
 
     //var AnimationSprite: CCSprite?
-    let EnterIndentDoor: CGFloat = 17
+    let EnterIndentDoor: CGFloat = 150
     
-    class var DoorAnimationDelay:CGFloat { get {return 0.1 } }
+    class var DoorAnimationDelay:CGFloat { get {return 0.15 } }
     let Direct: Int = 0
     let Type: DoorType = DoorType.Top
     
@@ -24,13 +24,13 @@ class Door: RoomObject {
         get{
             var room = CurrentRoom!
             if(Type == DoorType.Left){
-                return CGPointMake(Position.x + Width/2.0 + EnterIndentDoor, room.FloorPosition)
+                return CGPointMake(Position.x + EnterIndentDoor, room.FloorPosition)
             }
             if(Type == DoorType.Right){
-                return CGPointMake(Position.x + Width/2 - EnterIndentDoor, room.FloorPosition)
+                return CGPointMake(Position.x - EnterIndentDoor, room.FloorPosition)
             }
             if(Type == DoorType.Top){
-                return CGPointMake(Position.x + Width/2, room.FloorPosition + 50);
+                return CGPointMake(Position.x, room.FloorPosition + 50);
             }
             return ccp(0,0);
         }
@@ -38,11 +38,12 @@ class Door: RoomObject {
         
     init(scene:IntroScene, type: DoorType, direct: Int) {
         var name: String = ""
-        if ( type == DoorType.Left ){ name = "DL"; }
-        else if (type == DoorType.Right){ name = "DR"; }
-        else if ( type == DoorType.Top ){ name = "DU"; }
+        if ( type == DoorType.Left ){ name = "MDLO (1)"; }
+        else if (type == DoorType.Right){ name = "MDRO (1)"; }
+        else if ( type == DoorType.Top ){ name = "MDUO (1)"; }
         
         super.init(scene: scene, imageNamed: "\(name).png")
+        anchorPoint = CGPointMake(0, 1)
         Type = type
         Direct = direct
         //AnimationSprite = CCSprite()

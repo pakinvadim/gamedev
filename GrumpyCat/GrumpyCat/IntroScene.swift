@@ -11,25 +11,34 @@ import Foundation
 class IntroScene : CCScene {
     var TouchBegan_PointOfTouch:CGPoint?
     var TouchBegan_PointOfLevel:CGPoint?
+    let ManAnchorPoint = CGPointMake(256, -480)
+    let DoorLeftAnchorPoint = CGPointMake(0, -512)
+    let DoorRightAnchorPoint = CGPointMake(512, -512)
+    let DoorUpAnchorPoint = CGPointMake(256, -420)
     
     var ActualLevel: GameLevel?
     
     override init() {
         super.init()
-        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("ManAngry.plist")
-        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("ManDoorLeft.plist")
-        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("ManDoorRight.plist")
-        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("ManDoorUp.plist")
-        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("ManRepair.plist")
-        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("ManWalk.plist")
-        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("Shok.plist")
-        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("Door.plist")
+        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("ManAngry.plist", anchor:ManAnchorPoint)
+        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("ManRepair.plist", anchor:ManAnchorPoint)
+        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("ManWalk.plist", anchor:ManAnchorPoint)
+        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("Shok.plist", anchor:ManAnchorPoint)
+        
+        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("ManDoorLeft.plist", anchor:DoorLeftAnchorPoint)
+        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("ManDoorRight.plist", anchor:DoorRightAnchorPoint)
+        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("ManDoorUp.plist", anchor:DoorUpAnchorPoint)
         
         ActualLevel = Level1(scene: self)
         addChild(ActualLevel)
         ActualLevel!.InitAll()
         userInteractionEnabled = true
-        multipleTouchEnabled = true;
+        multipleTouchEnabled = true
+        
+        /*var s = CCSprite(imageNamed: "MWD (1).png")
+        s.position = CGPointZero
+        s.anchorPoint = CGPointMake(0,1)
+        ActualLevel!.addChild(s, z:1000)*/
     }
 
     class func scene() -> CCScene {

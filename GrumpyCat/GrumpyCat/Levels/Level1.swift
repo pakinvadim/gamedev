@@ -17,13 +17,13 @@ class Level1 : GameLevel {
         super.InitAll()
         Cat!.BindToRoom(1)
         Man!.BindToRoom(4)
-        
+        Man!.position = CGPointMake(0, 0)
         let otvertka = Otvertka(scene: Scene!)
         let televizor = Televizor(scene: Scene!)
         let televizor2 = Televizor2(scene: Scene!)
         Room2!.AddThing(otvertka, position: CGPointMake(1060, 265))
-        Room2!.AddThing(televizor, position: CGPointMake(800, 265))
-        Room4!.AddThing(televizor2, position: CGPointMake(300, 265))
+        Room1!.AddThing(televizor, position: CGPointMake(800, 150))
+        Room4!.AddThing(televizor2, position: CGPointMake(600, 150))
         
         Man!.PermanentLogics.append(GoToRoomObjectLogic(object: televizor))
         Man!.PermanentLogics.append(GoToRoomObjectLogic(object: televizor2))

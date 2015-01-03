@@ -33,6 +33,13 @@ enum DoorType: Int{
     case Top = 2
 }
 
+enum WallType: Int{
+    case Left = 0
+    case Right = 1
+    case Top = 2
+    case Down = 3
+}
+
 enum ActStatus:Int{
     case Run = 0
     case Done = 1

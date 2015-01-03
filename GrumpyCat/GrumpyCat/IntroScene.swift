@@ -20,6 +20,8 @@ class IntroScene : CCScene {
     
     override init() {
         super.init()
+        let back = CCNodeColor(color: CCColor(red: 0.65, green: 0.85, blue: 0.90), width: 4000, height: 3000)
+        addChild(back, z: 0);
         CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("ManAngry.plist", anchor:ManAnchorPoint)
         CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("ManRepair.plist", anchor:ManAnchorPoint)
         CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("ManWalk.plist", anchor:ManAnchorPoint)

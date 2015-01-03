@@ -16,7 +16,10 @@ class GameChar : RootSprite {
     var WalkRight:CCAnimation?
     var WalkUp:CCAnimation?
     
-    var StandDownAction:CCAction?
+    var Step:CGFloat = 0;
+    var LeftStep:[CCAction] = [CCAction]()
+    
+    var Stand5DownAction:CCAction?
     var StandLeftAction:CCAction?
     var StandRightAction:CCAction?
     var StandUpAction:CCAction?

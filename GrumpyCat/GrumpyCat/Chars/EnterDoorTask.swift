@@ -65,7 +65,7 @@ class EnterDoorTask : TaskBase{
         else if(inDoor.Type == DoorType.Top){
             actionIn = char.DoorTopInAction!
             actionOut = char.DoorTopOutAction!
-            actionStand = char.StandDownAction!
+            actionStand = char.Stand5DownAction!
             stairsTime = CCActionDelay.actionWithDuration(CCTime(Door.DoorAnimationDelay * 7.0)) as CCActionDelay;// задержка при поднятие по лестнице
         }
         /*let animation = CCActionCallBlock({
@@ -86,8 +86,8 @@ class EnterDoorTask : TaskBase{
         
         let showAndActionOut = CCActionSpawn.actionWithArray([hideOutDoor, CCActionShow.action(), actionOut!]) as CCAction
         
-        let moveToEnterPosition = CCActionMoveTo.actionWithDuration(0.001, position: outDoor.EnterPosition) as CCActionMoveTo
-        let backPose = CCActionSpawn.actionWithArray([showOutDoor, moveToEnterPosition, actionStand!]) as CCAction
+        let moveToEnterPosition = CCActionMoveTo.actionWithDuration(0.000, position: outDoor.EnterPosition) as CCActionMoveTo
+        let backPose = CCActionSpawn.actionWithArray([showOutDoor, actionStand!, moveToEnterPosition]) as CCAction
         
         let outAction = CCActionSequence.actionWithArray([setPoseAndHide, stairsTime, showAndActionOut, backPose]) as CCAction
         return (inAction, outAction)

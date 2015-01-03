@@ -10,7 +10,7 @@ import Foundation
 
 class Room : RootSprite{
     var Numb: Int = 0
-    let Indent:CGFloat = 90
+    let Indent:CGFloat = 32
     var Doors:[Door] = [Door]()
     var Things:[ThingBase] = [ThingBase]()
     
@@ -35,16 +35,29 @@ class Room : RootSprite{
         door.CurrentRoom = self
         
         if (type == DoorType.Right){
-            door.position = CGPointMake(boundingBox().size.width - door.boundingBox().size.width, 0);
+            door.position = CGPointMake(boundingBox().size.width, 0);
         }
         else if (type == DoorType.Left){
-            door.position = CGPointMake(0, 0);
+            door.position = CGPointZero;
         }
         else if (type == DoorType.Top){
-            door.position = CGPointMake(positionX, 80);
+            door.position = CGPointMake(positionX, 160);
         }
         Doors.append(door);
         addChild(door, z: 150)
+    }
+    
+    func AddWall(wallType:WallType){
+        var wall:CCSprite?
+        if(wallType == WallType.Left) {
+            wall = CCSprite.spriteWithImageNamed("WH.png") as CCSprite
+            wall!.position = CGPointMake(-45, 0)
+        } else if(wallType == WallType.Right){
+            wall = CCSprite.spriteWithImageNamed("WH.png") as CCSprite
+            wall!.position = CGPointMake(boundingBox().size.width, 0)
+        }
+        wall!.anchorPoint = CGPointZero
+        addChild(wall!)
     }
     
     func GetDoor(direct: Int) -> Door?{

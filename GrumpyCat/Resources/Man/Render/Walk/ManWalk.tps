@@ -6,7 +6,7 @@
         <key>texturePackerVersion</key>
         <string>3.5.3</string>
         <key>fileName</key>
-        <string>C:/Users/Vadim/Desktop/Gamedev/GrumpyCat/Resources/Man/Render/Walk/ManWalk.tps</string>
+        <string>/Users/admin/Desktop/Gamedev/GrumpyCat/Resources/Man/Render/Walk/ManWalk.tps</string>
         <key>autoSDSettings</key>
         <array>
             <struct type="AutoSDSettings">

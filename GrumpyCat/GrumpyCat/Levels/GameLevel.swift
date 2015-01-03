@@ -11,10 +11,11 @@ import Foundation
 class GameLevel : RootSprite {
     var TouchBegan_PointOfTouch:CGPoint?
     var TouchBegan_PointOfLevel:CGPoint?
-    let wallConst:CGFloat = 25.0
-    let floorConst:CGFloat = 25.0
     
-    var Room1:Room?; var Room2:Room?; var Room3:Room?; var Room4:Room?; var Room5:Room?
+    var Room9:Room?
+    var Room10:Room?; var Room11:Room?; var Room12:Room?; var Room13:Room?; var Room14:Room?;
+    var Room21:Room?; var Room22:Room?; var Room23:Room?; var Room24:Room?
+    var Room31:Room?
     var Rooms:[Room] = [Room]()
     var Cat:CatChar?
     var Man:ManChar?
@@ -22,55 +23,28 @@ class GameLevel : RootSprite {
     
     override init(scene:IntroScene){
         super.init(scene: scene)
-        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("ManAngry.plist")
-        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("ManDoorLeft.plist")
-        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("ManDoorRight.plist")
-        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("ManDoorTop.plist")
-        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("ManRepair.plist")
-        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("ManWalk.plist")
-        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("Shok.plist")
         userInteractionEnabled = true
         multipleTouchEnabled = true;
         anchorPoint = CGPointMake(0, 0)
         
         Cat = CatChar(scene: scene)
         Man = ManChar(scene: scene)
-        addChild(Cat, z:10)
-        addChild(Man, z:9)
+        addChild(Cat, z:20)
+        addChild(Man, z:20)
         
         Inventory = InventoryInfo(scene: scene)
-        Scene!.addChild(Inventory, z:20)
+        Scene!.addChild(Inventory, z:500)
     }
     
     func InitAll(){
-        Room1 = Room(scene: Scene!, imageName: "room1.png", pos: CGPointMake(0, 0), number: 1)
-        Room1!.AddDoor(DoorType.Left, dir: 2, positionX: 0)
-        Room1!.AddDoor(DoorType.Top, dir:4, positionX:400)
-        AddRoom(Room1!)
-        
-        Room2 = Room(scene: Scene!, imageName: "room1.png", pos: CGPointMake(-1600 - wallConst, 0), number: 2)
-        Room2!.AddDoor(DoorType.Right, dir:1, positionX:0)
-        Room2!.AddDoor(DoorType.Top, dir:3, positionX:100)
-        AddRoom(Room2!)
-        
-        Room3 = Room(scene: Scene!, imageName: "room1.png", pos:CGPointMake(-1600 - wallConst, 640 + floorConst), number:3)
-        Room3!.AddDoor(DoorType.Right,  dir:4, positionX:0)
-        Room3!.AddDoor(DoorType.Top, dir:2, positionX:100)
-        AddRoom(Room3!)
-        
-        Room4 = Room(scene: Scene!, imageName: "room1.png", pos:CGPointMake(0, 640 + floorConst), number:4)
-        Room4!.AddDoor(DoorType.Top, dir:1, positionX:400)
-        Room4!.AddDoor(DoorType.Left, dir:3, positionX:0)
-        Room4!.AddDoor(DoorType.Top, dir:5, positionX:200)
-        AddRoom(Room4!)
-        
-        Room5 = Room(scene: Scene!, imageName: "room1.png", pos:CGPointMake(0, 2 * (640 + floorConst)), number:5)
-        Room5!.AddDoor(DoorType.Top, dir:4, positionX:200)
-        AddRoom(Room5!)
+        GameLevelInitHelper.AddRooms(self)
+        GameLevelInitHelper.AddFloor(self)
+        GameLevelInitHelper.AddTree(self)
+        GameLevelInitHelper.AddGround(self)
     }
     
     func AddRoom(room:Room){
-        addChild(room, z:0)
+        addChild(room, z:10)
         Rooms.append(room)
     }
     

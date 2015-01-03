@@ -16,6 +16,14 @@ class GameChar : RootSprite {
     var WalkRight:CCAnimation?
     var WalkUp:CCAnimation?
     
+    var Step:CGFloat = 0;
+    var LeftStep:[CCAction] = [CCAction]()
+    
+    var Stand5DownAction:CCAction?
+    var StandLeftAction:CCAction?
+    var StandRightAction:CCAction?
+    var StandUpAction:CCAction?
+    
     var BreatheAction:CCAction?
     
     var DoorLeftInAction:CCAction?
@@ -30,6 +38,7 @@ class GameChar : RootSprite {
 
     override init(scene:IntroScene) {
         super.init(scene: scene)
+        anchorPoint = CGPointMake(0, 1)
         self.schedule(Selector("Myupdate"), interval: 0.05)
     }
     

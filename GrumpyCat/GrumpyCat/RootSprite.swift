@@ -38,7 +38,8 @@ class RootSprite : CCSprite {
     class func GetAnimationNew(name: String, frameRange: [Int], delay:CGFloat) -> CCAnimation{
         var tempFrames = [CCSpriteFrame]()
         for i in frameRange {
-            let frame = CCSpriteFrame.frameWithImageNamed("\(name) (\(i)).png") as CCSpriteFrame
+            let fileName = frameRange.count != 1 ? "\(name) (\(i)).png" : "\(name).png"
+            let frame = CCSpriteFrame.frameWithImageNamed(fileName) as CCSpriteFrame
             tempFrames.append(frame)
         }
         return CCAnimation.animationWithSpriteFrames(tempFrames, delay: Float(delay)) as CCAnimation
@@ -69,6 +70,20 @@ class RootSprite : CCSprite {
         }
         return CCAnimation.animationWithSpriteFrames(tempFrames, delay: Float(delay)) as CCAnimation
     }
+    
+    class func GetFrameActions(name: String, frameCount: Int, step: CGPoint, delay:CCTime, gameChar:GameChar) -> [CCAction] {
+        var animation = GetAnimationNew(name, frameCount: frameCount, delay: 0)
+        var stepsActions = [CCAction]()
+        
+        for frame in animation.frames {
+            let moveStep:CCActionMoveBy = CCActionMoveBy(duration: 0.001, position: step)
+            //let animStep:CCActionAnimate = CCActionAnimate.actionWithAnimation(CCAnimation(spriteFrames: [frame], delay: 0.001)) as CCActionAnimate
+            let animStep:CCActionCallBlock = CCActionCallBlock({gameChar.spriteFrame = frame.spriteFrame })
+            let stepDelay:CCActionDelay = CCActionDelay(duration: delay)
+            stepsActions.append(CCActionSpawn.actionWithArray([moveStep, animStep, stepDelay]) as CCAction)
+        }
+        return stepsActions
+    }
 
     
     var ttf1:CCLabelTTF?
@@ -82,7 +97,7 @@ class RootSprite : CCSprite {
     }
     
     override func update(delta: CCTime) {
-        ttf1!.string = "\(position.x) : \(position.y)"
+        //ttf1!.string = "\(position.x) : \(position.y)"
         
         /*var b = boundingBox()
         let vertices:UnsafePointer<CGPoint> = UnsafePointer([

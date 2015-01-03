@@ -9,25 +9,26 @@
 import Foundation
 
 class ManChar : GameChar {
+    let animDelayCon: CGFloat = 25.2
     var RepairAction:CCAction?
     
     override init(scene:IntroScene) {
         super.init(scene: scene)
         name = "Man"
-        Speed = 210
-        //anchorPoint = CGPointMake(0.5, 0.15)
-        
-        let animDelayCon: CGFloat = 0.12
-        let animDelay:CGFloat = Speed / animDelayCon
+        Speed = 200
+        let animDelay:CGFloat = animDelayCon / Speed
         WalkRight = RootSprite.GetAnimationNew("MWR", frameCount: 8, delay: animDelay)
         WalkLeft = RootSprite.GetAnimationNew("MWL", frameCount: 8, delay: animDelay)
         WalkUp = RootSprite.GetAnimationNew("MWU", frameCount: 8, delay: animDelay)
         WalkDown = RootSprite.GetAnimationNew("MWD", frameCount: 8, delay: animDelay)
         
-        StandRightAction = RootSprite.GetActionNew("MWR (1)", frameCount: 1, delay: 0)
-        StandLeftAction = RootSprite.GetActionNew("MWL (1)", frameCount: 1, delay: 0)
-        StandUpAction = RootSprite.GetActionNew("MWU (1)", frameCount: 1, delay: 0)
-        StandDownAction = RootSprite.GetActionNew("MWD (1)", frameCount: 1, delay: 0)
+        Step = 22.5;
+        LeftStep = RootSprite.GetFrameActions("MWL", frameCount: 8, step: CGPointMake(0-Step, 0), delay: 0.1, gameChar: self)
+        
+        StandRightAction = RootSprite.GetActionNew("MWR (1)", frameCount: 1, delay: 0.001)
+        StandLeftAction = RootSprite.GetActionNew("MWL (1)", frameCount: 1, delay: 0.001)
+        StandUpAction = RootSprite.GetActionNew("MWU (1)", frameCount: 1, delay: 0.001)
+        Stand5DownAction = RootSprite.GetActionNew("MWD (1)", frameCount: 1, delay: 0.001)
         
         DoorLeftInAction = RootSprite.GetActionNew("MDLI", frameCount:11, delay:Door.DoorAnimationDelay)
         DoorLeftOutAction = RootSprite.GetActionNew("MDLO", frameCount:10, delay:Door.DoorAnimationDelay)

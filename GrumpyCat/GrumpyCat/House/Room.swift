@@ -41,10 +41,23 @@ class Room : RootSprite{
             door.position = CGPointZero;
         }
         else if (type == DoorType.Top){
-            door.position = CGPointMake(positionX, 200);
+            door.position = CGPointMake(positionX, 160);
         }
         Doors.append(door);
         addChild(door, z: 150)
+    }
+    
+    func AddWall(wallType:WallType){
+        var wall:CCSprite?
+        if(wallType == WallType.Left) {
+            wall = CCSprite.spriteWithImageNamed("WH.png") as CCSprite
+            wall!.position = CGPointMake(-45, 0)
+        } else if(wallType == WallType.Right){
+            wall = CCSprite.spriteWithImageNamed("WH.png") as CCSprite
+            wall!.position = CGPointMake(boundingBox().size.width, 0)
+        }
+        wall!.anchorPoint = CGPointZero
+        addChild(wall!)
     }
     
     func GetDoor(direct: Int) -> Door?{

@@ -7,158 +7,158 @@
             <key>ActionZont (0).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{458,398},{454,376}}</string>
+                <string>{{708,1278},{332,412}}</string>
                 <key>offset</key>
-                <string>{4,-40}</string>
+                <string>{159,-41}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{4,40},{454,376}}</string>
+                <string>{{159,41},{332,412}}</string>
                 <key>sourceSize</key>
-                <string>{454,376}</string>
+                <string>{332,412}</string>
             </dict>
             <key>ActionZont (1).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,792},{408,426}}</string>
+                <string>{{2,442},{334,438}}</string>
                 <key>offset</key>
-                <string>{85,-11}</string>
+                <string>{157,-42}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{85,11},{408,426}}</string>
+                <string>{{157,42},{334,438}}</string>
                 <key>sourceSize</key>
-                <string>{408,426}</string>
+                <string>{334,438}</string>
             </dict>
             <key>ActionZont (10).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1342,398},{408,424}}</string>
+                <string>{{2,882},{332,438}}</string>
                 <key>offset</key>
-                <string>{85,-11}</string>
+                <string>{159,-41}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{85,11},{408,424}}</string>
+                <string>{{159,41},{332,438}}</string>
                 <key>sourceSize</key>
-                <string>{408,424}</string>
+                <string>{332,438}</string>
             </dict>
             <key>ActionZont (11).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{412,792},{408,426}}</string>
+                <string>{{2,2},{350,438}}</string>
                 <key>offset</key>
-                <string>{85,-11}</string>
+                <string>{141,-42}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{85,11},{408,426}}</string>
+                <string>{{141,42},{350,438}}</string>
                 <key>sourceSize</key>
-                <string>{408,426}</string>
+                <string>{350,438}</string>
             </dict>
             <key>ActionZont (2).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{914,398},{408,426}}</string>
+                <string>{{724,2},{332,438}}</string>
                 <key>offset</key>
-                <string>{85,-11}</string>
+                <string>{159,-42}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{85,11},{408,426}}</string>
+                <string>{{159,42},{332,438}}</string>
                 <key>sourceSize</key>
-                <string>{408,426}</string>
+                <string>{332,438}</string>
             </dict>
             <key>ActionZont (3).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{822,808},{410,424}}</string>
+                <string>{{338,442},{332,438}}</string>
                 <key>offset</key>
-                <string>{83,-13}</string>
+                <string>{159,-42}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{83,13},{410,424}}</string>
+                <string>{{159,42},{332,438}}</string>
                 <key>sourceSize</key>
-                <string>{410,424}</string>
+                <string>{332,438}</string>
             </dict>
             <key>ActionZont (4).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1248,808},{410,420}}</string>
+                <string>{{2,1322},{334,436}}</string>
                 <key>offset</key>
-                <string>{83,-17}</string>
+                <string>{158,-44}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{83,17},{410,420}}</string>
+                <string>{{158,44},{334,436}}</string>
                 <key>sourceSize</key>
-                <string>{410,420}</string>
+                <string>{334,436}</string>
             </dict>
             <key>ActionZont (5).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{454,394}}</string>
+                <string>{{354,2},{368,418}}</string>
                 <key>offset</key>
-                <string>{4,-40}</string>
+                <string>{77,-60}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{4,40},{454,394}}</string>
+                <string>{{77,60},{368,418}}</string>
                 <key>sourceSize</key>
-                <string>{454,394}</string>
+                <string>{368,418}</string>
             </dict>
             <key>ActionZont (6).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,398},{454,392}}</string>
+                <string>{{338,1302},{368,416}}</string>
                 <key>offset</key>
-                <string>{8,-39}</string>
+                <string>{82,-58}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{8,39},{454,392}}</string>
+                <string>{{82,58},{368,416}}</string>
                 <key>sourceSize</key>
-                <string>{454,392}</string>
+                <string>{368,416}</string>
             </dict>
             <key>ActionZont (7).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1366,2},{450,394}}</string>
+                <string>{{704,442},{366,416}}</string>
                 <key>offset</key>
-                <string>{17,-37}</string>
+                <string>{90,-58}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{17,37},{450,394}}</string>
+                <string>{{90,58},{366,416}}</string>
                 <key>sourceSize</key>
-                <string>{450,394}</string>
+                <string>{366,416}</string>
             </dict>
             <key>ActionZont (8).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{458,2},{452,394}}</string>
+                <string>{{336,882},{366,418}}</string>
                 <key>offset</key>
-                <string>{13,-38}</string>
+                <string>{87,-57}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{13,38},{452,394}}</string>
+                <string>{{87,57},{366,418}}</string>
                 <key>sourceSize</key>
-                <string>{452,394}</string>
+                <string>{366,418}</string>
             </dict>
             <key>ActionZont (9).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{912,2},{452,394}}</string>
+                <string>{{704,860},{366,416}}</string>
                 <key>offset</key>
-                <string>{15,-39}</string>
+                <string>{90,-60}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{15,39},{452,394}}</string>
+                <string>{{90,60},{366,416}}</string>
                 <key>sourceSize</key>
-                <string>{452,394}</string>
+                <string>{366,416}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -168,9 +168,9 @@
             <key>realTextureFileName</key>
             <string>ManZontAction.png</string>
             <key>size</key>
-            <string>{1818,1220}</string>
+            <string>{1072,1760}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:970ccc00943b6c6e2a9270eb17fb4170:450d17b7de2cc9cb12f1f378b9db364a:4f36a1383f1f5aa844014f6e16a1065d$</string>
+            <string>$TexturePacker:SmartUpdate:7409af5b78793c3147d61dd845768f36:69f91d1e2a4c99c9da147e5cd9532567:4f36a1383f1f5aa844014f6e16a1065d$</string>
             <key>textureFileName</key>
             <string>ManZontAction.png</string>
         </dict>

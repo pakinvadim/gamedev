@@ -7,7 +7,7 @@
             <key>T1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,534},{246,228}}</string>
+                <string>{{682,702},{246,228}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -20,7 +20,7 @@
             <key>T2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{496,534},{273,183}}</string>
+                <string>{{1176,702},{273,183}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -33,7 +33,7 @@
             <key>T3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{250,534},{244,206}}</string>
+                <string>{{930,702},{244,206}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -43,31 +43,31 @@
                 <key>sourceSize</key>
                 <string>{244,206}</string>
             </dict>
-            <key>TR.png</key>
+            <key>T4.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{771,534},{923,152}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{923,152}}</string>
-                <key>sourceSize</key>
-                <string>{923,152}</string>
-            </dict>
-            <key>TUP.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{2,2},{530,1700}}</string>
+                <string>{{2,2},{815,678}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{530,1700}}</string>
+                <string>{{0,0},{815,678}}</string>
                 <key>sourceSize</key>
-                <string>{530,1700}</string>
+                <string>{815,678}</string>
+            </dict>
+            <key>TUP.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{682,2},{698,1330}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{698,1330}}</string>
+                <key>sourceSize</key>
+                <string>{698,1330}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -77,9 +77,9 @@
             <key>realTextureFileName</key>
             <string>Tree.png</string>
             <key>size</key>
-            <string>{1704,764}</string>
+            <string>{2014,932}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:68476ed23626e44ee9467e7931fea0c3:25a987612711fe5c3ec20f79b228ba76:17271709d50eb8e92a6144b841a647b1$</string>
+            <string>$TexturePacker:SmartUpdate:bf19aeb368e1ef059606a546762ed3f0:36849976172b203486173314db67619f:17271709d50eb8e92a6144b841a647b1$</string>
             <key>textureFileName</key>
             <string>Tree.png</string>
         </dict>

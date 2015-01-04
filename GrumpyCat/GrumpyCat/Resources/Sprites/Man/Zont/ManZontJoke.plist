@@ -7,106 +7,106 @@
             <key>JokeZont (1).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{260,714},{234,336}}</string>
+                <string>{{1654,256},{248,368}}</string>
                 <key>offset</key>
-                <string>{98,-91}</string>
+                <string>{137,-85}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{98,91},{234,336}}</string>
+                <string>{{137,85},{248,368}}</string>
                 <key>sourceSize</key>
-                <string>{234,336}</string>
+                <string>{248,368}</string>
             </dict>
             <key>JokeZont (2).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{264,358},{190,326}}</string>
+                <string>{{1654,2},{252,366}}</string>
                 <key>offset</key>
-                <string>{125,-90}</string>
+                <string>{121,-87}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{125,90},{190,326}}</string>
+                <string>{{121,87},{252,366}}</string>
                 <key>sourceSize</key>
-                <string>{190,326}</string>
+                <string>{252,366}</string>
             </dict>
             <key>JokeZont (3).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,1070},{180,324}}</string>
+                <string>{{862,2},{276,366}}</string>
                 <key>offset</key>
-                <string>{122,-92}</string>
+                <string>{121,-87}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{122,92},{180,324}}</string>
+                <string>{{121,87},{276,366}}</string>
                 <key>sourceSize</key>
-                <string>{180,324}</string>
+                <string>{276,366}</string>
             </dict>
             <key>JokeZont (4).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{184,1070},{176,324}}</string>
+                <string>{{1390,2},{262,366}}</string>
                 <key>offset</key>
-                <string>{110,-92}</string>
+                <string>{113,-87}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{110,92},{176,324}}</string>
+                <string>{{113,87},{262,366}}</string>
                 <key>sourceSize</key>
-                <string>{176,324}</string>
+                <string>{262,366}</string>
             </dict>
             <key>JokeZont (5).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{280,2},{184,334}}</string>
+                <string>{{594,2},{266,390}}</string>
                 <key>offset</key>
-                <string>{126,-89}</string>
+                <string>{121,-86}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{126,89},{184,334}}</string>
+                <string>{{121,86},{266,390}}</string>
                 <key>sourceSize</key>
-                <string>{184,334}</string>
+                <string>{266,390}</string>
             </dict>
             <key>JokeZont (6).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{276,354}}</string>
+                <string>{{2,2},{304,402}}</string>
                 <key>offset</key>
-                <string>{86,-85}</string>
+                <string>{88,-81}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{86,85},{276,354}}</string>
+                <string>{{88,81},{304,402}}</string>
                 <key>sourceSize</key>
-                <string>{276,354}</string>
+                <string>{304,402}</string>
             </dict>
             <key>JokeZont (7).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,358},{260,354}}</string>
+                <string>{{308,2},{284,402}}</string>
                 <key>offset</key>
-                <string>{96,-85}</string>
+                <string>{107,-81}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{96,85},{260,354}}</string>
+                <string>{{107,81},{284,402}}</string>
                 <key>sourceSize</key>
-                <string>{260,354}</string>
+                <string>{284,402}</string>
             </dict>
             <key>JokeZont (8).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,714},{256,354}}</string>
+                <string>{{1140,2},{248,402}}</string>
                 <key>offset</key>
-                <string>{96,-85}</string>
+                <string>{119,-81}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{96,85},{256,354}}</string>
+                <string>{{119,81},{248,402}}</string>
                 <key>sourceSize</key>
-                <string>{256,354}</string>
+                <string>{248,402}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -116,9 +116,9 @@
             <key>realTextureFileName</key>
             <string>ManZontJoke.png</string>
             <key>size</key>
-            <string>{496,1396}</string>
+            <string>{2024,506}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:ebdf94eebcc95ce2b0665b2fad8306e9:c842553bd3d1ae0d2ba956756913782b:73c6b2bdf1c4b2dc50f1ba173d6a2414$</string>
+            <string>$TexturePacker:SmartUpdate:0a2ce5f6f9f615c514e40d24be66107f:b85383c55064c6a3da79a1d1875aa4f4:73c6b2bdf1c4b2dc50f1ba173d6a2414$</string>
             <key>textureFileName</key>
             <string>ManZontJoke.png</string>
         </dict>

@@ -25,7 +25,7 @@ class GoToManager {
             if(touchObj is ThingGet){
                 tasks += (touchObj as ThingGet).GetItTask(char)
             } else if (touchObj is ThingJoke){
-                tasks += (touchObj as ThingJoke).GetJokeTasks(char)
+                tasks += (touchObj as ThingJoke).GetTasks(char)
             }
         }
         return tasks.reverse()

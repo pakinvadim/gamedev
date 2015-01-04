@@ -308,11 +308,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GrumpyCat/IntroScene.swift"
-            timestampString = "439954853.755221"
+            timestampString = "441948858.609517"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "touchesMoved(_:withEvent:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1029,22 +1029,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GrumpyCat/House/MicsThings.swift"
-            timestampString = "436502509.173638"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "init(scene:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "GrumpyCat/House/ThingGet.swift"
             timestampString = "436502509.173638"
             startingColumnNumber = "9223372036854775807"
@@ -1062,11 +1046,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GrumpyCat/RootSprite.swift"
-            timestampString = "437364439.855651"
+            timestampString = "441948675.825429"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "GetAnimation(_:frameRange:delay:wight:hight:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1280,11 +1264,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GrumpyCat/RootSprite.swift"
-            timestampString = "437364439.855651"
+            timestampString = "441948675.825429"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "GetAction(_:frameCount:delay:wight:hight:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1296,11 +1280,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GrumpyCat/RootSprite.swift"
-            timestampString = "437364439.855651"
+            timestampString = "441948675.825429"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "GetAnimation(_:frameCount:delay:wight:hight:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1312,11 +1296,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GrumpyCat/RootSprite.swift"
-            timestampString = "437364439.855651"
+            timestampString = "441948675.825429"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "RootSprite"
             landmarkType = "3">
          </BreakpointContent>
@@ -1328,11 +1312,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GrumpyCat/IntroScene.swift"
-            timestampString = "439954853.755221"
+            timestampString = "441948858.609517"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "IntroScene"
             landmarkType = "3">
          </BreakpointContent>
@@ -1360,11 +1344,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GrumpyCat/IntroScene.swift"
-            timestampString = "439954853.755221"
+            timestampString = "441948858.609517"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "init()"
             landmarkType = "5">
          </BreakpointContent>
@@ -1392,11 +1376,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GrumpyCat/RootSprite.swift"
-            timestampString = "439956403.338201"
+            timestampString = "441948675.825429"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "GetAnimationNew(_:frameRange:delay:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1472,11 +1456,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GrumpyCat/RootSprite.swift"
-            timestampString = "440133636.04717"
+            timestampString = "441948675.825429"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "GetFrameActions(_:frameCount:step:delay:gameChar:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1488,11 +1472,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GrumpyCat/RootSprite.swift"
-            timestampString = "440133044.119849"
+            timestampString = "441948675.825429"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "GetFrameActions(_:frameCount:step:delay:gameChar:)"
             landmarkType = "5">
             <Locations>
@@ -1584,6 +1568,54 @@
             startingLineNumber = "107"
             endingLineNumber = "107"
             landmarkName = "AddFloor(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GrumpyCat/House/ThingJoke.swift"
+            timestampString = "442024488.716239"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "GetTasks(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GrumpyCat/House/MicsThingsJoke.swift"
+            timestampString = "441949017.881718"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "init(scene:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GrumpyCat/Chars/MoveInRoomTask.swift"
+            timestampString = "442024749.47437"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "GetMoveToPointAction(_:char:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

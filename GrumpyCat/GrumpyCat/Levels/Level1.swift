@@ -16,22 +16,24 @@ class Level1 : GameLevel {
     override func InitAll(){
         super.InitAll()
         Cat!.BindToRoom(21)
-        Man!.BindToRoom(12)
+        Man!.BindToRoom(22)
         //Man!.position = CGPointMake(0, 0)
-        let otvertka = Otvertka(scene: Scene!)
-        let televizor = Televizor(scene: Scene!)
-        let televizor2 = Televizor2(scene: Scene!)
-        /*Room2!.AddThing(otvertka, position: CGPointMake(1060, 265))
-        Room1!.AddThing(televizor, position: CGPointMake(800, 150))
-        Room4!.AddThing(televizor2, position: CGPointMake(600, 150))*/
+        let zont = Zont(scene: Scene!)
+        //let televizor = Televizor(scene: Scene!)
+        //let televizor2 = Televizor2(scene: Scene!)
+        Room21!.AddThing(zont, position: CGPointMake(400, 0))
+        //Room1!.AddThing(televizor, position: CGPointMake(800, 150))
+        //Room4!.AddThing(televizor2, position: CGPointMake(600, 150))
         
-        Man!.PermanentLogics.append(GoToCenterRoomLogic(room: Room10!))
+        /*Man!.PermanentLogics.append(GoToCenterRoomLogic(room: Room10!))
         Man!.PermanentLogics.append(GoToCenterRoomLogic(room: Room9!))
         Man!.PermanentLogics.append(GoToCenterRoomLogic(room: Room14!))
         Man!.PermanentLogics.append(GoToCenterRoomLogic(room: Room21!))
         Man!.PermanentLogics.append(GoToCenterRoomLogic(room: Room24!))
-        Man!.PermanentLogics.append(GoToCenterRoomLogic(room: Room31!))
-        //Man!.PermanentLogics.append(GoToRoomObjectLogic(object: televizor2))
+        Man!.PermanentLogics.append(GoToCenterRoomLogic(room: Room31!))*/
+        
+        Man!.PermanentLogics.append(GoToRoomObjectLogic(object: zont))
+        Man!.PermanentLogics.append(GoToCenterRoomLogic(room: Room22!))
     }
     
     override init(texture : CCTexture!, rect: CGRect){ super.init(texture: texture, rect: rect) }

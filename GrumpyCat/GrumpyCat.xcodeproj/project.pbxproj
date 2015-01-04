@@ -205,8 +205,7 @@
 		84A6A4461A024A0000DE6F58 /* otv.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A6A4441A024A0000DE6F58 /* otv.png */; };
 		84A6BB9A19FEFB7400EB8AA2 /* DoActionTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A6BB9919FEFB7400EB8AA2 /* DoActionTask.swift */; };
 		84A6C52219FC352500577430 /* ThingBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A6C52119FC352500577430 /* ThingBase.swift */; };
-		84A6C52419FC37D900577430 /* MicsThings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A6C52319FC37D900577430 /* MicsThings.swift */; };
-		84A6C52F19FC504100577430 /* room1.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A6C52E19FC504100577430 /* room1.png */; };
+		84A6C52419FC37D900577430 /* MicsThingsJoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A6C52319FC37D900577430 /* MicsThingsJoke.swift */; };
 		84A6C53119FC557700577430 /* tv.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 84A6C53019FC557700577430 /* tv.jpeg */; };
 		84A6E9BD1A0ED53C002B90A1 /* GoToRoomObjectLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A6E9BC1A0ED53C002B90A1 /* GoToRoomObjectLogic.swift */; };
 		84A6E9BF1A0ED5DB002B90A1 /* LogicBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A6E9BE1A0ED5DB002B90A1 /* LogicBase.swift */; };
@@ -262,6 +261,11 @@
 		84AFC0CB19F45F5200A0EBDE /* MoveTaskBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFC0CA19F45F5200A0EBDE /* MoveTaskBase.swift */; };
 		84B0DAF11A3E6390008F4060 /* GameLevelInitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B0DAF01A3E6390008F4060 /* GameLevelInitHelper.swift */; };
 		84B1C5AC19F86576008E790E /* Linq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1C5AB19F86576008E790E /* Linq.swift */; };
+		84B7F1541A578E0F00617E54 /* ManZontAction.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84B7F1501A578E0F00617E54 /* ManZontAction.plist */; };
+		84B7F1551A578E0F00617E54 /* ManZontAction.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B7F1511A578E0F00617E54 /* ManZontAction.png */; };
+		84B7F1561A578E0F00617E54 /* ManZontJoke.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84B7F1521A578E0F00617E54 /* ManZontJoke.plist */; };
+		84B7F1571A578E0F00617E54 /* ManZontJoke.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B7F1531A578E0F00617E54 /* ManZontJoke.png */; };
+		84B7F1591A578EE100617E54 /* MicsThingsGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7F1581A578EE100617E54 /* MicsThingsGet.swift */; };
 		84C61AE019FC658A008E5173 /* RoomObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C61ADF19FC658A008E5173 /* RoomObject.swift */; };
 		84C61AE219FC6DB2008E5173 /* HelpCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C61AE119FC6DB2008E5173 /* HelpCode.swift */; };
 		84E1BDAC19E1DCCE008B3C8F /* RootSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E1BDA819E1DCCE008B3C8F /* RootSprite.swift */; };
@@ -724,8 +728,7 @@
 		84A6A4441A024A0000DE6F58 /* otv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = otv.png; path = House/Things/otv.png; sourceTree = "<group>"; };
 		84A6BB9919FEFB7400EB8AA2 /* DoActionTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoActionTask.swift; sourceTree = "<group>"; };
 		84A6C52119FC352500577430 /* ThingBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThingBase.swift; sourceTree = "<group>"; };
-		84A6C52319FC37D900577430 /* MicsThings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicsThings.swift; sourceTree = "<group>"; };
-		84A6C52E19FC504100577430 /* room1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = room1.png; path = House/Rooms/room1.png; sourceTree = "<group>"; };
+		84A6C52319FC37D900577430 /* MicsThingsJoke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicsThingsJoke.swift; sourceTree = "<group>"; };
 		84A6C53019FC557700577430 /* tv.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tv.jpeg; path = House/Things/tv.jpeg; sourceTree = "<group>"; };
 		84A6E9BC1A0ED53C002B90A1 /* GoToRoomObjectLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoToRoomObjectLogic.swift; sourceTree = "<group>"; };
 		84A6E9BE1A0ED5DB002B90A1 /* LogicBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogicBase.swift; sourceTree = "<group>"; };
@@ -781,6 +784,11 @@
 		84AFC0CA19F45F5200A0EBDE /* MoveTaskBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveTaskBase.swift; sourceTree = "<group>"; };
 		84B0DAF01A3E6390008F4060 /* GameLevelInitHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLevelInitHelper.swift; sourceTree = "<group>"; };
 		84B1C5AB19F86576008E790E /* Linq.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Linq.swift; sourceTree = "<group>"; };
+		84B7F1501A578E0F00617E54 /* ManZontAction.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ManZontAction.plist; sourceTree = "<group>"; };
+		84B7F1511A578E0F00617E54 /* ManZontAction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ManZontAction.png; sourceTree = "<group>"; };
+		84B7F1521A578E0F00617E54 /* ManZontJoke.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ManZontJoke.plist; sourceTree = "<group>"; };
+		84B7F1531A578E0F00617E54 /* ManZontJoke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ManZontJoke.png; sourceTree = "<group>"; };
+		84B7F1581A578EE100617E54 /* MicsThingsGet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicsThingsGet.swift; sourceTree = "<group>"; };
 		84C61ADF19FC658A008E5173 /* RoomObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomObject.swift; sourceTree = "<group>"; };
 		84C61AE119FC6DB2008E5173 /* HelpCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpCode.swift; sourceTree = "<group>"; };
 		84E1BDA819E1DCCE008B3C8F /* RootSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootSprite.swift; sourceTree = "<group>"; };
@@ -1677,7 +1685,8 @@
 				84A6C52119FC352500577430 /* ThingBase.swift */,
 				84A9DD391A03A4A800E3BE52 /* ThingJoke.swift */,
 				84AA4DFA19FD85CD0006DE99 /* ThingGet.swift */,
-				84A6C52319FC37D900577430 /* MicsThings.swift */,
+				84A6C52319FC37D900577430 /* MicsThingsJoke.swift */,
+				84B7F1581A578EE100617E54 /* MicsThingsGet.swift */,
 			);
 			name = Things;
 			sourceTree = "<group>";
@@ -1700,7 +1709,6 @@
 				84ADA6901A3684F200C4A74D /* 2 */,
 				84ADA6951A3684F200C4A74D /* 3 */,
 				84ADA6971A3684F200C4A74D /* walls */,
-				84A6C52E19FC504100577430 /* room1.png */,
 			);
 			name = Rooms;
 			sourceTree = "<group>";
@@ -1708,6 +1716,7 @@
 		84A6C52719FC4EDF00577430 /* Things */ = {
 			isa = PBXGroup;
 			children = (
+				84B7F14F1A578E0F00617E54 /* Zont */,
 				84A6A4441A024A0000DE6F58 /* otv.png */,
 				84A6A4431A024A0000DE6F58 /* otv-2.jpg */,
 				84A6C53019FC557700577430 /* tv.jpeg */,
@@ -1843,6 +1852,18 @@
 				84AAF43F1A39305900287BCB /* GoToCenterRoomLogic.swift */,
 			);
 			name = TasksLogic;
+			sourceTree = "<group>";
+		};
+		84B7F14F1A578E0F00617E54 /* Zont */ = {
+			isa = PBXGroup;
+			children = (
+				84B7F1501A578E0F00617E54 /* ManZontAction.plist */,
+				84B7F1511A578E0F00617E54 /* ManZontAction.png */,
+				84B7F1521A578E0F00617E54 /* ManZontJoke.plist */,
+				84B7F1531A578E0F00617E54 /* ManZontJoke.png */,
+			);
+			name = Zont;
+			path = House/Things/Zont;
 			sourceTree = "<group>";
 		};
 		84E1BDAD19E1DD22008B3C8F /* Chars */ = {
@@ -2078,15 +2099,16 @@
 				65F5D6D419854038007C8B2B /* Icon-72@2x.png in Resources */,
 				84E1BE0419E1E3D9008B3C8F /* CatAnimEnterDoorLeftIn4.png in Resources */,
 				84E1BE2F19E1E3D9008B3C8F /* walkTop0.png in Resources */,
+				84B7F1571A578E0F00617E54 /* ManZontJoke.png in Resources */,
 				84ADA69E1A3684F200C4A74D /* R13.png in Resources */,
 				84E1BE2D19E1E3D9008B3C8F /* walkLeft3.png in Resources */,
 				84E1BE1319E1E3D9008B3C8F /* CatAnimEnterDoorRightOut1.png in Resources */,
 				84AA4DF719FD55220006DE99 /* inventory.jpg in Resources */,
+				84B7F1561A578E0F00617E54 /* ManZontJoke.plist in Resources */,
 				84E1BE1D19E1E3D9008B3C8F /* CatAnimEnterDoorTopIn5.png in Resources */,
 				84AB2DEF1A410C7F0089A727 /* TUP.png in Resources */,
 				84E1BE1E19E1E3D9008B3C8F /* CatAnimEnterDoorTopOut0.png in Resources */,
 				84A6C53119FC557700577430 /* tv.jpeg in Resources */,
-				84A6C52F19FC504100577430 /* room1.png in Resources */,
 				84E1BE2419E1E3D9008B3C8F /* standBotton0.png in Resources */,
 				84E1BE0619E1E3D9008B3C8F /* CatAnimEnterDoorLeftOut0.png in Resources */,
 				84A6A4451A024A0000DE6F58 /* otv-2.jpg in Resources */,
@@ -2103,6 +2125,7 @@
 				84E1BE2119E1E3D9008B3C8F /* CatAnimEnterDoorTopOut3.png in Resources */,
 				84A732831A048EDB00991C9B /* tv-2.jpg in Resources */,
 				65F5D6CE19854038007C8B2B /* Icon.png in Resources */,
+				84B7F1541A578E0F00617E54 /* ManZontAction.plist in Resources */,
 				65F5D6DC19854038007C8B2B /* Icon-iPad-Spotlight-iOS7@2x.png in Resources */,
 				84ADA6A31A3684F200C4A74D /* R24.png in Resources */,
 				84E1BE1F19E1E3D9008B3C8F /* CatAnimEnterDoorTopOut1.png in Resources */,
@@ -2137,6 +2160,7 @@
 				65F5D6E419854038007C8B2B /* Icon-Spotlight-iOS7.png in Resources */,
 				84A966C91A0DC23D001CDC11 /* ManRepair.png in Resources */,
 				84E1BE1619E1E3D9008B3C8F /* CatAnimEnterDoorRightOut4.png in Resources */,
+				84B7F1551A578E0F00617E54 /* ManZontAction.png in Resources */,
 				84E1BE2019E1E3D9008B3C8F /* CatAnimEnterDoorTopOut2.png in Resources */,
 				84ADA69C1A3684F200C4A74D /* R11.png in Resources */,
 				84E1BE0819E1E3D9008B3C8F /* CatAnimEnterDoorLeftOut2.png in Resources */,
@@ -2209,6 +2233,7 @@
 				65F5D80C1985403A007C8B2B /* CGPointExtension.m in Sources */,
 				84E1BDB519E1DD22008B3C8F /* CatChar.swift in Sources */,
 				65F5D73619854039007C8B2B /* CCActionTween.m in Sources */,
+				84B7F1591A578EE100617E54 /* MicsThingsGet.swift in Sources */,
 				65F5D8981985403A007C8B2B /* CCAnimationManager.m in Sources */,
 				65F5D76D19854039007C8B2B /* CCNode+Debug.m in Sources */,
 				65F5D70B19854039007C8B2B /* CCEffectNode.m in Sources */,
@@ -2253,7 +2278,7 @@
 				65F5D8921985403A007C8B2B /* CCTextField.m in Sources */,
 				84AA4DF419FD54890006DE99 /* InventoryInfo.swift in Sources */,
 				65F5D76A19854039007C8B2B /* CCNode.m in Sources */,
-				84A6C52419FC37D900577430 /* MicsThings.swift in Sources */,
+				84A6C52419FC37D900577430 /* MicsThingsJoke.swift in Sources */,
 				84AB2DF11A410CCA0089A727 /* Tree.swift in Sources */,
 				65F5D8AA1985403A007C8B2B /* CCBLocalizationManager.m in Sources */,
 				84AFC0BB19F3D53A00A0EBDE /* TaskBase.swift in Sources */,

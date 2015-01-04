@@ -182,6 +182,11 @@ static CCSpriteFrameCache *_sharedSpriteFrameCache=nil;
 
 -(void) addSpriteFramesWithDictionary:(NSDictionary*)dictionary textureReference:(id)textureReference
 {
+    [self addSpriteFramesWithDictionary:dictionary textureReference:textureReference anchor:CGPointZero];
+}
+
+-(void) addSpriteFramesWithDictionary:(NSDictionary*)dictionary textureReference:(id)textureReference anchor:(CGPoint)anchor
+{
 	/*
 	 Supported Zwoptex Formats:
 	 ZWTCoordinatesFormatOptionXMLLegacy = 0, // Flash Version
@@ -247,7 +252,7 @@ static CCSpriteFrameCache *_sharedSpriteFrameCache=nil;
 			// set frame info
 			rectInPixels = frame;
 			isRotated = rotated;
-			frameOffset = offset;
+			frameOffset = ccpSub(offset, anchor);;
 			originalSize = sourceSize;
 		} else if(format == 3) {
 			// get values
@@ -301,7 +306,12 @@ static CCSpriteFrameCache *_sharedSpriteFrameCache=nil;
 
 -(void) addSpriteFramesWithDictionary:(NSDictionary*)dictionary textureFilename:(NSString*)textureFilename
 {
-	return [self addSpriteFramesWithDictionary:dictionary textureReference:textureFilename];
+    return [self addSpriteFramesWithDictionary:dictionary textureFilename:textureFilename anchor:CGPointZero];
+}
+
+-(void) addSpriteFramesWithDictionary:(NSDictionary*)dictionary textureFilename:(NSString*)textureFilename anchor:(CGPoint)anchor
+{
+    return [self addSpriteFramesWithDictionary:dictionary textureReference:textureFilename anchor:anchor];
 }
 
 -(void) addSpriteFramesWithDictionary:(NSDictionary *)dictionary texture:(CCTexture *)texture
@@ -337,8 +347,12 @@ static CCSpriteFrameCache *_sharedSpriteFrameCache=nil;
 	return [self addSpriteFramesWithFile:plist textureReference:texture];
 }
 
-
 -(void) addSpriteFramesWithFile:(NSString*)plist
+{
+    [self addSpriteFramesWithFile:plist anchor:CGPointZero];
+}
+
+-(void) addSpriteFramesWithFile:(NSString*)plist anchor:(CGPoint)anchor
 {
 	NSAssert(plist, @"plist filename should not be nil");
 	
@@ -366,8 +380,8 @@ static CCSpriteFrameCache *_sharedSpriteFrameCache=nil;
 
 			CCLOG(@"cocos2d: CCSpriteFrameCache: Trying to use file '%@' as texture", texturePath);
 		}
-
-		[self addSpriteFramesWithDictionary:dict textureFilename:texturePath];
+        
+        [self addSpriteFramesWithDictionary:dict textureFilename:texturePath anchor:anchor];
 		
 		[_loadedFilenames addObject:plist];
 	}

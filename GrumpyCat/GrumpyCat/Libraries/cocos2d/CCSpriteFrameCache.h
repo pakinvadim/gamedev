@@ -75,6 +75,7 @@
  *  @param plist plist description.
  */
 -(void) addSpriteFramesWithFile:(NSString*)plist;
+-(void) addSpriteFramesWithFile:(NSString*)plist anchor:(CGPoint)anchor;
 
 /**
  *  Add sprite frames to the cache from the specified plist and texture file.

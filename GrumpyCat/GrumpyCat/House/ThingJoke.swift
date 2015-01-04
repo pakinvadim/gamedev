@@ -10,8 +10,9 @@ import Foundation
 
 class ThingJoke : ThingBase {
     var CatMakeJokeTasks:[TaskBase]?
-    var ManUsingTasks:[TaskBase]?
-    var ManJokeTasks:[TaskBase]?
+    var ManStartAction:CCAction?
+    var ManEndAction:CCAction?
+    var ManJokeAction:CCAction?
     
     var CatStartActionPoint:CGPoint?
     var ManStartActionPoint:CGPoint?
@@ -21,6 +22,7 @@ class ThingJoke : ThingBase {
     
     override init(scene:IntroScene, imageName: String){
         super.init(scene: scene, imageName: imageName)
+        anchorPoint = CGPointMake(0, 1)
     }
     
     func MakeJokeReady(){
@@ -28,7 +30,7 @@ class ThingJoke : ThingBase {
         JokeReady = true
     }
     
-    func GetJokeTasks(gameChar:GameChar) -> [TaskBase]{
+    func GetTasks(gameChar:GameChar) -> [TaskBase]{
         if(gameChar is CatChar){
             if(!JokeReady){
                 let anim = DoActionTask(action: (gameChar as CatChar).MakeJokeAction!, canStop: false, name: "MakeJoke")
@@ -40,13 +42,33 @@ class ThingJoke : ThingBase {
         }
         if(gameChar is ManChar){
             if(!JokeReady){
-                return ManUsingTasks!
+                return GetManActionTask()
             }else{
-                return ManJokeTasks!
+                return GetManJokeTask()
             }
         }
         println("Error: ThingJoke - unknow type")
         return [TaskBase]()
+    }
+    
+    func GetManActionTask() -> [TaskBase]{
+        let hideThing = CCActionCallBlock({ self.runAction(CCActionHide() as CCAction); return; })
+        let showThing = CCActionCallBlock({ self.runAction(CCActionShow() as CCAction); return; })
+        let moveToThing = CCActionMoveTo(duration: 0.001, position: self.Position)
+        let moveBack = CCActionMoveTo(duration: 0.001, position: CcpAdd(self.Position, ManStartActionPoint!))
+        let standUp = Scene!.ActualLevel!.Man!.StandUpAction!;
+        let play = CCActionSequence.actionWithArray([self.ManStartAction!, self.ManEndAction!]) as CCAction
+        
+        let startSpawn = CCActionSpawn.actionWithArray([hideThing, play]) as CCAction
+        let endSpawn = CCActionSpawn.actionWithArray([moveBack, showThing, standUp]) as CCAction
+        
+        let action = CCActionSequence.actionWithArray([moveToThing, startSpawn, endSpawn]) as CCAction
+        
+        return [DoActionTask(action: action)]
+    }
+    
+    func GetManJokeTask() -> [TaskBase]{
+        return [DoActionTask(action: ManStartAction!), DoActionTask(action: ManJokeAction!)]
     }
     
     func GetJokePosition(gameChar:GameChar) -> CGPoint{

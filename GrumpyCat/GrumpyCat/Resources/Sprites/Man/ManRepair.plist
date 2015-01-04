@@ -9,11 +9,11 @@
                 <key>frame</key>
                 <string>{{2,2},{270,262}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{122,-218}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{270,262}}</string>
+                <string>{{122,218},{270,262}}</string>
                 <key>sourceSize</key>
                 <string>{270,262}</string>
             </dict>
@@ -22,11 +22,11 @@
                 <key>frame</key>
                 <string>{{2,266},{198,258}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{160,-222}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{198,258}}</string>
+                <string>{{160,222},{198,258}}</string>
                 <key>sourceSize</key>
                 <string>{198,258}</string>
             </dict>
@@ -35,11 +35,11 @@
                 <key>frame</key>
                 <string>{{332,526},{158,254}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{184,-225}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{158,254}}</string>
+                <string>{{184,225},{158,254}}</string>
                 <key>sourceSize</key>
                 <string>{158,254}</string>
             </dict>
@@ -48,11 +48,11 @@
                 <key>frame</key>
                 <string>{{170,526},{160,254}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{180,-225}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{160,254}}</string>
+                <string>{{180,225},{160,254}}</string>
                 <key>sourceSize</key>
                 <string>{160,254}</string>
             </dict>
@@ -61,11 +61,11 @@
                 <key>frame</key>
                 <string>{{2,526},{166,256}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{179,-223}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{166,256}}</string>
+                <string>{{179,223},{166,256}}</string>
                 <key>sourceSize</key>
                 <string>{166,256}</string>
             </dict>
@@ -74,11 +74,11 @@
                 <key>frame</key>
                 <string>{{202,266},{166,258}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{180,-221}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{166,258}}</string>
+                <string>{{180,221},{166,258}}</string>
                 <key>sourceSize</key>
                 <string>{166,258}</string>
             </dict>
@@ -87,11 +87,11 @@
                 <key>frame</key>
                 <string>{{274,2},{164,262}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{183,-218}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{164,262}}</string>
+                <string>{{183,218},{164,262}}</string>
                 <key>sourceSize</key>
                 <string>{164,262}</string>
             </dict>
@@ -105,7 +105,7 @@
             <key>size</key>
             <string>{492,784}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:d85fe80ed9d36f77d2d14b7ed3426976:7857425945d1b6e198946057aed60ff4:7f4a527710d94719b6d2603f00a79038$</string>
+            <string>$TexturePacker:SmartUpdate:2f3ebb323a276b2df6f3263a7613dfd3:7857425945d1b6e198946057aed60ff4:7f4a527710d94719b6d2603f00a79038$</string>
             <key>textureFileName</key>
             <string>ManRepair.png</string>
         </dict>

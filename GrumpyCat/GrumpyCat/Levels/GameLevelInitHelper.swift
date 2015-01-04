@@ -30,8 +30,8 @@ class GameLevelInitHelper {
         l.Room12 = Room(scene: l.Scene!, imageName: "R12.png", pos: CGPointMake(768 + wallConst, 0), number: 12)
         l.Room12!.AddWall(WallType.Right)
         l.Room12!.AddWall(WallType.Left)
-        l.Room12!.AddDoor(DoorType.Left, dir:11, positionX:0)
-        l.Room12!.AddDoor(DoorType.Right, dir:13, positionX:0)
+        //l.Room12!.AddDoor(DoorType.Left, dir:11, positionX:0)
+        //l.Room12!.AddDoor(DoorType.Right, dir:13, positionX:0)
         l.Room12!.AddDoor(DoorType.Top, dir:22, positionX:1536-400)
         
         l.Room13 = Room(scene: l.Scene!, imageName: "R13.png", pos:CGPointMake(768 + 1536 + 2*wallConst, 0), number:13)

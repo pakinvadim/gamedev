@@ -4,7 +4,7 @@
         <key>fileFormatVersion</key>
         <int>3</int>
         <key>texturePackerVersion</key>
-        <string>3.5.3</string>
+        <string>3.6.0</string>
         <key>fileName</key>
         <string>C:/Users/Vadim/Desktop/Gamedev/GrumpyCat/Resources/Rooms/tree/tree.tps</string>
         <key>autoSDSettings</key>
@@ -191,8 +191,8 @@
             <filename>T1.png</filename>
             <filename>T2.png</filename>
             <filename>T3.png</filename>
-            <filename>TR.png</filename>
             <filename>TUP.png</filename>
+            <filename>T4.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

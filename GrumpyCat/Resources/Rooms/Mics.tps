@@ -6,7 +6,7 @@
         <key>texturePackerVersion</key>
         <string>3.6.0</string>
         <key>fileName</key>
-        <string>C:/Users/Vadim/Desktop/Gamedev/GrumpyCat/Resources/Rooms/tree/tree.tps</string>
+        <string>C:/Users/Vadim/Desktop/Gamedev/GrumpyCat/Resources/Rooms/Mics.tps</string>
         <key>autoSDSettings</key>
         <array>
             <struct type="AutoSDSettings">
@@ -38,7 +38,7 @@
         <key>dataFormat</key>
         <string>cocos2d</string>
         <key>textureFileName</key>
-        <filename>../../../GrumpyCat/Resources/Sprites/House/House/Tree.png</filename>
+        <filename>../../GrumpyCat/Resources/Sprites/House/Mics.png</filename>
         <key>flipPVR</key>
         <false/>
         <key>pvrCompressionQuality</key>
@@ -145,7 +145,7 @@
             <key>data</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename>../../../GrumpyCat/Resources/Sprites/House/House/Tree.plist</filename>
+                <filename>../../GrumpyCat/Resources/Sprites/House/Mics.plist</filename>
             </struct>
         </map>
         <key>multiPack</key>
@@ -180,7 +180,7 @@
             <key>trimThreshold</key>
             <uint>1</uint>
             <key>trimMode</key>
-            <enum type="SpriteSettings::TrimMode">Crop</enum>
+            <enum type="SpriteSettings::TrimMode">CropKeepPos</enum>
             <key>heuristicMask</key>
             <false/>
             <key>pivotPoint</key>
@@ -188,11 +188,19 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>T1.png</filename>
-            <filename>T2.png</filename>
-            <filename>T3.png</filename>
-            <filename>TUP.png</filename>
-            <filename>T4.png</filename>
+            <filename>walls/WH.png</filename>
+            <filename>walls/WS.png</filename>
+            <filename>walls/WW.png</filename>
+            <filename>tree/T1.png</filename>
+            <filename>tree/T2.png</filename>
+            <filename>tree/T3.png</filename>
+            <filename>tree/T4.png</filename>
+            <filename>tree/TUP.png</filename>
+            <filename>roof/RFL1.png</filename>
+            <filename>roof/RFL2.png</filename>
+            <filename>roof/RFM.png</filename>
+            <filename>roof/RFR.png</filename>
+            <filename>other/BP.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

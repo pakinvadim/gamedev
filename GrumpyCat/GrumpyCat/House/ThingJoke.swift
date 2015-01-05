@@ -59,10 +59,10 @@ class ThingJoke : ThingBase {
         let standUp = Scene!.ActualLevel!.Man!.StandUpAction!;
         let play = CCActionSequence.actionWithArray([self.ManStartAction!, self.ManEndAction!]) as CCAction
         
-        let startSpawn = CCActionSpawn.actionWithArray([hideThing, moveToThing]) as CCAction
+        let startSpawn = CCActionSpawn.actionWithArray([hideThing, play]) as CCAction
         let endSpawn = CCActionSpawn.actionWithArray([moveBack, showThing, standUp]) as CCAction
         
-        let action = CCActionSequence.actionWithArray([startSpawn, play, endSpawn]) as CCAction
+        let action = CCActionSequence.actionWithArray([moveToThing, startSpawn, endSpawn]) as CCAction
         
         return [DoActionTask(action: action)]
     }

@@ -233,11 +233,6 @@
 		84AA4DF919FD7D6B0006DE99 /* UIBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA4DF819FD7D6B0006DE99 /* UIBase.swift */; };
 		84AA4DFB19FD85CD0006DE99 /* ThingGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA4DFA19FD85CD0006DE99 /* ThingGet.swift */; };
 		84AAF4401A39305900287BCB /* GoToCenterRoomLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AAF43F1A39305900287BCB /* GoToCenterRoomLogic.swift */; };
-		84AB2DEA1A410C7F0089A727 /* T1.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AB2DE41A410C7F0089A727 /* T1.png */; };
-		84AB2DEB1A410C7F0089A727 /* T2.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AB2DE51A410C7F0089A727 /* T2.png */; };
-		84AB2DEC1A410C7F0089A727 /* T3.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AB2DE61A410C7F0089A727 /* T3.png */; };
-		84AB2DED1A410C7F0089A727 /* TR.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AB2DE71A410C7F0089A727 /* TR.png */; };
-		84AB2DEF1A410C7F0089A727 /* TUP.png in Resources */ = {isa = PBXBuildFile; fileRef = 84AB2DE91A410C7F0089A727 /* TUP.png */; };
 		84AB2DF11A410CCA0089A727 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB2DF01A410CCA0089A727 /* Tree.swift */; };
 		84ACD41A1A1050F4006839A6 /* ManDoorUp.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84ACD4161A1050F4006839A6 /* ManDoorUp.plist */; };
 		84ACD41B1A1050F4006839A6 /* ManDoorUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 84ACD4171A1050F4006839A6 /* ManDoorUp.png */; };
@@ -261,10 +256,6 @@
 		84AFC0CB19F45F5200A0EBDE /* MoveTaskBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AFC0CA19F45F5200A0EBDE /* MoveTaskBase.swift */; };
 		84B0DAF11A3E6390008F4060 /* GameLevelInitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B0DAF01A3E6390008F4060 /* GameLevelInitHelper.swift */; };
 		84B1C5AC19F86576008E790E /* Linq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1C5AB19F86576008E790E /* Linq.swift */; };
-		84B7F1541A578E0F00617E54 /* ManZontAction.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84B7F1501A578E0F00617E54 /* ManZontAction.plist */; };
-		84B7F1551A578E0F00617E54 /* ManZontAction.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B7F1511A578E0F00617E54 /* ManZontAction.png */; };
-		84B7F1561A578E0F00617E54 /* ManZontJoke.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84B7F1521A578E0F00617E54 /* ManZontJoke.plist */; };
-		84B7F1571A578E0F00617E54 /* ManZontJoke.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B7F1531A578E0F00617E54 /* ManZontJoke.png */; };
 		84B7F1591A578EE100617E54 /* MicsThingsGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B7F1581A578EE100617E54 /* MicsThingsGet.swift */; };
 		84C61AE019FC658A008E5173 /* RoomObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C61ADF19FC658A008E5173 /* RoomObject.swift */; };
 		84C61AE219FC6DB2008E5173 /* HelpCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C61AE119FC6DB2008E5173 /* HelpCode.swift */; };
@@ -325,6 +316,12 @@
 		84E1BE3019E1E3D9008B3C8F /* walkTop1.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E1BDEF19E1E3D9008B3C8F /* walkTop1.png */; };
 		84E1BE3119E1E3D9008B3C8F /* walkTop2.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E1BDF019E1E3D9008B3C8F /* walkTop2.png */; };
 		84E1BE3219E1E3D9008B3C8F /* walkTop3.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E1BDF119E1E3D9008B3C8F /* walkTop3.png */; };
+		84F1D1051A5A189000E70780 /* Tree.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84F1D1031A5A189000E70780 /* Tree.plist */; };
+		84F1D1061A5A189000E70780 /* Tree.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F1D1041A5A189000E70780 /* Tree.png */; };
+		84F1D10C1A5A191C00E70780 /* ManZontAction.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84F1D1081A5A191C00E70780 /* ManZontAction.plist */; };
+		84F1D10D1A5A191C00E70780 /* ManZontAction.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F1D1091A5A191C00E70780 /* ManZontAction.png */; };
+		84F1D10E1A5A191C00E70780 /* ManZontJoke.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84F1D10A1A5A191C00E70780 /* ManZontJoke.plist */; };
+		84F1D10F1A5A191C00E70780 /* ManZontJoke.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F1D10B1A5A191C00E70780 /* ManZontJoke.png */; };
 		B02F11E3A8D606A6925A5493 /* IntroScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02F16615489F963387AB292 /* IntroScene.swift */; };
 /* End PBXBuildFile section */
 
@@ -756,11 +753,6 @@
 		84AA4DF819FD7D6B0006DE99 /* UIBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBase.swift; sourceTree = "<group>"; };
 		84AA4DFA19FD85CD0006DE99 /* ThingGet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThingGet.swift; sourceTree = "<group>"; };
 		84AAF43F1A39305900287BCB /* GoToCenterRoomLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoToCenterRoomLogic.swift; sourceTree = "<group>"; };
-		84AB2DE41A410C7F0089A727 /* T1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = T1.png; sourceTree = "<group>"; };
-		84AB2DE51A410C7F0089A727 /* T2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = T2.png; sourceTree = "<group>"; };
-		84AB2DE61A410C7F0089A727 /* T3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = T3.png; sourceTree = "<group>"; };
-		84AB2DE71A410C7F0089A727 /* TR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TR.png; sourceTree = "<group>"; };
-		84AB2DE91A410C7F0089A727 /* TUP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TUP.png; sourceTree = "<group>"; };
 		84AB2DF01A410CCA0089A727 /* Tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
 		84ACD4161A1050F4006839A6 /* ManDoorUp.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ManDoorUp.plist; sourceTree = "<group>"; };
 		84ACD4171A1050F4006839A6 /* ManDoorUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ManDoorUp.png; sourceTree = "<group>"; };
@@ -784,10 +776,6 @@
 		84AFC0CA19F45F5200A0EBDE /* MoveTaskBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveTaskBase.swift; sourceTree = "<group>"; };
 		84B0DAF01A3E6390008F4060 /* GameLevelInitHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameLevelInitHelper.swift; sourceTree = "<group>"; };
 		84B1C5AB19F86576008E790E /* Linq.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Linq.swift; sourceTree = "<group>"; };
-		84B7F1501A578E0F00617E54 /* ManZontAction.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ManZontAction.plist; sourceTree = "<group>"; };
-		84B7F1511A578E0F00617E54 /* ManZontAction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ManZontAction.png; sourceTree = "<group>"; };
-		84B7F1521A578E0F00617E54 /* ManZontJoke.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ManZontJoke.plist; sourceTree = "<group>"; };
-		84B7F1531A578E0F00617E54 /* ManZontJoke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ManZontJoke.png; sourceTree = "<group>"; };
 		84B7F1581A578EE100617E54 /* MicsThingsGet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicsThingsGet.swift; sourceTree = "<group>"; };
 		84C61ADF19FC658A008E5173 /* RoomObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomObject.swift; sourceTree = "<group>"; };
 		84C61AE119FC6DB2008E5173 /* HelpCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpCode.swift; sourceTree = "<group>"; };
@@ -848,6 +836,12 @@
 		84E1BDEF19E1E3D9008B3C8F /* walkTop1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walkTop1.png; sourceTree = "<group>"; };
 		84E1BDF019E1E3D9008B3C8F /* walkTop2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walkTop2.png; sourceTree = "<group>"; };
 		84E1BDF119E1E3D9008B3C8F /* walkTop3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walkTop3.png; sourceTree = "<group>"; };
+		84F1D1031A5A189000E70780 /* Tree.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Tree.plist; path = House/Tree.plist; sourceTree = "<group>"; };
+		84F1D1041A5A189000E70780 /* Tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tree.png; path = House/Tree.png; sourceTree = "<group>"; };
+		84F1D1081A5A191C00E70780 /* ManZontAction.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ManZontAction.plist; sourceTree = "<group>"; };
+		84F1D1091A5A191C00E70780 /* ManZontAction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ManZontAction.png; sourceTree = "<group>"; };
+		84F1D10A1A5A191C00E70780 /* ManZontJoke.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ManZontJoke.plist; sourceTree = "<group>"; };
+		84F1D10B1A5A191C00E70780 /* ManZontJoke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ManZontJoke.png; sourceTree = "<group>"; };
 		B02F164AF8D293B0ED7D8171 /* GrumpyCat-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GrumpyCat-Bridging-Header.h"; sourceTree = "<group>"; };
 		B02F16615489F963387AB292 /* IntroScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1694,7 +1688,8 @@
 		84A6C52519FC4ECA00577430 /* House */ = {
 			isa = PBXGroup;
 			children = (
-				84AB2DE31A410C7F0089A727 /* Tree */,
+				84F1D1031A5A189000E70780 /* Tree.plist */,
+				84F1D1041A5A189000E70780 /* Tree.png */,
 				84A6C52719FC4EDF00577430 /* Things */,
 				84A6C52619FC4ED600577430 /* Rooms */,
 			);
@@ -1716,7 +1711,6 @@
 		84A6C52719FC4EDF00577430 /* Things */ = {
 			isa = PBXGroup;
 			children = (
-				84B7F14F1A578E0F00617E54 /* Zont */,
 				84A6A4441A024A0000DE6F58 /* otv.png */,
 				84A6A4431A024A0000DE6F58 /* otv-2.jpg */,
 				84A6C53019FC557700577430 /* tv.jpeg */,
@@ -1728,6 +1722,7 @@
 		84A966B11A0DC23D001CDC11 /* Man */ = {
 			isa = PBXGroup;
 			children = (
+				84F1D1071A5A191C00E70780 /* Zont */,
 				84ACD4161A1050F4006839A6 /* ManDoorUp.plist */,
 				84ACD4171A1050F4006839A6 /* ManDoorUp.png */,
 				84A966B21A0DC23D001CDC11 /* ManAngry.plist */,
@@ -1761,19 +1756,6 @@
 				84AA4DF619FD55220006DE99 /* inventory.jpg */,
 			);
 			path = UI;
-			sourceTree = "<group>";
-		};
-		84AB2DE31A410C7F0089A727 /* Tree */ = {
-			isa = PBXGroup;
-			children = (
-				84AB2DE41A410C7F0089A727 /* T1.png */,
-				84AB2DE51A410C7F0089A727 /* T2.png */,
-				84AB2DE61A410C7F0089A727 /* T3.png */,
-				84AB2DE71A410C7F0089A727 /* TR.png */,
-				84AB2DE91A410C7F0089A727 /* TUP.png */,
-			);
-			name = Tree;
-			path = House/House/tree;
 			sourceTree = "<group>";
 		};
 		84ADA6881A3684F200C4A74D /* 0 */ = {
@@ -1852,18 +1834,6 @@
 				84AAF43F1A39305900287BCB /* GoToCenterRoomLogic.swift */,
 			);
 			name = TasksLogic;
-			sourceTree = "<group>";
-		};
-		84B7F14F1A578E0F00617E54 /* Zont */ = {
-			isa = PBXGroup;
-			children = (
-				84B7F1501A578E0F00617E54 /* ManZontAction.plist */,
-				84B7F1511A578E0F00617E54 /* ManZontAction.png */,
-				84B7F1521A578E0F00617E54 /* ManZontJoke.plist */,
-				84B7F1531A578E0F00617E54 /* ManZontJoke.png */,
-			);
-			name = Zont;
-			path = House/Things/Zont;
 			sourceTree = "<group>";
 		};
 		84E1BDAD19E1DD22008B3C8F /* Chars */ = {
@@ -1994,6 +1964,17 @@
 			path = Walk;
 			sourceTree = "<group>";
 		};
+		84F1D1071A5A191C00E70780 /* Zont */ = {
+			isa = PBXGroup;
+			children = (
+				84F1D1081A5A191C00E70780 /* ManZontAction.plist */,
+				84F1D1091A5A191C00E70780 /* ManZontAction.png */,
+				84F1D10A1A5A191C00E70780 /* ManZontJoke.plist */,
+				84F1D10B1A5A191C00E70780 /* ManZontJoke.png */,
+			);
+			path = Zont;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2074,6 +2055,7 @@
 				65F5D6C719854038007C8B2B /* Default@2x.png in Resources */,
 				84E1BE2219E1E3D9008B3C8F /* CatAnimEnterDoorTopOut4.png in Resources */,
 				65F5D6DA19854038007C8B2B /* Icon-120.png in Resources */,
+				84F1D10E1A5A191C00E70780 /* ManZontJoke.plist in Resources */,
 				84E1BE0119E1E3D9008B3C8F /* CatAnimEnterDoorLeftIn1.png in Resources */,
 				84E1BE0F19E1E3D9008B3C8F /* CatAnimEnterDoorRightIn3.png in Resources */,
 				84E1BE0019E1E3D9008B3C8F /* CatAnimEnterDoorLeftIn0.png in Resources */,
@@ -2099,14 +2081,12 @@
 				65F5D6D419854038007C8B2B /* Icon-72@2x.png in Resources */,
 				84E1BE0419E1E3D9008B3C8F /* CatAnimEnterDoorLeftIn4.png in Resources */,
 				84E1BE2F19E1E3D9008B3C8F /* walkTop0.png in Resources */,
-				84B7F1571A578E0F00617E54 /* ManZontJoke.png in Resources */,
 				84ADA69E1A3684F200C4A74D /* R13.png in Resources */,
 				84E1BE2D19E1E3D9008B3C8F /* walkLeft3.png in Resources */,
 				84E1BE1319E1E3D9008B3C8F /* CatAnimEnterDoorRightOut1.png in Resources */,
 				84AA4DF719FD55220006DE99 /* inventory.jpg in Resources */,
-				84B7F1561A578E0F00617E54 /* ManZontJoke.plist in Resources */,
 				84E1BE1D19E1E3D9008B3C8F /* CatAnimEnterDoorTopIn5.png in Resources */,
-				84AB2DEF1A410C7F0089A727 /* TUP.png in Resources */,
+				84F1D10F1A5A191C00E70780 /* ManZontJoke.png in Resources */,
 				84E1BE1E19E1E3D9008B3C8F /* CatAnimEnterDoorTopOut0.png in Resources */,
 				84A6C53119FC557700577430 /* tv.jpeg in Resources */,
 				84E1BE2419E1E3D9008B3C8F /* standBotton0.png in Resources */,
@@ -2122,10 +2102,10 @@
 				84E1BE2B19E1E3D9008B3C8F /* walkLeft1.png in Resources */,
 				84A966CC1A0DC23D001CDC11 /* Shok.plist in Resources */,
 				84ADA6A11A3684F200C4A74D /* R22.png in Resources */,
+				84F1D10D1A5A191C00E70780 /* ManZontAction.png in Resources */,
 				84E1BE2119E1E3D9008B3C8F /* CatAnimEnterDoorTopOut3.png in Resources */,
 				84A732831A048EDB00991C9B /* tv-2.jpg in Resources */,
 				65F5D6CE19854038007C8B2B /* Icon.png in Resources */,
-				84B7F1541A578E0F00617E54 /* ManZontAction.plist in Resources */,
 				65F5D6DC19854038007C8B2B /* Icon-iPad-Spotlight-iOS7@2x.png in Resources */,
 				84ADA6A31A3684F200C4A74D /* R24.png in Resources */,
 				84E1BE1F19E1E3D9008B3C8F /* CatAnimEnterDoorTopOut1.png in Resources */,
@@ -2139,15 +2119,15 @@
 				84A966C41A0DC23D001CDC11 /* ManDoorRight.plist in Resources */,
 				84ADA6A41A3684F200C4A74D /* R31.png in Resources */,
 				84E1BE1719E1E3D9008B3C8F /* CatAnimEnterDoorRightOut5.png in Resources */,
+				84F1D1061A5A189000E70780 /* Tree.png in Resources */,
 				84E1BE0B19E1E3D9008B3C8F /* CatAnimEnterDoorLeftOut5.png in Resources */,
+				84F1D1051A5A189000E70780 /* Tree.plist in Resources */,
 				84A6A4461A024A0000DE6F58 /* otv.png in Resources */,
 				65F5D91C1985403B007C8B2B /* LICENSE_Chipmunk.txt in Resources */,
 				84E1BE1019E1E3D9008B3C8F /* CatAnimEnterDoorRightIn4.png in Resources */,
 				65F5D6D219854038007C8B2B /* Icon-72.png in Resources */,
-				84AB2DEA1A410C7F0089A727 /* T1.png in Resources */,
 				65F5D8AE1985403A007C8B2B /* LICENSE_CCBReader.txt in Resources */,
 				84E1BE1119E1E3D9008B3C8F /* CatAnimEnterDoorRightIn5.png in Resources */,
-				84AB2DED1A410C7F0089A727 /* TR.png in Resources */,
 				84E1BE1519E1E3D9008B3C8F /* CatAnimEnterDoorRightOut3.png in Resources */,
 				84E1BE0A19E1E3D9008B3C8F /* CatAnimEnterDoorLeftOut4.png in Resources */,
 				65F5D81E1985403A007C8B2B /* LICENSE_cocos2d.txt in Resources */,
@@ -2160,7 +2140,6 @@
 				65F5D6E419854038007C8B2B /* Icon-Spotlight-iOS7.png in Resources */,
 				84A966C91A0DC23D001CDC11 /* ManRepair.png in Resources */,
 				84E1BE1619E1E3D9008B3C8F /* CatAnimEnterDoorRightOut4.png in Resources */,
-				84B7F1551A578E0F00617E54 /* ManZontAction.png in Resources */,
 				84E1BE2019E1E3D9008B3C8F /* CatAnimEnterDoorTopOut2.png in Resources */,
 				84ADA69C1A3684F200C4A74D /* R11.png in Resources */,
 				84E1BE0819E1E3D9008B3C8F /* CatAnimEnterDoorLeftOut2.png in Resources */,
@@ -2174,15 +2153,14 @@
 				84E1BE0C19E1E3D9008B3C8F /* CatAnimEnterDoorRightIn0.png in Resources */,
 				84E1BE2C19E1E3D9008B3C8F /* walkLeft2.png in Resources */,
 				84A966C31A0DC23D001CDC11 /* ManDoorLeft.png in Resources */,
-				84AB2DEC1A410C7F0089A727 /* T3.png in Resources */,
 				84E1BE2619E1E3D9008B3C8F /* walkBotton0.png in Resources */,
 				84E1BE0519E1E3D9008B3C8F /* CatAnimEnterDoorLeftIn5.png in Resources */,
+				84F1D10C1A5A191C00E70780 /* ManZontAction.plist in Resources */,
 				84ACD41B1A1050F4006839A6 /* ManDoorUp.png in Resources */,
 				84A966C21A0DC23D001CDC11 /* ManDoorLeft.plist in Resources */,
 				84E1BE3219E1E3D9008B3C8F /* walkTop3.png in Resources */,
 				84E1BE1A19E1E3D9008B3C8F /* CatAnimEnterDoorTopIn2.png in Resources */,
 				65F5D6EB19854038007C8B2B /* iTunesArtwork@2x in Resources */,
-				84AB2DEB1A410C7F0089A727 /* T2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

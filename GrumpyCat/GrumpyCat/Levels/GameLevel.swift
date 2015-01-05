@@ -13,8 +13,8 @@ class GameLevel : RootSprite {
     var TouchBegan_PointOfLevel:CGPoint?
     
     var Room9:Room?
-    var Room10:Room?; var Room11:Room?; var Room12:Room?; var Room13:Room?; var Room14:Room?;
-    var Room21:Room?; var Room22:Room?; var Room23:Room?; var Room24:Room?
+    var Room10:Room?; var Room11:Room?; var Room12:Room?; var Room13:Room?;
+    var Room21:Room?; var Room22:Room?; var Room23:Room?;
     var Room31:Room?
     var Rooms:[Room] = [Room]()
     var Cat:CatChar?

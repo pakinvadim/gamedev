@@ -16,7 +16,7 @@ class IntroScene : CCScene {
     let DoorRightAnchorPoint = CGPointMake(512, -512)
     let DoorUpAnchorPoint = CGPointMake(256, -420)
     
-    let DefaultAnchorPoint = CGPointMake(0, -512)
+    let DefaultCharAnchorPoint = CGPointMake(0, -512)
     
     var ActualLevel: GameLevel?
     
@@ -33,8 +33,11 @@ class IntroScene : CCScene {
         CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("ManDoorRight.plist", anchor:DoorRightAnchorPoint)
         CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("ManDoorUp.plist", anchor:DoorUpAnchorPoint)
         
-        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("ManZontAction.plist", anchor:DefaultAnchorPoint)
-        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("ManZontJoke.plist", anchor:DefaultAnchorPoint)
+        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("Tree.plist", anchor:CGPointZero)
+        
+        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("ManZontAction.plist", anchor:DefaultCharAnchorPoint)
+        CCSpriteFrameCache.sharedSpriteFrameCache().addSpriteFramesWithFile("ManZontJoke.plist", anchor:DefaultCharAnchorPoint)
+        
         
         ActualLevel = Level1(scene: self)
         addChild(ActualLevel)

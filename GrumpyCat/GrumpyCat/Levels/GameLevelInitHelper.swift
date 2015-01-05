@@ -30,19 +30,14 @@ class GameLevelInitHelper {
         l.Room12 = Room(scene: l.Scene!, imageName: "R12.png", pos: CGPointMake(768 + wallConst, 0), number: 12)
         l.Room12!.AddWall(WallType.Right)
         l.Room12!.AddWall(WallType.Left)
-        //l.Room12!.AddDoor(DoorType.Left, dir:11, positionX:0)
-        //l.Room12!.AddDoor(DoorType.Right, dir:13, positionX:0)
+        l.Room12!.AddDoor(DoorType.Left, dir:11, positionX:0)
+        l.Room12!.AddDoor(DoorType.Right, dir:13, positionX:0)
         l.Room12!.AddDoor(DoorType.Top, dir:22, positionX:1536-400)
         
         l.Room13 = Room(scene: l.Scene!, imageName: "R13.png", pos:CGPointMake(768 + 1536 + 2*wallConst, 0), number:13)
+        l.Room13!.AddWall(WallType.Right)
         l.Room13!.AddDoor(DoorType.Left, dir:12, positionX:0)
-        l.Room13!.AddDoor(DoorType.Right, dir:14, positionX:0)
         l.Room13!.AddDoor(DoorType.Top, dir:23, positionX:1024-400)
-        
-        l.Room14 = Room(scene: l.Scene!, imageName: "R14.png", pos:CGPointMake(768 + 1536 + 1024 + 3*wallConst, 0), number:14)
-        l.Room14!.AddWall(WallType.Right)
-        l.Room14!.AddWall(WallType.Left)
-        l.Room14!.AddDoor(DoorType.Left, dir:13, positionX:0)
         
         l.Room21 = Room(scene: l.Scene!, imageName: "R21.png", pos:CGPointMake(-256, 512 + floorConst), number:21)
         l.Room21!.AddDoor(DoorType.Right, dir:22, positionX:0)
@@ -56,14 +51,9 @@ class GameLevelInitHelper {
         l.Room22!.AddDoor(DoorType.Top, dir:12, positionX:1536-400)
         
         l.Room23 = Room(scene: l.Scene!, imageName: "R23.png", pos:CGPointMake(768 + 1536 + 2*wallConst, 512 + floorConst), number:23)
+        l.Room23!.AddWall(WallType.Right)
         l.Room23!.AddDoor(DoorType.Left, dir:22, positionX:0)
-        l.Room23!.AddDoor(DoorType.Right, dir:24, positionX:0)
         l.Room23!.AddDoor(DoorType.Top, dir:13, positionX:1024-400)
-        
-        l.Room24 = Room(scene: l.Scene!, imageName: "R24.png", pos:CGPointMake(768 + 1536 + 1024 + 3*wallConst, 512 + floorConst), number:24)
-        l.Room24!.AddWall(WallType.Right)
-        l.Room24!.AddWall(WallType.Left)
-        l.Room24!.AddDoor(DoorType.Left, dir:23, positionX:0)
         
         l.Room31 = Room(scene: l.Scene!, imageName: "R31.png", pos:CGPointMake(768 + wallConst, 2*(512 + floorConst)), number:31)
         l.Room31!.AddWall(WallType.Right)
@@ -75,11 +65,9 @@ class GameLevelInitHelper {
         l.AddRoom(l.Room11!)
         l.AddRoom(l.Room12!)
         l.AddRoom(l.Room13!)
-        l.AddRoom(l.Room14!)
         l.AddRoom(l.Room21!)
         l.AddRoom(l.Room22!)
         l.AddRoom(l.Room23!)
-        l.AddRoom(l.Room24!)
         l.AddRoom(l.Room31!)
     }
     
@@ -88,8 +76,8 @@ class GameLevelInitHelper {
         let blockHight:CGFloat = 39
         let FloorInfos:[(Width:CGFloat, FloorX:CGFloat, FloorY:CGFloat)] = [
             (1536 + 2*45, 768, 2*512+blockHight),
-            (4608 + 4*45, -256, 512),
-            (4352 + 5*45, -45, 0-blockHight),
+            (3584 + 3*45, -256, 512),
+            (3328 + 4*45, -45, 0-blockHight),
             (1536 + 2*45, -45, 0-2*blockHight-512)
         ]
         

@@ -46,10 +46,7 @@ class Tree : RootSprite {
         
         let treeUp = CCSprite(imageNamed: "TUP.png");
         treeUp.anchorPoint = CGPointZero
-        let treeRight = CCSprite(imageNamed: "TR.png")
-        treeRight.anchorPoint = CGPointZero
-        treeRight.position = CGPointMake(250, 720)
-        treeUp.addChild(treeRight)
+        treeUp.position = CGPointMake(116, 512)
         
         for info in positionsByPictDic {
             for pos in info.positions {

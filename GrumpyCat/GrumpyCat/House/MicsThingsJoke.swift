@@ -13,12 +13,12 @@ class Zont : ThingJoke {
         super.init(scene: scene, imageName:"ActionZont (0).png")
         JokeReadyTexture = CCTexture(file: "ActionZont (0).png")
         CatStartActionPoint = CGPointMake(0, 0)
-        ManStartActionPoint = CGPointMake(Width/2.0, 75)
+        ManStartActionPoint = CGPointMake(256, 0)
         CatMakeJokeTasks = [DoActionTask(action: RootSprite.GetAction("walkTop", frameCount: 4, delay: 0.1, wight: 186,  hight: 185))]
         
-        ManStartAction = RootSprite.GetActionNew("ActionZont", frameCount: 6, delay: 0.2)
-        ManEndAction = RootSprite.GetActionNew("ActionZont", frameRange: [Int](6...11), delay: 0.2)
-        ManJokeAction = RootSprite.GetActionNew("JokeZont", frameRange: [1,2,3,4,5,6,7,8], delay: 0.2)
+        ManStartAction = RootSprite.GetActionNew("ActionZont", frameRange: [1,2,3,4,5,6], delay: 0.15)
+        ManJokeAction = RootSprite.GetActionNew("ActionZont", frameRange: [7,7,7,7,8,9,10,11], delay: 0.15)
+        ManEndAction = RootSprite.GetActionNew("JokeZont", frameRange: [1,2,3,4,5,4,3,4,5,6,7,8], delay: 0.15)
     }
     
     override init(imageNamed imageName: String!) {super.init(imageNamed: imageName)}

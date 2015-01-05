@@ -21,7 +21,7 @@ class Level1 : GameLevel {
         let zont = Zont(scene: Scene!)
         //let televizor = Televizor(scene: Scene!)
         //let televizor2 = Televizor2(scene: Scene!)
-        Room21!.AddThing(zont, position: CGPointMake(400, 0))
+        Room21!.AddThing(zont, position: CGPointMake(400, 75))
         //Room1!.AddThing(televizor, position: CGPointMake(800, 150))
         //Room4!.AddThing(televizor2, position: CGPointMake(600, 150))
         

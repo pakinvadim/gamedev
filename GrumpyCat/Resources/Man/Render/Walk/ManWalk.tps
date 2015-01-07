@@ -4,9 +4,9 @@
         <key>fileFormatVersion</key>
         <int>3</int>
         <key>texturePackerVersion</key>
-        <string>3.5.3</string>
+        <string>3.6.0</string>
         <key>fileName</key>
-        <string>/Users/admin/Desktop/Gamedev/GrumpyCat/Resources/Man/Render/Walk/ManWalk.tps</string>
+        <string>C:/Users/Vadim/Desktop/Gamedev/GrumpyCat/Resources/Man/Render/Walk/ManWalk.tps</string>
         <key>autoSDSettings</key>
         <array>
             <struct type="AutoSDSettings">
@@ -204,6 +204,14 @@
             <filename>MWL (6).png</filename>
             <filename>MWL (7).png</filename>
             <filename>MWL (8).png</filename>
+            <filename>MWL (9).png</filename>
+            <filename>MWL (10).png</filename>
+            <filename>MWL (11).png</filename>
+            <filename>MWL (12).png</filename>
+            <filename>MWL (13).png</filename>
+            <filename>MWL (14).png</filename>
+            <filename>MWL (15).png</filename>
+            <filename>MWL (16).png</filename>
             <filename>MWR (1).png</filename>
             <filename>MWR (2).png</filename>
             <filename>MWR (3).png</filename>
@@ -212,6 +220,14 @@
             <filename>MWR (6).png</filename>
             <filename>MWR (7).png</filename>
             <filename>MWR (8).png</filename>
+            <filename>MWR (9).png</filename>
+            <filename>MWR (10).png</filename>
+            <filename>MWR (11).png</filename>
+            <filename>MWR (12).png</filename>
+            <filename>MWR (13).png</filename>
+            <filename>MWR (14).png</filename>
+            <filename>MWR (15).png</filename>
+            <filename>MWR (16).png</filename>
             <filename>MWU (1).png</filename>
             <filename>MWU (2).png</filename>
             <filename>MWU (3).png</filename>

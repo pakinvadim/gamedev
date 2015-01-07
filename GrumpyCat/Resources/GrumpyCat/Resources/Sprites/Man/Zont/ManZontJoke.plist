@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>JokeZont (1).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{836,130},{124,184}}</string>
+                <key>offset</key>
+                <string>{69,-43}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{69,43},{124,184}}</string>
+                <key>sourceSize</key>
+                <string>{124,184}</string>
+            </dict>
+            <key>JokeZont (2).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{836,2},{126,184}}</string>
+                <key>offset</key>
+                <string>{61,-43}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{61,43},{126,184}}</string>
+                <key>sourceSize</key>
+                <string>{126,184}</string>
+            </dict>
+            <key>JokeZont (3).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{562,2},{138,184}}</string>
+                <key>offset</key>
+                <string>{61,-43}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{61,43},{138,184}}</string>
+                <key>sourceSize</key>
+                <string>{138,184}</string>
+            </dict>
+            <key>JokeZont (4).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{702,2},{132,184}}</string>
+                <key>offset</key>
+                <string>{56,-43}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{56,43},{132,184}}</string>
+                <key>sourceSize</key>
+                <string>{132,184}</string>
+            </dict>
+            <key>JokeZont (5).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{426,2},{134,196}}</string>
+                <key>offset</key>
+                <string>{60,-42}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{60,42},{134,196}}</string>
+                <key>sourceSize</key>
+                <string>{134,196}</string>
+            </dict>
+            <key>JokeZont (6).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{152,202}}</string>
+                <key>offset</key>
+                <string>{44,-40}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{44,40},{152,202}}</string>
+                <key>sourceSize</key>
+                <string>{152,202}</string>
+            </dict>
+            <key>JokeZont (7).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{156,2},{142,202}}</string>
+                <key>offset</key>
+                <string>{54,-40}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{54,40},{142,202}}</string>
+                <key>sourceSize</key>
+                <string>{142,202}</string>
+            </dict>
+            <key>JokeZont (8).png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{300,2},{124,202}}</string>
+                <key>offset</key>
+                <string>{60,-40}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{60,40},{124,202}}</string>
+                <key>sourceSize</key>
+                <string>{124,202}</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>2</integer>
+            <key>realTextureFileName</key>
+            <string>ManZontJoke.png</string>
+            <key>size</key>
+            <string>{1022,256}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:e37924dcc80a9a8e40b1d7fefe21600d:86ee5b0d8049afe8f239aee1c65d3cd1:73c6b2bdf1c4b2dc50f1ba173d6a2414$</string>
+            <key>textureFileName</key>
+            <string>ManZontJoke.png</string>
+        </dict>
+    </dict>
+</plist>

@@ -7,93 +7,93 @@
             <key>MRepair (1).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{270,262}}</string>
+                <string>{{2,2},{136,130}}</string>
                 <key>offset</key>
-                <string>{122,-218}</string>
+                <string>{60,-110}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{122,218},{270,262}}</string>
+                <string>{{60,110},{136,130}}</string>
                 <key>sourceSize</key>
-                <string>{270,262}</string>
+                <string>{136,130}</string>
             </dict>
             <key>MRepair (2).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,266},{198,258}}</string>
+                <string>{{140,2},{98,128}}</string>
                 <key>offset</key>
-                <string>{160,-222}</string>
+                <string>{81,-112}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{160,222},{198,258}}</string>
+                <string>{{81,112},{98,128}}</string>
                 <key>sourceSize</key>
-                <string>{198,258}</string>
+                <string>{98,128}</string>
             </dict>
             <key>MRepair (3).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{332,526},{158,254}}</string>
+                <string>{{168,262},{78,128}}</string>
                 <key>offset</key>
-                <string>{184,-225}</string>
+                <string>{93,-112}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{184,225},{158,254}}</string>
+                <string>{{93,112},{78,128}}</string>
                 <key>sourceSize</key>
-                <string>{158,254}</string>
+                <string>{78,128}</string>
             </dict>
             <key>MRepair (4).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{170,526},{160,254}}</string>
+                <string>{{86,262},{80,128}}</string>
                 <key>offset</key>
-                <string>{180,-225}</string>
+                <string>{90,-112}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{180,225},{160,254}}</string>
+                <string>{{90,112},{80,128}}</string>
                 <key>sourceSize</key>
-                <string>{160,254}</string>
+                <string>{80,128}</string>
             </dict>
             <key>MRepair (5).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,526},{166,256}}</string>
+                <string>{{140,132},{84,128}}</string>
                 <key>offset</key>
-                <string>{179,-223}</string>
+                <string>{89,-112}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{179,223},{166,256}}</string>
+                <string>{{89,112},{84,128}}</string>
                 <key>sourceSize</key>
-                <string>{166,256}</string>
+                <string>{84,128}</string>
             </dict>
             <key>MRepair (6).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{202,266},{166,258}}</string>
+                <string>{{2,262},{82,130}}</string>
                 <key>offset</key>
-                <string>{180,-221}</string>
+                <string>{91,-110}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{180,221},{166,258}}</string>
+                <string>{{91,110},{82,130}}</string>
                 <key>sourceSize</key>
-                <string>{166,258}</string>
+                <string>{82,130}</string>
             </dict>
             <key>MRepair (7).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{274,2},{164,262}}</string>
+                <string>{{2,134},{82,130}}</string>
                 <key>offset</key>
-                <string>{183,-218}</string>
+                <string>{92,-110}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
-                <string>{{183,218},{164,262}}</string>
+                <string>{{92,110},{82,130}}</string>
                 <key>sourceSize</key>
-                <string>{164,262}</string>
+                <string>{82,130}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -103,9 +103,9 @@
             <key>realTextureFileName</key>
             <string>ManRepair.png</string>
             <key>size</key>
-            <string>{492,784}</string>
+            <string>{248,394}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:2f3ebb323a276b2df6f3263a7613dfd3:7857425945d1b6e198946057aed60ff4:7f4a527710d94719b6d2603f00a79038$</string>
+            <string>$TexturePacker:SmartUpdate:6d178498725571d1da7fd7c3eaff0305:94e7db5dd9c32c1696e6009eb61abfba:7f4a527710d94719b6d2603f00a79038$</string>
             <key>textureFileName</key>
             <string>ManRepair.png</string>
         </dict>

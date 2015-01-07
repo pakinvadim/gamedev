@@ -7,262 +7,262 @@
             <key>MAngry (1).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{540,2},{192,266}}</string>
+                <string>{{138,154},{96,132}}</string>
                 <key>offset</key>
-                <string>{148,-224}</string>
+                <string>{74,-113}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{148,224},{192,266}}</string>
+                <string>{{74,113},{96,132}}</string>
                 <key>sourceSize</key>
-                <string>{192,266}</string>
+                <string>{96,132}</string>
             </dict>
             <key>MAngry (10).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1120,220},{314,232}}</string>
+                <string>{{596,132},{158,116}}</string>
                 <key>offset</key>
-                <string>{90,-258}</string>
+                <string>{44,-129}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{90,258},{314,232}}</string>
+                <string>{{44,129},{158,116}}</string>
                 <key>sourceSize</key>
-                <string>{314,232}</string>
+                <string>{158,116}</string>
             </dict>
             <key>MAngry (11).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1126,454},{328,256}}</string>
+                <string>{{474,2},{164,128}}</string>
                 <key>offset</key>
-                <string>{68,-236}</string>
+                <string>{34,-118}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{68,236},{328,256}}</string>
+                <string>{{34,118},{164,128}}</string>
                 <key>sourceSize</key>
-                <string>{328,256}</string>
+                <string>{164,128}</string>
             </dict>
             <key>MAngry (12).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1184,712},{300,294}}</string>
+                <string>{{2,2},{150,148}}</string>
                 <key>offset</key>
-                <string>{82,-153}</string>
+                <string>{41,-76}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{82,153},{300,294}}</string>
+                <string>{{41,76},{150,148}}</string>
                 <key>sourceSize</key>
-                <string>{300,294}</string>
+                <string>{150,148}</string>
             </dict>
             <key>MAngry (13).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{1094,2},{314,216}}</string>
+                <string>{{272,146},{158,108}}</string>
                 <key>offset</key>
-                <string>{79,-276}</string>
+                <string>{39,-138}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{79,276},{314,216}}</string>
+                <string>{{39,138},{158,108}}</string>
                 <key>sourceSize</key>
-                <string>{314,216}</string>
+                <string>{158,108}</string>
             </dict>
             <key>MAngry (14).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{868,712},{314,284}}</string>
+                <string>{{152,2},{156,142}}</string>
                 <key>offset</key>
-                <string>{82,-187}</string>
+                <string>{42,-94}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{82,187},{314,284}}</string>
+                <string>{{42,94},{156,142}}</string>
                 <key>sourceSize</key>
-                <string>{314,284}</string>
+                <string>{156,142}</string>
             </dict>
             <key>MAngry (15).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{542,708},{324,270}}</string>
+                <string>{{310,2},{162,136}}</string>
                 <key>offset</key>
-                <string>{75,-220}</string>
+                <string>{38,-109}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{75,220},{324,270}}</string>
+                <string>{{38,109},{162,136}}</string>
                 <key>sourceSize</key>
-                <string>{324,270}</string>
+                <string>{162,136}</string>
             </dict>
             <key>MAngry (16).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{264,196},{322,220}}</string>
+                <string>{{432,140},{162,110}}</string>
                 <key>offset</key>
-                <string>{76,-272}</string>
+                <string>{37,-136}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{76,272},{322,220}}</string>
+                <string>{{37,136},{162,110}}</string>
                 <key>sourceSize</key>
-                <string>{322,220}</string>
+                <string>{162,110}</string>
             </dict>
             <key>MAngry (17).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{802,454},{322,252}}</string>
+                <string>{{640,2},{160,126}}</string>
                 <key>offset</key>
-                <string>{84,-240}</string>
+                <string>{43,-120}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{84,240},{322,252}}</string>
+                <string>{{43,120},{160,126}}</string>
                 <key>sourceSize</key>
-                <string>{322,252}</string>
+                <string>{160,126}</string>
             </dict>
             <key>MAngry (18).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,652},{264,262}}</string>
+                <string>{{1024,118},{132,132}}</string>
                 <key>offset</key>
-                <string>{119,-230}</string>
+                <string>{60,-114}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{119,230},{264,262}}</string>
+                <string>{{60,114},{132,132}}</string>
                 <key>sourceSize</key>
-                <string>{264,262}</string>
+                <string>{132,132}</string>
             </dict>
             <key>MAngry (19).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{272,2},{190,266}}</string>
+                <string>{{2,154},{96,134}}</string>
                 <key>offset</key>
-                <string>{159,-226}</string>
+                <string>{79,-112}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{159,226},{190,266}}</string>
+                <string>{{79,112},{96,134}}</string>
                 <key>sourceSize</key>
-                <string>{190,266}</string>
+                <string>{96,134}</string>
             </dict>
             <key>MAngry (2).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,418},{232,266}}</string>
+                <string>{{1158,110},{116,132}}</string>
                 <key>offset</key>
-                <string>{107,-224}</string>
+                <string>{54,-113}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{107,224},{232,266}}</string>
+                <string>{{54,113},{116,132}}</string>
                 <key>sourceSize</key>
-                <string>{232,266}</string>
+                <string>{116,132}</string>
             </dict>
             <key>MAngry (20).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{172,268}}</string>
+                <string>{{1220,2},{86,134}}</string>
                 <key>offset</key>
-                <string>{171,-224}</string>
+                <string>{86,-112}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{171,224},{172,268}}</string>
+                <string>{{86,112},{86,134}}</string>
                 <key>sourceSize</key>
-                <string>{172,268}</string>
+                <string>{86,134}</string>
             </dict>
             <key>MAngry (3).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{270,418},{232,270}}</string>
+                <string>{{802,2},{116,134}}</string>
                 <key>offset</key>
-                <string>{109,-220}</string>
+                <string>{55,-111}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{109,220},{232,270}}</string>
+                <string>{{55,111},{116,134}}</string>
                 <key>sourceSize</key>
-                <string>{232,270}</string>
+                <string>{116,134}</string>
             </dict>
             <key>MAngry (4).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,176},{228,260}}</string>
+                <string>{{1356,2},{114,130}}</string>
                 <key>offset</key>
-                <string>{117,-230}</string>
+                <string>{59,-115}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{117,230},{228,260}}</string>
+                <string>{{59,115},{114,130}}</string>
                 <key>sourceSize</key>
-                <string>{228,260}</string>
+                <string>{114,130}</string>
             </dict>
             <key>MAngry (5).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{862,220},{230,256}}</string>
+                <string>{{1276,134},{116,128}}</string>
                 <key>offset</key>
-                <string>{127,-234}</string>
+                <string>{63,-117}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{127,234},{230,256}}</string>
+                <string>{{63,117},{116,128}}</string>
                 <key>sourceSize</key>
-                <string>{230,256}</string>
+                <string>{116,128}</string>
             </dict>
             <key>MAngry (6).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{808,2},{212,284}}</string>
+                <string>{{1076,2},{106,142}}</string>
                 <key>offset</key>
-                <string>{145,-206}</string>
+                <string>{73,-103}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{145,206},{212,284}}</string>
+                <string>{{73,103},{106,142}}</string>
                 <key>sourceSize</key>
-                <string>{212,284}</string>
+                <string>{106,142}</string>
             </dict>
             <key>MAngry (7).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{588,216},{228,272}}</string>
+                <string>{{938,2},{114,136}}</string>
                 <key>offset</key>
-                <string>{129,-218}</string>
+                <string>{65,-109}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{129,218},{228,272}}</string>
+                <string>{{65,109},{114,136}}</string>
                 <key>sourceSize</key>
-                <string>{228,272}</string>
+                <string>{114,136}</string>
             </dict>
             <key>MAngry (8).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{542,446},{246,258}}</string>
+                <string>{{756,130},{124,128}}</string>
                 <key>offset</key>
-                <string>{111,-232}</string>
+                <string>{55,-117}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{111,232},{246,258}}</string>
+                <string>{{55,117},{124,128}}</string>
                 <key>sourceSize</key>
-                <string>{246,258}</string>
+                <string>{124,128}</string>
             </dict>
             <key>MAngry (9).png</key>
             <dict>
                 <key>frame</key>
-                <string>{{268,652},{272,268}}</string>
+                <string>{{886,120},{136,134}}</string>
                 <key>offset</key>
-                <string>{115,-222}</string>
+                <string>{58,-111}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{115,222},{272,268}}</string>
+                <string>{{58,111},{136,134}}</string>
                 <key>sourceSize</key>
-                <string>{272,268}</string>
+                <string>{136,134}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -272,9 +272,9 @@
             <key>realTextureFileName</key>
             <string>ManAngry.png</string>
             <key>size</key>
-            <string>{1480,1014}</string>
+            <string>{1472,256}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:f2ae30ed38a715f4648ffda8b5a21b19:4e61b3d71c8e2b45126b7e9a2298ec7e:a115a4efd4963f477cbc01b94eeebc6e$</string>
+            <string>$TexturePacker:SmartUpdate:6928cfdbdee8995665106a476d88c6bb:2fe3790fe0fc23932cea8fcc9042e9c5:a115a4efd4963f477cbc01b94eeebc6e$</string>
             <key>textureFileName</key>
             <string>ManAngry.png</string>
         </dict>

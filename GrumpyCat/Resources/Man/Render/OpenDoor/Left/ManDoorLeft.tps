@@ -4,9 +4,9 @@
         <key>fileFormatVersion</key>
         <int>3</int>
         <key>texturePackerVersion</key>
-        <string>3.5.3</string>
+        <string>3.6.0</string>
         <key>fileName</key>
-        <string>/Users/admin/Desktop/Gamedev/GrumpyCat/Resources/Man/Render/OpenDoor/Left/ManDoorLeft.tps</string>
+        <string>C:/Users/Vadim/Desktop/Gamedev/GrumpyCat/Resources/Man/Render/OpenDoor/Left/ManDoorLeft.tps</string>
         <key>autoSDSettings</key>
         <array>
             <struct type="AutoSDSettings">
@@ -209,6 +209,7 @@
             <filename>MDLO (8).png</filename>
             <filename>MDLO (9).png</filename>
             <filename>MDLO (10).png</filename>
+            <filename>MDLO (11).png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

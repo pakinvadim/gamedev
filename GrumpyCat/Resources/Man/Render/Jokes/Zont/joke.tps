@@ -6,7 +6,7 @@
         <key>texturePackerVersion</key>
         <string>3.6.0</string>
         <key>fileName</key>
-        <string>C:/Users/Vadim/Desktop/Gamedev/GrumpyCat/Resources/Man/Render/Jokes/action.tps</string>
+        <string>C:/Users/Vadim/Desktop/Gamedev/GrumpyCat/Resources/Man/Render/Jokes/Zont/joke.tps</string>
         <key>autoSDSettings</key>
         <array>
             <struct type="AutoSDSettings">
@@ -38,7 +38,7 @@
         <key>dataFormat</key>
         <string>cocos2d</string>
         <key>textureFileName</key>
-        <filename>../../../../GrumpyCat/Resources/Sprites/Man/Zont/ManZontAction.png</filename>
+        <filename>../../../../GrumpyCat/Resources/Sprites/Man/Zont/ManZontJoke.png</filename>
         <key>flipPVR</key>
         <false/>
         <key>pvrCompressionQuality</key>
@@ -145,7 +145,7 @@
             <key>data</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename>../../../../GrumpyCat/Resources/Sprites/Man/Zont/ManZontAction.plist</filename>
+                <filename>../../../../GrumpyCat/Resources/Sprites/Man/Zont/ManZontJoke.plist</filename>
             </struct>
         </map>
         <key>multiPack</key>
@@ -188,18 +188,14 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>Zont/Action/ActionZont (1).png</filename>
-            <filename>Zont/Action/ActionZont (2).png</filename>
-            <filename>Zont/Action/ActionZont (3).png</filename>
-            <filename>Zont/Action/ActionZont (4).png</filename>
-            <filename>Zont/Action/ActionZont (5).png</filename>
-            <filename>Zont/Action/ActionZont (6).png</filename>
-            <filename>Zont/Action/ActionZont (7).png</filename>
-            <filename>Zont/Action/ActionZont (8).png</filename>
-            <filename>Zont/Action/ActionZont (9).png</filename>
-            <filename>Zont/Action/ActionZont (10).png</filename>
-            <filename>Zont/Action/ActionZont (11).png</filename>
-            <filename>Zont/Action/ActionZont (0).png</filename>
+            <filename>Joke/JokeZont (1).png</filename>
+            <filename>Joke/JokeZont (2).png</filename>
+            <filename>Joke/JokeZont (3).png</filename>
+            <filename>Joke/JokeZont (4).png</filename>
+            <filename>Joke/JokeZont (5).png</filename>
+            <filename>Joke/JokeZont (6).png</filename>
+            <filename>Joke/JokeZont (7).png</filename>
+            <filename>Joke/JokeZont (8).png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>
